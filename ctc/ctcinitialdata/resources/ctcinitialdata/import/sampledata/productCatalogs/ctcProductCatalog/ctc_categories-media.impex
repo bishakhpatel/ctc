@@ -1,0 +1,110 @@
+# -----------------------------------------------------------------------
+# [y] hybris Platform
+#
+# Copyright (c) 2000-2016 SAP SE or an SAP affiliate company.
+# All rights reserved.
+#
+# This software is the confidential and proprietary information of SAP
+# ("Confidential Information"). You shall not disclose such Confidential
+# Information and shall use it only in accordance with the terms of the
+# license agreement you entered into with SAP.
+# -----------------------------------------------------------------------
+# ImpEx for Importing Category Brands Medias into Apparel Store
+
+# Macros / Replacement Parameter definitions
+$productCatalog=ctcProductCatalog
+$productCatalogName=CTC Product Catalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
+$siteResource=jar:com.ctc.initialdata.constants.CtcInitialDataConstants&/ctcinitialdata/import/sampledata/productCatalogs/$productCatalog
+$logos=logo(code, $catalogVersion)
+$picture=picture(code, $catalogVersion)
+
+
+# Create medias
+INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];$media;mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
+#sample
+;96Wx96H;brand-logo-69Slam;$siteResource/images/96Wx96H/69_Slam.jpg;;;images
+
+
+# Update Categories with medias
+UPDATE Category;code[unique=true];$picture;$logos;$catalogVersion
+#sample
+;37204;brand-logo-69Slam;;
+;37205;;;
+;37206;;;
+;37207;;;
+;37208;;;
+;37209;;;
+;37210;;;
+;37211;;;
+;37212;;;
+;37213;;;
+;37214;;;
+;37215;;;
+;37216;;;
+;37217;;;
+;37218;;;
+;37219;;;
+;37220;;;
+;37221;;;
+;37222;;;
+;37223;;;
+;37224;;;
+;37225;;;
+;37226;;;
+;37227;;;
+;37228;;;
+;37229;;;
+;37230;;;
+;37231;;;
+;37232;;;
+;37233;;;
+;37234;;;
+;37235;;;
+;37236;;;
+;37237;;;
+;37238;;;
+;37239;;;
+;37240;;;
+;37241;;;
+;37242;;;
+;37243;;;
+;37244;;;
+;37245;;;
+;37246;;;
+;37247;;;
+;37248;;;
+;37249;;;
+;37250;;;
+;37251;;;
+;37252;;;
+;37253;;;
+;37254;;;
+;37255;;;
+;37256;;;
+;37257;;;
+;37258;;;
+;37259;;;
+;37260;;;
+;37261;;;
+;37262;;;
+;37263;;;
+;37264;;;
+;37265;;;
+;37266;;;
+;37267;;;
+;37268;;;
+;37269;;;
+;37270;;;
+;37271;;;
+;37272;;;
+;37273;;;
+;37274;;;
+;37275;;;
+
+
+
+
+
+
