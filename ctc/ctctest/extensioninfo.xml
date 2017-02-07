@@ -17,8 +17,7 @@
 			extensions which are automatically required -->
 
 		<requires-extension name="ctcfacades"/>
-		<requires-extension name="electronicsstore"/>
-		<requires-extension name="apparelstore"/>
+		<requires-extension name="ctcinitialdata"/>
 
 		<coremodule generated="true" manager="de.hybris.platform.jalo.extension.GenericManager" packageroot="com.ctc.test"/>
 			
