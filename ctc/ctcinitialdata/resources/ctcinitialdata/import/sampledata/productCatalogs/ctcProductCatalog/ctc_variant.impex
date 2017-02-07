@@ -1,0 +1,115 @@
+$lang=en
+$productCatalog=ctcProductCatalog
+$catalogVersion=catalogVersion(catalog(id[default='ctcProductCatalog']),version[default='Staged'])[unique=true,default='ctcProductCatalog:Staged']
+$baseProduct=baseProduct(code, catalogVersion(catalog(id[default='$productCatalog']),version[default='Staged']))
+
+INSERT_UPDATE ApparelStyleVariantProduct;$catalogVersion;$baseProduct;name[lang=$lang];code[unique=true]
+
+;;0765556P;"Centre de 10\u00a0cm (4\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765558
+;;0765556P;"Centre de 7,6\u00a0cm (3\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765557  
+;;0765556P;"Centre de 5\u00a0cm (2\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765556  
+;;1870275P;"Taille 7";1870276  
+;;1870275P;"Taille 8";1870277  
+;;1870275P;"Taille 10";1870279  
+;;1870275P;"Taille 9";1870278  
+;;1870275P;"Taille 6";1870275  
+;;1870252P;"Taille 9";  1870253  
+;;1870252P;"Taille 12"; 1870256  
+;;1870252P;"Taille 8";1870252  
+;;1870252P;"Taille 11"; 1870255  
+;;1870252P;"Taille 10"; 1870254  
+;;1870246P;"Taille 9";  1870247  
+;;1870246P;"Taille 8"; 1870246  
+;;1870246P;"Taille 12";1870250  
+;;1870246P;"Taille 13";1870251  
+;;1870246P;"Taille 11";1870249  
+;;1870246P;"Taille 10";1870248  
+;;1870240P;"Taille 8";  1870240  
+;;1870240P;"Taille 13";1870245  
+;;1870240P;"Taille 9"; 1870241  
+;;1870240P;"Taille 11";1870243  
+;;1870240P;"Taille 10";1870242  
+;;1870240P;"Taille 12";1870244  
+;;1870470P;"Tr\u00e8s grand";1870472  
+;;1870470P;"Tr\u00e8s tr\u00e8s grand";1870473  
+;;1870470P;"Grand";1870471  
+;;1870470P;"Moyen";1870470  
+;;1870474P;"Moyen";1870474  
+;;1870474P;"Tr\u00e8s grand";1870476  
+;;1870474P;"Tr\u00e8s tr\u00e8s grand";1870477  
+;;1870474P;"Grand";1870475  
+;;1870498P;"Moyen";1870499  
+;;1870498P;"Tr\u00e8s grand";1870501  
+;;1870498P;"Petit";1870498  
+;;1870498P;"Grand";1870500  
+;;1870478P;"Moyen";1870478  
+;;1870478P;"Tr\u00e8s grand";1870480  
+;;1870478P;"Tr\u00e8s tr\u00e8s grand";1870481  
+;;1870478P;"Grand";1870479  
+;;1870494P;"Tr\u00e8s grand";1870497  
+;;1870494P;"Moyen";1870495  
+;;1870494P;"Petit";1870494  
+;;1870494P;"Grand";1870496  
+;;1870490P;"Moyen";1870491  
+;;1870490P;"Grand";1870492  
+;;1870490P;"Petit";1870490  
+;;1870490P;"Tr\u00e8s grand"; 1870493  
+;;0762139P;"9,46 L";   0762141  
+;;0762139P;"4 L";0762140  
+;;0762139P;"1 L";0762139  
+;;0762122P;"Grenade";0762122  
+;;0762122P;"Nectarine";0762123  
+;;0762122P;"Eau fra\u00eeche";  0762124  
+;;0771640P;"12";0771644  
+;;0771640P;"8";0771640  
+;;0771640P;"11";0771643  
+;;0771640P;"9";0771641  
+;;0771640P;"10";0771642           
+;;0771645P;"9";0771646  
+;;0771645P;"10";0771647  
+;;0771645P;"8";0771645  
+;;0771645P;"12";0771649  
+;;0771645P;"11";0771648        
+;;0771650P;"8";0771650  
+;;0771650P;"11";0771653  
+;;0771650P;"12";0771654  
+;;0771650P;"9";0771651  
+;;0771650P;"10";0771652  
+;;1870166P;"Taille 7";1870166  
+;;1870166P;"Taille 12";1870171  
+;;1870166P;"Taille 9";1870168  
+;;1870166P;"Taille 8";1870167  
+;;1870166P;"Taille 11";1870170  
+;;1870166P;"Taille 10";1870169  
+;;1870156P;"Taille 10";  1870160  
+;;1870156P;"Taille 7";1870157  
+;;1870156P;"Taille 9";1870159  
+;;1870156P;"Taille 8";1870158  
+;;1870156P;"Taille 6";1870156  
+;;1870161P;"Taille 9";1870162  
+;;1870161P;"Taille 12";1870165  
+;;1870161P;"Taille 11";1870164  
+;;1870161P;"Taille 8";1870161  
+;;1870161P;"Taille 10";1870163  
+;;1870100P;"Taille 12";1870105  
+;;1870100P;"Taille 7";1870100  
+;;1870100P;"Taille 9";1870102  
+;;1870100P;"Taille 10";1870103  
+;;1870100P;"Taille 11";1870104  
+;;1870100P;"Taille 8";1870101  
+;;1870151P;"Taille 6";1870151  
+;;1870151P;"Taille 9";1870154  
+;;1870151P;"Taille 8";1870153  
+;;1870151P;"Taille 7";1870152  
+;;1870151P;"Taille 10";1870155  
+;;0765401P;"60 L - 65,5\u00a0cm L\u00a0x\u00a040\u00a0cm la. (25 3\/4\u00a0x\u00a015 3\/4\u00a0po)";  0765402  
+;;0765401P;"30 L - 55,5\u00a0cm L\u00a0x\u00a035\u00a0cm la. (22\u00a0x\u00a013 3\/4\u00a0po)";  0765401  
+;;0765405P;"Grand - 72\u00a0cm L\u00a0x\u00a041\u00a0cm la.\u00a0x\u00a032\u00a0cm H (28\u00a01\/2\u00a0x\u00a016\u00a0x\u00a012 1\/2\u00a0po)";  0765406  
+;;0765405P;"Moyen - 53\u00a0cm L\u00a0x\u00a034\u00a0cm la.\u00a0x\u00a025\u00a0cm H (21\u00a0x\u00a013\u00a01\/2\u00a0x\u00a010\u00a0po)";  0765405  
+;;0765593P;"Grand\u00a0: 24,1\u00a0cm dia.\u00a0x\u00a045,7\u00a0cm H (9\u00a01\/2\u00a0x\u00a018\u00a0po)";  0765594  
+;;0765593P;"Moyen\u00a0: 22,9\u00a0cm dia.\u00a0x\u00a038,1\u00a0cm H (9\u00a0x\u00a015\u00a0po)";  0765593  
+;;0765761P;"Grand\u00a0: 25\u00a0cm dia.\u00a0x\u00a023\u00a0cm H (10\u00a0x\u00a021\u00a0po)";  0765762  
+;;0765761P;"Petit\u00a0: 16,5\u00a0cm dia.\u00a0x\u00a046\u00a0cm H (6\u00a01\/2\u00a0x\u00a018\u00a0po)";  0765761  
+;;2992131P;"Bleu";  2992131  
+;;2992131P;"Rose";  2992132  
+           
