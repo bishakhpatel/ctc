@@ -25,7 +25,7 @@
 					</cms:pageSlot>
                 </div>
                 <div class="header__content">
-                <div class="site-caption">Canadian Tier Corporation</div>
+                <div class="site-caption">Canadian Tire Corporation</div>
                     <nav class="menu menu_main">
                         <input type="checkbox" id="main-menu-checkbox">
                         
@@ -46,6 +46,11 @@
                 <img class="menu__products__item__image" src="images/categories/tents.png" alt="Tents &amp; Accessories">
             </div>
             Tents &amp; Accessories          </a>
+            <ul>
+          <li><a href="#">Resets</a></li>
+          <li><a href="#">Grids</a></li>
+          <li><a href="#">Frameworks</a></li>
+        </ul>
 
                   </li>
                       <li class="menu__products__item">
@@ -70,6 +75,11 @@
                 <img class="menu__products__item__image" src="images/categories/air-beds.png" alt="Air Beds, Cots &amp; Pads/Mats">
             </div>
             Air Beds, Cots &amp; Pads/Mats          </a>
+            <ul>
+	          <li><a href="#">Resets</a></li>
+	          <li><a href="#">Grids</a></li>
+	          <li><a href="#">Frameworks</a></li>
+	        </ul>
 
                   </li>
                       <li class="menu__products__item">
