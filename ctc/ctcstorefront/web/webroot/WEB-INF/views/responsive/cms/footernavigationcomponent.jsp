@@ -4,7 +4,7 @@
 <%@ taglib prefix="footer" tagdir="/WEB-INF/tags/responsive/common/footer"  %>
 
 <c:if test="${component.visible}">
-	<div class="container-fluid">
+	<%-- <div class="container-fluid">
 	    <div class="footer__top">
 	        <div class="row">
 	            <div class="footer__left col-xs-12 col-sm-12 col-md-9">
@@ -41,11 +41,34 @@
 	            </div>
 	        </div>
 	    </div>
-	</div>
+	</div> --%>
 	
-	<div class="footer__bottom">
+	<footer class="footer">
+            <a href="#page-content" class="button footer__button_top" role="button">Top</a>
+            <div class="footer__wrapper">
+                <nav class="menu footer-main-menu col-md-7">
+                    <ul class="nav menu">
+<li class="item-10836 default current active"><a href="en/index.html">Home</a></li><li class="item-10838"><a href="en/faq.html">FAQ</a></li><li class="item-10840"><a href="en/contact-us.html">Contact us</a></li><li class="item-10842"><a href="en/site-map-en.html">Site map</a></li><li class="item-10863"><a href="en/privacy-policy.html">Privacy Policy</a></li><li class="item-10864"><a href="en/terms-conditions.html">Terms &amp; conditions</a></li></ul>
+
+                </nav>
+                <nav class="menu menu_social col-md-5">
+                                        <span class="menu_social__header">Connect With CTC Canada</span>
+                                        <ul class="nav menu">
+<li class="item-10854"><a href="https://www.facebook.com/" target="_blank"><img src="../_ui/responsive/theme-alpha/images/facebook.png" alt="Facebook Page"></a></li>
+<li class="item-10867"><a href="https://twitter.com/Woods_Canada" target="_blank"><img src="../_ui/responsive/theme-alpha/images/Twitter_icon.png" alt="Twitter Page"></a></li>
+<li class="item-10856"><a href="https://instagram.com/woodscanada"><img src="../_ui/responsive/theme-alpha/images/instagram.png" alt="Instagram Page"></a></li></ul>
+
+                </nav>
+            </div>
+        </footer>
+	
+	
+	
+	
+	
+	<%-- <div class="footer__bottom">
 	    <div class="footer__copyright">
 	        <div class="container">${notice}</div>
 	    </div>
-	</div>
+	</div> --%>
 </c:if>

@@ -49,8 +49,8 @@
     </div>
 </div>
 
-<div class="footer__bottom">
+<%-- <div class="footer__bottom">
     <div class="footer__copyright">
         <div class="container">${notice}</div>
     </div>
-</div>
+</div> --%>
