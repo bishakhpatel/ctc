@@ -9,7 +9,7 @@
 	var="autocompleteUrl" />
 
 <div class="ui-front">
-	<form name="search_form_${component.uid}" method="get"
+	<%-- <form name="search_form_${component.uid}" method="get"
 		action="${searchUrl}">
 		<div class="input-group">
 			<spring:theme code="search.placeholder" var="searchPlaceholder" />
@@ -29,6 +29,11 @@
 				</ycommerce:testId>
 			</span>
 		</div>
-	</form>
+	</form> --%>
+	
+	<form id="search-form" name="search_form_${component.uid}" action="${searchUrl}" class="search" method="GET" autocomplete="off">
+                    <input type="text" name="searchquery" class="search__input"><input type="submit" value="Search" class="search__button search__button_inactive">
+
+                                    </form>
 
 </div>

@@ -83,6 +83,13 @@
 
 		<script type="text/javascript" src="${commonResourcePath}/js/_autoload.js"></script>
 		
+		<script type="text/javascript">
+				$('.menu #first-menu , .menu__holder').hover(
+				  function(){$('.menu__holder').css('display', 'block')}, 
+				  function(){$('.menu__holder').css('display', 'none')}
+				);
+		</script>
+		
 		<%-- Cms Action JavaScript files --%>
 		<c:forEach items="${cmsActionsJsFiles}" var="actionJsFile">
 		    <script type="text/javascript" src="${commonResourcePath}/js/cms/${actionJsFile}"></script>

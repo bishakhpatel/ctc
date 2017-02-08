@@ -15,7 +15,172 @@
 </cms:pageSlot>
 
 <header class="js-mainHeader">
-	<nav class="navigation navigation--top hidden-xs hidden-sm">
+
+<header class="header">
+            <div class="header__wrapper">
+                <div class="logo">
+                	<!-- <a href="en.html"><img src="templates/woods/image/en-gb/logo.png" alt="logo"></a> -->
+                	<cms:pageSlot position="SiteLogo" var="logo" limit="1">
+						<cms:component component="${logo}" element="div" class="yComponentWrapper"/>
+					</cms:pageSlot>
+                </div>
+                <div class="header__content">
+                <div class="site-caption">Canadian Tier Corporation</div>
+                    <nav class="menu menu_main">
+                        <input type="checkbox" id="main-menu-checkbox">
+                        
+                        <label for="main-menu-checkbox" onclick=""></label>
+                        <ul class="nav menu" id="products-menu-trigger">
+<li class="item" id="first-menu"><a href="en/products.html" class="menu__item menu_main__item">Products</a></li>
+<li class="item"><a href="en/inspiration.html" class="menu__item menu_main__item">Inspiration</a></li>
+<li class="item"><a href="en/woods-legacy.html" class="menu__item menu_main__item">Wood Legacy</a></li>
+<li class="item"><a href="en/where-to-buy.html" class="menu__item menu_main__item">Where to buy</a></li>
+</ul>
+<div class="menu__holder" id="products-menu" style="display:none">   
+  <nav class="menu menu__products">
+    <header class="menu__products__header" data-products-menu-title="">Products</header>
+    <ul class="menu__products__items">
+                      <li class="menu__products__item">
+          <a href="en/products/category/tents-accessories.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/tents.png" alt="Tents &amp; Accessories">
+            </div>
+            Tents &amp; Accessories          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/water-coolers.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/sunscreen.png" alt="Water Bottles &amp; Coolers">
+            </div>
+            Water Bottles &amp; Coolers          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/sleeping-bags.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/sleeping-bag.png" alt="Sleeping Bags">
+            </div>
+            Sleeping Bags          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/air-beds-cots-pads-mats.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/air-beds.png" alt="Air Beds, Cots &amp; Pads/Mats">
+            </div>
+            Air Beds, Cots &amp; Pads/Mats          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/stoves-cooking-accessories.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/stoves.png" alt="Stoves &amp; Cooking Accessories">
+            </div>
+            Stoves &amp; Cooking Accessories          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/lighting-accessories.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/lighting.png" alt="Lighting &amp; Accessories">
+            </div>
+            Lighting &amp; Accessories          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/backpacks-daypacks.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/bakcpacks.png" alt="Backpacks &amp; Daypacks">
+            </div>
+            Backpacks &amp; Daypacks          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/camping-furniture.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/chair.png" alt="Camping Furniture">
+            </div>
+            Camping Furniture          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/apparel.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/apparel.png" alt="Footwear &amp; Apparel">
+            </div>
+            Footwear &amp; Apparel          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/shelters-canopies-screenhouses.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/shelters.png" alt="Shelters &amp; Canopies/Screenhouses">
+            </div>
+            Shelters &amp; Canopies/Screenhouses          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/knives-multi-tools-accessories.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/knife.png" alt="Multi-Tools &amp; Camping Accessories">
+            </div>
+            Multi-Tools &amp; Camping Accessories          </a>
+
+                  </li>
+                      <li class="menu__products__item">
+          <a href="en/products/category/fishing-accessories.html">
+            <div class="menu__products__item__holder">
+                <img class="menu__products__item__image" src="images/categories/fishing.png" alt="Fishing &amp; Accessories">
+            </div>
+            Fishing &amp; Accessories          </a>
+
+                  </li>
+          </ul>
+  </nav>
+  <aside class="menu__banner" style="display:none" data-products-menu-banner=""></aside>
+</div>
+
+                    </nav>
+                </div>
+                <%-- <nav class="menu menu_second">
+                    <ul>
+                        <li class="menu__item menu_second__item"><div class="mod-languages">
+
+	<ul class="lang-inline">
+						<li class="" dir="ltr">
+			<a href="fr/index.html">
+							Français						</a>
+			</li>
+							</ul>
+
+</div>
+</li>
+                        <li class="menu__item menu_second__item"><ul class="nav menu">
+<li class="item-10844"><a href="en/contact-us.html">CONTACT US</a></li></ul>
+</li>
+                    </ul>
+                </nav> --%>
+                                <!-- <form id="predictive-search-form" action="http://woods.ca/en/products/searchresult" class="search" method="GET" autocomplete="off">
+                    <input type="text" name="searchquery" class="search__input"><input type="submit" value="Search" class="search__button search__button_inactive" disabled="">
+                    <div class="search__autocomplete" id="predictive-search-results">
+                        <ul class="no-list search__autocomplete__items"></ul>
+                    </div>
+                                    </form> -->
+                                    <cms:pageSlot position="SearchBox" var="component">
+									<cms:component component="${component}" element="div"/>
+								</cms:pageSlot>
+
+            </div>
+        </header>
+
+
+
+
+
+
+
+	<%-- <nav class="navigation navigation--top hidden-xs hidden-sm">
 		<div class="row">
 			<div class="col-sm-12 col-md-4">
 				<div class="nav__left js-site-logo">
@@ -80,9 +245,9 @@
 				</div>
 			</div>
 		</div>
-	</nav>
+	</nav> --%>
 	<%-- a hook for the my account links in desktop/wide desktop--%>
-	<div class="hidden-xs hidden-sm js-secondaryNavAccount collapse" id="accNavComponentDesktopOne">
+	<!-- <div class="hidden-xs hidden-sm js-secondaryNavAccount collapse" id="accNavComponentDesktopOne">
 		<ul class="nav__links">
 
 		</ul>
@@ -91,8 +256,8 @@
 		<ul class="nav__links js-nav__links">
 
 		</ul>
-	</div>
-	<nav class="navigation navigation--middle js-navigation--middle">
+	</div> -->
+	<%-- <nav class="navigation navigation--middle js-navigation--middle">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="mobile__nav__row mobile__nav__row--table">
@@ -174,9 +339,9 @@
 				</div>
 			</div>
 		</div>
-	</nav>
-	<a id="skiptonavigation"></a>
-	<nav:topNavigation />
+	</nav> --%>
+	<!-- <a id="skiptonavigation"></a> -->
+	<%-- <nav:topNavigation /> --%>
 </header>
 
 
