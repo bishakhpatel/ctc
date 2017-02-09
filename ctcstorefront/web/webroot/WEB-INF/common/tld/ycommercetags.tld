@@ -11,7 +11,7 @@
 
 	<tag>
 		<name>testId</name>
-		<tag-class>de.hybris.ctc.storefront.tags.TestIdTag</tag-class>
+		<tag-class>com.ctc.storefront.tags.TestIdTag</tag-class>
 		<body-content>scriptless</body-content>
 		<info>Render a text id wrapper</info>
 		<attribute>
