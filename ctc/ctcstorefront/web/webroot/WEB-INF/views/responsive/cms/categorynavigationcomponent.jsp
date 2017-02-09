@@ -3,8 +3,10 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="cms" uri="http://hybris.com/tld/cmstags"%>
 
+<c:set var="hasSubChild" value="true"/>
 <div class="header__wrapper">
                 <div class="logo">
+                	<!-- <a href="en.html"><img src="templates/woods/image/en-gb/logo.png" alt="logo"></a> -->
                 	<cms:pageSlot position="SiteLogo" var="logo" limit="1">
 						<cms:component component="${logo}" element="div" class="yComponentWrapper"/>
 					</cms:pageSlot>
@@ -12,6 +14,9 @@
                 <div class="header__content">
                 <div class="site-caption">Canadian Tire Corporation</div>
                     <nav class="menu menu_main">
+                        <input type="checkbox" id="main-menu-checkbox">
+                        
+                        <label for="main-menu-checkbox" onclick=""></label>
                         <ul class="nav menu" id="products-menu-trigger">
                         <c:forEach items="${component.navigationNode.children}" var="childLevel1">
                         	<li class="item" id="first-menu">
@@ -20,10 +25,11 @@
 								</c:forEach>
                         	</li>
                         </c:forEach>
-				<li class="item"><a href="en/inspiration.html" class="menu__item menu_main__item">Inspiration</a></li>
-				<li class="item"><a href="en/woods-legacy.html" class="menu__item menu_main__item">CTC Legacy</a></li>
-				<li class="item"><a href="en/where-to-buy.html" class="menu__item menu_main__item">Where to buy</a></li>
-				</ul>
+<!-- <li class="item" id="first-menu"><a href="en/products.html" class="menu__item menu_main__item">Products</a></li> -->
+<li class="item"><a href="en/inspiration.html" class="menu__item menu_main__item">Inspiration</a></li>
+<li class="item"><a href="en/woods-legacy.html" class="menu__item menu_main__item">Wood Legacy</a></li>
+<li class="item"><a href="en/where-to-buy.html" class="menu__item menu_main__item">Where to buy</a></li>
+</ul>
 <div class="menu__holder" id="products-menu" style="display:none">
 	<nav class="menu menu__products">
 	    <!-- <header class="menu__products__header" data-products-menu-title="">Products</header> -->
