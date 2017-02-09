@@ -16,8 +16,8 @@ $productCatalog=ctcProductCatalog
 $contentCatalog=ctcContentCatalog
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged]
 $defaultLanguage=en
-$storeUid=ctc-store
-$siteUid=ctc-site
+$storeUid=ctc
+$siteUid=ctc
 
 
 # CMS Site - Update the theme to be responsive

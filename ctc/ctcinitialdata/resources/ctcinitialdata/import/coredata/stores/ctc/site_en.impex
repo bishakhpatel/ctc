@@ -10,12 +10,12 @@
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
 #
-# Create the Responsive Apparel UK Store
+# Import the CMS Site configuration for the Apparel DE Store
 #
 
-$storeUid=ctc-store
-$checkoutFlowGroup=responsiveCheckoutGroup
+# Language
+$lang=en
 
-# Base Store - Update the checkout flow for responsive
-INSERT_UPDATE BaseStore;uid[unique=true];checkoutFlowGroup;
-;$storeUid;$checkoutFlowGroup;
+# Create CMS Site
+UPDATE CMSSite;uid[unique=true];name[lang=$lang];locale[lang=$lang]
+ ;ctc;"CTC Site CA";en

@@ -9,8 +9,8 @@
 # Information and shall use it only in accordance with the terms of the
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
-$storeUid=ctc-store
-$cmsSiteUid=ctc-site
+$storeUid=ctc
+$cmsSiteUid=ctc
 $defaultCurrency=USD
 $defaultLanguage=en
 $googleHost=setthethirdpartyhost

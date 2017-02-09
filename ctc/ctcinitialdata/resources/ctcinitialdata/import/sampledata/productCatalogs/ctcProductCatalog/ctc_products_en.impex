@@ -2,7 +2,7 @@ $lang=en
 $catalogVersion=catalogVersion(catalog(id[default='ctcProductCatalog']),version[default='Staged'])[unique=true,default='ctcProductCatalog:Staged']
 
 
-INSERT_UPDATE ApparelProduct;varianttype(code);code[unique=true];ean;name[lang=$lang];summary[lang=$lang,dafultPa];$catalogVersion
+INSERT_UPDATE ApparelProduct;varianttype(code);code[unique=true];ean;name[lang=$lang];summary[lang=$lang];$catalogVersion
 
 ;ApparelStyleVariantProduct;	0762270P	;	76-2270-4	;	Woodsâ„¢  Camouflage Camp Cot	;"Woodsâ„¢  Camouflage Camp Cot features an easy-fold frame system for easy transport and storage:|:Made from a heavy-duty X-brace construction with a durable, powder-coated, rust-resistant steel frame:|:No end bars for increased usable resting space:|:Weather-resistant, PVC-coated 600-denier polyester rip-stop fabric:|:Quick set-up and increased stability:|:Includes a carry bag:|:Product weight: 25.5 lbs (11.5 kg):|:User weight capacity: 300 lbs (136 kg):|:Dimensions: 82-5/16 L x 31-1/2 W x 18-7/8"" H (209 x 80 x 48 cm)"
 ;ApparelStyleVariantProduct;	0762639P	;	76-2639-0	;	Woodsâ„¢  Butane Gas, 227-g	;"Woodsâ„¢  Butane Gas is ideal for use in camping stoves, lanterns and heaters:|:Available in a 227 g canister"

@@ -17,11 +17,11 @@ $catalogVersions=catalogVersions(catalog(id),version);
 $serverConfigName=ctcSolrServerConfig
 $indexConfigName=ctcSolrIndexConfig
 $searchConfigName=ctcPageSize
-$facetSearchConfigName=ctc-caIndex
+$facetSearchConfigName=ctcIndex
 $facetSearchConfigDescription=CTC CA Solr Index
 $searchIndexNamePrefix=ctc
 $solrIndexedType=ctcProductType
-$indexBaseSite=ctc-site
+$indexBaseSite=ctc
 $indexLanguages=en
 $indexCurrencies=USD
 

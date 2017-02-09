@@ -1,4 +1,4 @@
-$lang=en
+$lang=fr
 $productCatalog=ctcProductCatalog
 $catalogVersion=catalogVersion(catalog(id[default='ctcProductCatalog']),version[default='Staged'])[unique=true,default='ctcProductCatalog:Staged']
 $baseProduct=baseProduct(code, catalogVersion(catalog(id[default='$productCatalog']),version[default='Staged']))

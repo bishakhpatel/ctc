@@ -15,7 +15,7 @@
 $productCatalog=ctcProductCatalog
 $currencies=USD
 $net=false
-$storeUid=ctc-store
+$storeUid=ctc
 $defaultCurrency=USD
 $languages=en
 $defaultLanguage=en
@@ -35,9 +35,9 @@ INSERT_UPDATE BaseStore;uid[unique=true];catalogs(id);currencies(isocode);net;ta
 ;$storeUid;$productCatalog;$currencies;$net;uk-taxes;miles;$defaultCurrency;$languages;$defaultLanguage;$deliveryCountries;$orderProcessCode;$pickupInStoreMode;$paymentProvider;$expressCheckoutEnabled;300;apparelCheckoutGroup;$returnProcessCode;
 
 INSERT_UPDATE BaseStore2DeliveryModeRel;source(uid)[unique=true];target(code)[unique=true]
-;ctc-store;premium-net
-;ctc-store;standard-net
-;ctc-store;premium-gross
-;ctc-store;standard-gross
-;ctc-store;pickup
-;ctc-store;free-standard-shipping
+;ctc;premium-net
+;ctc;standard-net
+;ctc;premium-gross
+;ctc;standard-gross
+;ctc;pickup
+;ctc;free-standard-shipping
