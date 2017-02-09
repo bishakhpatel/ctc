@@ -85,11 +85,10 @@ public class InitialDataSystemSetup extends AbstractSystemSetup
 	public void createProjectData(final SystemSetupContext context)
 	{
 		final List<ImportData> importData = new ArrayList<ImportData>();
-
 		final ImportData ctcImportData = new ImportData();
 		ctcImportData.setProductCatalogName(CTC);
-		ctcImportData.setContentCatalogNames(Arrays.asList("ctc"));
-		ctcImportData.setStoreNames(Arrays.asList("ctc-store"));
+		ctcImportData.setContentCatalogNames(Arrays.asList(CTC));
+		ctcImportData.setStoreNames(Arrays.asList(CTC));
 		importData.add(ctcImportData);
 
 		getCoreDataImportService().execute(this, context, importData);

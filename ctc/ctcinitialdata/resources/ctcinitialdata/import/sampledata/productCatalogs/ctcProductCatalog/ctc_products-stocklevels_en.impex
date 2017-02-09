@@ -9,13 +9,21 @@
 # Information and shall use it only in accordance with the terms of the
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
-#
-# Import the Apparel UK Store
-#
+#******************************This file is generated - please do not edit it. It will be regenerated after every build.********************************#
+# ImpEx for Importing Products stock levels into Apparel Store
+
+# Macros / Replacement Parameter definitions
 
 # Language
 $lang=en
 
-# Create Base Store
-UPDATE BaseStore;uid[unique=true];name[lang=$lang]
- ;ctc-store;"CTC Store CA"
+
+# Create Vendor for Apparel Store
+UPDATE Vendor;code[unique=true];name[lang=$lang]
+ ;apparello;Apparello;
+
+
+# Create some Warehouses for the Vendor
+UPDATE Warehouse;code[unique=true];name[lang=$lang]
+;ctc_warehouse;CTC Warehouse;
+ 

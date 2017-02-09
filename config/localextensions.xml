@@ -43,7 +43,7 @@
 	<extension name='ctccockpits'/>
 	<extension name='ctccore'/>
 	<extension name='ctcfacades'/>
-	<extension name='ctctest'/>
+	<!-- <extension name='ctctest'/> -->
 	<extension name='ctcstorefront'/>
 	<extension name='ctcinitialdata'/>
 	

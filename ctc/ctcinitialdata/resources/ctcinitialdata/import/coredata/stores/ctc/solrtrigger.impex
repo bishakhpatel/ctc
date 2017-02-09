@@ -10,12 +10,13 @@
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
 #
-# Import the CMS Site configuration for the Apparel DE Store
+# Import the Solr CronJob Trigger configuration for the CTC store
 #
 
-# Language
-$lang=en
+INSERT_UPDATE Trigger;cronJob(code)[unique=true];second;minute;hour;day;month;year;relative;active;maxAcceptableDelay
 
-# Create CMS Site
-UPDATE CMSSite;uid[unique=true];name[lang=$lang];locale[lang=$lang]
- ;ctc-site;"CTC Site CA";en
+# Run the full-apparel-ukIndex-cronJob at 3:05 AM every day
+;full-ctcIndex-cronJob;0;5;3;-1;-1;-1;false;false;-1
+
+# Run the update-apparel-ukIndex-cronJob every 1 minutes
+;update-ctcIndex-cronJob;0;1;-1;-1;-1;-1;true;false;-1
