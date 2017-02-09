@@ -45,26 +45,26 @@
 	</mvc:annotation-driven>
 
 	<!-- Scan for annotation configured controller -->
-	<context:component-scan base-package="de.hybris.ctc.storefront" scope-resolver="de.hybris.platform.spring.IgnoreTenantScopeMetadataResolver"  />
+	<context:component-scan base-package="com.ctc.storefront" scope-resolver="de.hybris.platform.spring.IgnoreTenantScopeMetadataResolver"  />
 
     
 
 	<!-- Data Value Processor -->
 	<alias name="crfRequestDataValueProcessor" alias="requestDataValueProcessor"/>
 
-	<bean name="defaultRequestDataValueProcessor" class="de.hybris.ctc.storefront.util.DefaultRequestDataProcessor" />
-	<bean name="crfRequestDataValueProcessor" class="de.hybris.ctc.storefront.util.CSRFRequestDataValueProcessor"/>
+	<bean name="defaultRequestDataValueProcessor" class="com.ctc.storefront.util.DefaultRequestDataProcessor" />
+	<bean name="crfRequestDataValueProcessor" class="com.ctc.storefront.util.CSRFRequestDataValueProcessor"/>
 
 
 	<!--This is a bean post-processor for RequestMappingHandlerAdapter-->
-	<bean class="de.hybris.ctc.storefront.web.mvc.RequestMappingHandlerAdapterConfigurer" init-method="init">
+	<bean class="com.ctc.storefront.web.mvc.RequestMappingHandlerAdapterConfigurer" init-method="init">
 		<property name="urlPathHelper">
-			<bean class="de.hybris.ctc.storefront.web.mvc.AcceleratorUrlPathHelper"/>
+			<bean class="com.ctc.storefront.web.mvc.AcceleratorUrlPathHelper"/>
 		</property>
 	</bean>
 
 	<alias name="defaultRequireHardLoginEvaluator" alias="requireHardLoginEvaluator" />
-	<bean id="defaultRequireHardLoginEvaluator" class="de.hybris.ctc.storefront.security.evaluator.impl.RequireHardLoginEvaluator" >
+	<bean id="defaultRequireHardLoginEvaluator" class="com.ctc.storefront.security.evaluator.impl.RequireHardLoginEvaluator" >
 		<property name="userService" ref="userService"/>
 		<property name="cookieGenerator" ref="guidCookieGenerator"/>
 		<property name="sessionService" ref="sessionService"/>
@@ -75,40 +75,40 @@
 	<alias name="defaultBeforeControllerHandlersList" alias="beforeControllerHandlersList" />
 	<util:list id="defaultBeforeControllerHandlersList" >
 		<!-- List of handlers to run -->
-		<bean class="de.hybris.ctc.storefront.interceptors.beforecontroller.SecurityUserCheckBeforeControllerHandler" />
-		<bean class="de.hybris.ctc.storefront.interceptors.beforecontroller.RequireHardLoginBeforeControllerHandler" >
+		<bean class="com.ctc.storefront.interceptors.beforecontroller.SecurityUserCheckBeforeControllerHandler" />
+		<bean class="com.ctc.storefront.interceptors.beforecontroller.RequireHardLoginBeforeControllerHandler" >
 				<property name="redirectStrategy" ref="redirectStrategy"/>
 				<property name="loginUrl" value="/login"/>
 				<property name="loginAndCheckoutUrl" value="/login/checkout"/>
 				<property name="requireHardLoginEvaluator" ref="requireHardLoginEvaluator"/>
 		</bean>
-		<bean class="de.hybris.ctc.storefront.interceptors.beforecontroller.DeviceDetectionBeforeControllerHandler" />
-		<bean class="de.hybris.ctc.storefront.interceptors.beforecontroller.SetLanguageBeforeControllerHandler" />
-		<bean class="de.hybris.ctc.storefront.interceptors.beforecontroller.SetUiExperienceBeforeControllerHandler" />
-		<bean class="de.hybris.ctc.storefront.interceptors.beforecontroller.ThemeBeforeControllerHandler" />
+		<bean class="com.ctc.storefront.interceptors.beforecontroller.DeviceDetectionBeforeControllerHandler" />
+		<bean class="com.ctc.storefront.interceptors.beforecontroller.SetLanguageBeforeControllerHandler" />
+		<bean class="com.ctc.storefront.interceptors.beforecontroller.SetUiExperienceBeforeControllerHandler" />
+		<bean class="com.ctc.storefront.interceptors.beforecontroller.ThemeBeforeControllerHandler" />
 	</util:list>
 	
 	<alias name="defaultBeforeViewHandlersList" alias="beforeViewHandlersList" />
 	<util:list id="defaultBeforeViewHandlersList"  >
 	<!-- The CmsPageBeforeViewHandler could change the target view, so it should be run first. -->
-		<bean class="de.hybris.ctc.storefront.interceptors.beforeview.CmsPageBeforeViewHandler" />
-		<bean class="de.hybris.ctc.storefront.interceptors.beforeview.UiThemeResourceBeforeViewHandler" >
+		<bean class="com.ctc.storefront.interceptors.beforeview.CmsPageBeforeViewHandler" />
+		<bean class="com.ctc.storefront.interceptors.beforeview.UiThemeResourceBeforeViewHandler" >
 			<property name="defaultThemeName" value="blue"/>
 		</bean>
-		<bean class="de.hybris.ctc.storefront.interceptors.beforeview.SeoRobotsFollowBeforeViewHandler" >
+		<bean class="com.ctc.storefront.interceptors.beforeview.SeoRobotsFollowBeforeViewHandler" >
 			<property name="robotIndexForJSONMapping">
 				<map>
 					<entry key="/search" value="noindex,follow" />
 				</map>
 			</property>
 		</bean>
-		<bean class="de.hybris.ctc.storefront.interceptors.beforeview.UiExperienceMetadataViewHandler"  />
-		<bean class="de.hybris.ctc.storefront.interceptors.beforeview.AnalyticsPropertiesBeforeViewHandler" />
-		<bean class="de.hybris.ctc.storefront.interceptors.beforeview.ConfigWro4jBeforeViewHandler" >
+		<bean class="com.ctc.storefront.interceptors.beforeview.UiExperienceMetadataViewHandler"  />
+		<bean class="com.ctc.storefront.interceptors.beforeview.AnalyticsPropertiesBeforeViewHandler" />
+		<bean class="com.ctc.storefront.interceptors.beforeview.ConfigWro4jBeforeViewHandler" >
 			<property name="siteConfigService" ref="siteConfigService"/>
 		</bean>
-		<bean class="de.hybris.ctc.storefront.interceptors.beforeview.DebugInfoBeforeViewHandler" />
-		<bean class="de.hybris.ctc.storefront.interceptors.beforeview.CartRestorationBeforeViewHandler">
+		<bean class="com.ctc.storefront.interceptors.beforeview.DebugInfoBeforeViewHandler" />
+		<bean class="com.ctc.storefront.interceptors.beforeview.CartRestorationBeforeViewHandler">
 			<property name="sessionService" ref="sessionService" />
 			<property name="pagesToShowModifications">
 				<list>
@@ -116,12 +116,12 @@
 				</list>
 			</property>
 		</bean>
-		<bean class="de.hybris.ctc.storefront.interceptors.beforeview.GoogleMapsBeforeViewHandler" />
+		<bean class="com.ctc.storefront.interceptors.beforeview.GoogleMapsBeforeViewHandler" />
 	</util:list>
 	
 	<!-- Interceptor that runs once per request and before the controller handler method is called -->
 	<alias name="defaultBeforeControllerHandlerInterceptor" alias="beforeControllerHandlerInterceptor" />
-	<bean id="defaultBeforeControllerHandlerInterceptor" class="de.hybris.ctc.storefront.interceptors.BeforeControllerHandlerInterceptor" >
+	<bean id="defaultBeforeControllerHandlerInterceptor" class="com.ctc.storefront.interceptors.BeforeControllerHandlerInterceptor" >
 		<property name="beforeControllerHandlers">
 			<ref bean="beforeControllerHandlersList" />	
 		</property>
@@ -129,7 +129,7 @@
 
 	<!-- Interceptor that runs BeforeViewHandlers before the view is rendered -->
 	<alias name="defaultBeforeViewHandlerInterceptor" alias="beforeViewHandlerInterceptor" />
-	<bean id="defaultBeforeViewHandlerInterceptor" class="de.hybris.ctc.storefront.interceptors.BeforeViewHandlerInterceptor" >
+	<bean id="defaultBeforeViewHandlerInterceptor" class="com.ctc.storefront.interceptors.BeforeViewHandlerInterceptor" >
 		<property name="beforeViewHandlers">
 			<ref bean="beforeViewHandlersList" />	
 		</property>
@@ -138,7 +138,7 @@
 	<util:list id="csrfAllowedUrlPatternsList" />
 	
 	<!-- CSRF Handler Interceptor -->
-	<bean name="csrfHandlerInterceptor" class="de.hybris.ctc.storefront.util.CSRFHandlerInterceptor">
+	<bean name="csrfHandlerInterceptor" class="com.ctc.storefront.util.CSRFHandlerInterceptor">
 		<property name="csrfAllowedUrlPatterns" ref="csrfAllowedUrlPatternsList"/>
 	</bean>
 
@@ -157,7 +157,7 @@
 	</mvc:interceptors>
 
 	<!-- Tell Spring MVC how to find its jsp files -->
-	<bean id="viewResolver" class="de.hybris.ctc.storefront.web.view.UiExperienceViewResolver" >
+	<bean id="viewResolver" class="com.ctc.storefront.web.view.UiExperienceViewResolver" >
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
 		<property name="prefix" value="/WEB-INF/views/"/>
 		<property name="addOnPrefix" value="addons/"/>
@@ -196,7 +196,7 @@
 	<!-- theme message source - falls back to the messageSource -->
 	<alias name="storefrontMessageSource" alias="themeSource" />
 	<alias name="storefrontMessageSource" alias="messageSource" />
-	<bean id="storefrontMessageSource" class="de.hybris.ctc.storefront.web.theme.StorefrontResourceBundleSource">
+	<bean id="storefrontMessageSource" class="com.ctc.storefront.web.theme.StorefrontResourceBundleSource">
 		<property name="basenamePrefix" value="/WEB-INF/messages/" />
 		<property name="basePrefix" value="base" />
 		<property name="sitePrefix" value="site" />
@@ -214,13 +214,13 @@
 
 	<!-- Theme Resolver Will resolve Theme from current page and then current cms site -->
 	<alias name="uiExperienceSiteThemeResolver" alias="themeResolver"/>
-	<bean id="uiExperienceSiteThemeResolver" class="de.hybris.ctc.storefront.web.theme.UiExperienceSiteThemeResolver" >
+	<bean id="uiExperienceSiteThemeResolver" class="com.ctc.storefront.web.theme.UiExperienceSiteThemeResolver" >
 		<property name="cmsSiteService" ref="cmsSiteService"/>
 		<property name="uiExperienceService" ref="uiExperienceService"/>
 		<property name="defaultThemeName" value="blue"/>
 	</bean>
 	
-	<bean id="localeResolver" class="de.hybris.ctc.storefront.web.i18n.StoreSessionLocaleResolver" >
+	<bean id="localeResolver" class="com.ctc.storefront.web.i18n.StoreSessionLocaleResolver" >
 		<property name="i18NService" ref="i18NService"/>
 	</bean>
 
@@ -322,7 +322,7 @@
 	</util:map>
 
 	<alias name="defaultPreviewDataModelUrlResolver" alias="previewDataModelUrlResolver" />
-	<bean id="defaultPreviewDataModelUrlResolver" class="de.hybris.ctc.storefront.url.DefaultPreviewDataModelUrlResolver" >
+	<bean id="defaultPreviewDataModelUrlResolver" class="com.ctc.storefront.url.DefaultPreviewDataModelUrlResolver" >
 		<property name="productModelUrlResolver" ref="productModelUrlResolver"/>
 		<property name="categoryModelUrlResolver" ref="categoryModelUrlResolver"/>
 		<property name="pageMapping">
