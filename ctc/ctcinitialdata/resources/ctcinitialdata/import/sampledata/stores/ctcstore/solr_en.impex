@@ -14,7 +14,7 @@
 #
 $lang=en
 
-$facetSearchConfigName=ctcstoreIndex
+$facetSearchConfigName=ctcIndex
 $indexedType=ctcProductType
 $contentCatalogName=ctcContentCatalog
 $contentCatalogVersion=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalogName]),CatalogVersion.version[default=Staged])[default=$contentCatalogName:Staged]
