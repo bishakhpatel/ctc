@@ -7,6 +7,9 @@
     <extension name='solrfacetsearchbackoffice' />
     <extension name='solrserver' />
     <extension name='ycommercewebservices' />
+	<extension name="hmc" dir="${HYBRIS_BIN_DIR}/ext-platform-optional/hmc" />
+		<extension name="platformhmc" dir="${HYBRIS_BIN_DIR}/ext-platform-optional/platformhmc" />
+		<extension name="virtualjdbc" dir="${HYBRIS_BIN_DIR}/ext-platform-optional/virtualjdbc" />
     <!-- <extension name='electronicsstore' /> 
     <extension name='apparelstore' />-->
     <extension name='liveeditaddon' />
