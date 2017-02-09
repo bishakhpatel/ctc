@@ -1,0 +1,107 @@
+# -----------------------------------------------------------------------
+# [y] hybris Platform
+#
+# Copyright (c) 2000-2016 SAP SE or an SAP affiliate company.
+# All rights reserved.
+#
+# This software is the confidential and proprietary information of SAP
+# ("Confidential Information"). You shall not disclose such Confidential
+# Information and shall use it only in accordance with the terms of the
+# license agreement you entered into with SAP.
+# -----------------------------------------------------------------------
+#******************************This file is generated - please do not edit it. It will be regenerated after every build.********************************#
+# ImpEx for Importing Categories into Apparel Store 
+
+# Macros / Replacement Parameter definitions
+$catalogVersion=catalogVersion(catalog(id[default='ctcProductCatalog']),version[default='Staged'])[unique=true,default='ctcProductCatalog:Staged']
+
+# Language
+$lang=en
+
+# Create Categories
+INSERT_UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];description[lang=$lang]
+;37204;;Sleeping Bags;sleeping-bags
+;37206;;Air Beds, Cots & Pads/Mats;air-beds-cots-pads-mats
+;37208;;Air Beds;air-beds
+;37210;;Cots;cots
+;37212;;Pads/Mats;pads-mats
+;37214;;Stoves & Cooking Accessories;stoves-cooking-accessories
+;37216;;Cooking Utensils;cooking-utensils
+;37218;;Plates, Cups & Bowls;plates-cups-bowls
+;37220;;Fuel & Accessories;fuel-accessories
+;37222;;Stoves;stoves
+;37224;;Cookware;cookware
+;37226;;Clean Up;clean-up
+;37228;;Lighting & Accessories;lighting-accessories
+;37230;;Headlamps;headlamps
+;37232;;Lanterns;lanterns
+;37234;;Backpacks & Daypacks;backpacks-daypacks
+;37236;;Backpacks;backpacks
+;37238;;Daypacks;daypacks
+;37240;;Hydration Packs;hydration-packs
+;37242;;Chairs & Tables;chairs-tables
+;37244;;Chairs;chairs
+;37246;;Tables;tables
+;37248;;Footwear & Apparel;apparel
+;37250;;Footwear;footwear
+;37252;;Jackets & Pants;jackets-pants
+;37254;;Shelters & Canopies/Screenhouses;shelters-canopies-screenhouses
+;37256;;Shelters;shelters
+;37258;;Canopies/Screenhouses;canopies-screenhouses
+;37260;;Knives, Multi-Tools & accessories;knives-multi-tools-accessories
+;37262;;Axes;axes
+;37264;;Saws;saws
+;37266;;Sunscreen & Bug Repellents;sunscreen-bug-repellents
+;37268;;Sunscreens;sunscreens
+;37270;;Insect repellants;insect-repellants
+;37272;;Fishing & Accessories;fishing-accessories
+;37274;;Waders;waders
+
+
+# Language
+$lang=fr
+
+# Create Categories
+INSERT_UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];description[lang=$lang]
+;37205;;Sacs de couchage;sacs-de-couchage
+;37207;;Lits pneumatiques, de camp et matelas;lits-pneumatiques-cots-et-matelas-tapis
+;37209;;Lits pneumatiques;lits-pneumatiques
+;37211;;Cots;cots
+;37213;;Matelas/Tapis;matelas-tapis
+;37215;;RÃ©chauds et accessoires de cuisine;rechauds-et-accessoires-de-cuisine
+;37217;;Ustensiles de cuisine;ustensiles-de-cuisine
+;37219;;Assiettes, tasses et bols;assiettes-tasses-et-bols
+;37221;;Carburant et accessoires;carburant-et-accessoires
+;37223;;RÃ©chauds;rechauds
+;37225;;Batterie de cuisine;batterie-de-cuisine
+;37227;;Nettoyer;nettoyer
+;37229;;Ã‰clairage et accessoires;lampes-et-accessoires
+;37231;;Lampes frontales;lampes-frontales
+;37233;;Lanternes;lanternes
+;37235;;Sacs Ã  dos;sacs-a-dos
+;37237;;Sacs Ã  dos;sacs-a-dos
+;37239;;Sacs de promenade;sacs-de-promenade
+;37241;;Sacs d'hydratation;sacs-d-hydratation
+;37243;;Fauteuils et tables;fauteuils-et-tables-de-camping
+;37245;;Fauteuils de camping;fauteuils-de-camping
+;37247;;Tables de camping;tables-de-camping
+;37249;;Chausseures et habillement;vetements
+;37251;;Bottes;bottes
+;37253;;Gilets et pantalons;gilets-et-pantalons
+;37255;;Abris et abris moustiquaire;abris-et-abris-moustiquaire
+;37257;;Abris;abris
+;37259;;Abris moustiquaire;abris-moustiquaire
+;37261;;Couteaux, outils multilames et accessoires;couteaux-outils-multilames-et-affuteurs
+;37263;;Haches;haches
+;37265;;Scies;scies
+;37267;;Ã‰cran solaire et anti-insectes;ecrans-solaires-et-insectifuges
+;37269;;Ã‰crans solaires;ecrans-solaires
+;37271;;Insectifuges;insectifuges
+;37273;;PÃªche et accessoires;peche-et-accessoires
+;37275;;Cuissardes;cuissardes
+
+
+
+ 
+
+
