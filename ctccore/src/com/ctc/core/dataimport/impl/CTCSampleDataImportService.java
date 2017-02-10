@@ -4,6 +4,7 @@
 package com.ctc.core.dataimport.impl;
 
 import de.hybris.platform.commerceservices.dataimport.impl.SampleDataImportService;
+import de.hybris.platform.commerceservices.util.ResponsiveUtils;
 
 
 /**
@@ -12,6 +13,40 @@ import de.hybris.platform.commerceservices.dataimport.impl.SampleDataImportServi
  */
 public class CTCSampleDataImportService extends SampleDataImportService
 {
+
+	@Override
+	protected void importContentCatalog(final String extensionName, final String contentCatalogName)
+	{
+		super.importContentCatalog(extensionName, contentCatalogName);
+		getSetupImpexService().importImpexFile(
+				String.format("/%s/import/sampledata/contentCatalogs/%sContentCatalog/ctc-content.impex", extensionName,
+						contentCatalogName), false);
+		getSetupImpexService().importImpexFile(
+				String.format("/%s/import/sampledata/contentCatalogs/%sContentCatalog/ctc-content_en.impex", extensionName,
+						contentCatalogName), false);
+		getSetupImpexService().importImpexFile(
+				String.format("/%s/import/sampledata/contentCatalogs/%sContentCatalog/ctc-mobile-content.impex", extensionName,
+						contentCatalogName), false);
+
+		getSetupImpexService().importImpexFile(
+				String.format("/%s/import/sampledata/contentCatalogs/%sContentCatalog/ctc-mobile-content_en.impex", extensionName,
+						contentCatalogName), false);
+
+		if (ResponsiveUtils.isResponsive())
+		{
+			getSetupImpexService().importImpexFile(
+					String.format("/%s/import/sampledata/contentCatalogs/%sContentCatalog/ctc-responsive-content.impex",
+							extensionName, contentCatalogName), false);
+
+			getSetupImpexService().importImpexFile(
+					String.format("/%s/import/sampledata/contentCatalogs/%sContentCatalog/ctc-responsive-content_en.impex",
+							extensionName, contentCatalogName), false);
+		}
+		getSetupImpexService().importImpexFile(
+				String.format("/%s/import/sampledata/contentCatalogs/%sContentCatalog/ctc-content-pages_en.impex", extensionName,
+						contentCatalogName), false);
+	}
+
 	@Override
 	protected void importProductCatalog(final String extensionName, final String productCatalogName)
 	{
