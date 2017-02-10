@@ -82,7 +82,7 @@
                             <cms:pageSlot position="MiniCart" var="cart" element="div" class="miniCartSlot componentContainer mobile__nav__row--table hidden-sm hidden-md hidden-lg">
 								<cms:component component="${cart}" element="div" class="mobile__nav__row--table-cell" />
 							</cms:pageSlot>
-                                    <cms:pageSlot position="SearchBox" var="component">
+                                 <cms:pageSlot position="SearchBox" var="component">
 									<cms:component component="${component}" element="div"/>
 								</cms:pageSlot>
 								
