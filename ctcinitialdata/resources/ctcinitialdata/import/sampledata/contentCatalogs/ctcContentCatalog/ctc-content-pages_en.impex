@@ -1,0 +1,87 @@
+# 
+# ImpEx for CTC CA Site CMS Content 
+# 
+$contentCatalog=ctcContentCatalog 
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged] 
+
+#for desktop
+
+INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='false']
+;;ctcContactUs;CTC Contact Us Page;ContentPage1Template;/contactus
+;;ctcTermsNConditions;CTC terms & Conditions Page;ContentPage1Template;/terms
+
+UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];title[lang=en]
+;;ctcContactUs;"Contact Us"
+;;ctcTermsNConditions;"Terms & Conditions"
+
+
+
+INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;;;;
+;;ContactUsMenuParagraph;ContactUs Paragraph;ContactUsMenuParagraph;;;;
+;;ContactUsTextParagraph;ContactUs Paragraph;ContactUsTextParagraph;;;;
+;;TermsMenuParagraph;Terms Paragraph;TermsMenuParagraph;;;;
+;;TermsTextParagraph;Terms Paragraph;TermsTextParagraph;;;;
+ 
+# ContentSlot 
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef);;;
+;;Section2ASlot-ContactUs;Section2A Slot for ContactUs Page;true;ContactUsMenuParagraph;;;
+;;Section2BSlot-ContactUs;Section2B Slot for ContactUs Page;true;ContactUsTextParagraph;;;
+;;Section2ASlot-Terms;Section2A Slot for Terms Page;true;TermsMenuParagraph;;;
+;;Section2BSlot-Terms;Section2B Slot for Terms Page;true;TermsTextParagraph;;;
+ 
+# ContentSlotForPage 
+INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='ContactUs'];contentSlot(uid,$contentCV)[unique=true];;;
+;;Section2A-ContactUs;Section2A;ctcContactUs;Section2ASlot-ContactUs;;;
+;;Section2B-ContactUs;Section2B;ctcContactUs;Section2BSlot-ContactUs;;;
+;;Section2A-Terms;Section2A;ctcTermsNConditions;Section2ASlot-Terms;;;
+;;Section2B-Terms;Section2B;ctcTermsNConditions;Section2BSlot-Terms;;;
+
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=en];
+;;ContactUsMenuParagraph;"<div class=""nav_column"">Add HTML for menu of contact us page</div>";
+;;ContactUsTextParagraph;"<div>Add HTML for text of contact us page</div>";
+;;TermsMenuParagraph;"<div class=""nav_column"">Add HTML for menu of terms page</div>";
+;;TermsTextParagraph;"<div>Add HTML for text of terms page</div>";
+
+
+
+
+
+#for mobile
+INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='false'];approvalStatus(code)[default='approved'];homepage[default='false'];restrictions(uid,$contentCV)[default='MobileExperienceRestriction'];onlyOneRestrictionMustApply[default='false']
+;;ctcMobileContactUs;Mobile CTC Contact Us Page;MobileContentPage1Template;/contactus
+;;ctcMobileTermsNConditions;Mobile CTC terms & Conditions Page;MobileContentPage1Template;/terms
+
+
+UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];title[lang=en]
+;;ctcMobileContactUs;"Contact Us"
+;;ctcMobileTermsNConditions;"Terms & Conditions"
+
+
+
+INSERT_UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;;;;
+;;MobileContactUsTextParagraph;ContactUs Paragraph;MobileContactUsTextParagraph;;;;
+;;MobileContactUsTextParagraph;ContactUs Paragraph;MobileContactUsTextParagraph;;;;
+;;MobileTermsMenuParagraph;Terms Paragraph;MobileTermsMenuParagraph;;;;
+;;MobileTermsTextParagraph;Terms Paragraph;MobileTermsTextParagraph;;;;
+ 
+# ContentSlot 
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef);;;
+;;Section2ASlot-MobileContactUs;Section2A Slot for ContactUs Page;true;MobileContactUsTextParagraph;;;
+;;Section2BSlot-MobileContactUs;Section2B Slot for ContactUs Page;true;MobileContactUsTextParagraph;;;
+;;Section2ASlot-MobileTerms;Section2A Slot for Terms Page;true;MobileTermsMenuParagraph;;;
+;;Section2BSlot-MobileTerms;Section2B Slot for Terms Page;true;MobileTermsTextParagraph;;;
+ 
+# ContentSlotForPage 
+INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='ContactUs'];contentSlot(uid,$contentCV)[unique=true];;;
+;;Section2A-MobileContactUs;Section2A;ctcMobileContactUs;Section2ASlot-MobileContactUs;;;
+;;Section2B-MobileContactUs;Section2B;ctcMobileContactUs;Section2BSlot-MobileContactUs;;;
+;;Section2A-MobileTerms;Section2A;ctcMobileTermsNConditions;Section2ASlot-MobileTerms;;;
+;;Section2B-MobileTerms;Section2B;ctcMobileTermsNConditions;Section2BSlot-MobileTerms;;;
+
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=en];
+;;MobileContactUsTextParagraph;"<div class=""nav_column"">Add HTML for menu of mobile contact us page</div>";
+;;MobileContactUsTextParagraph;"<div>Add HTML for text of mobile contact us page</div>";
+;;MobileTermsMenuParagraph;"<div class=""nav_column"">Add HTML for menu of mobile terms page</div>";
+;;MobileTermsMenuParagraph;"<div>Add HTML for text of mobile terms page</div>";
+
+
