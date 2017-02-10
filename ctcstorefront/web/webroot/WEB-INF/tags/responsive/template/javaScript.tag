@@ -88,6 +88,10 @@
 				  function(){$('.menu__holder').css('display', 'block')}, 
 				  function(){$('.menu__holder').css('display', 'none')}
 				);
+				$('.menu__holder .menu__products__item').hover(
+				  function(){$(this).addClass('active')}, 
+				  function(){$(this).removeClass('active')}
+				);
 		</script>
 		
 		<%-- Cms Action JavaScript files --%>

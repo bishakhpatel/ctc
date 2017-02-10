@@ -54,9 +54,10 @@
                 <nav class="menu menu_social col-md-5">
                                         <span class="menu_social__header">Connect With CTC Canada</span>
                                         <ul class="nav menu">
-<li class="item-10854"><a href="https://www.facebook.com/" target="_blank"><img src="../_ui/responsive/theme-alpha/images/facebook.png" alt="Facebook Page"></a></li>
-<li class="item-10867"><a href="https://twitter.com/Woods_Canada" target="_blank"><img src="../_ui/responsive/theme-alpha/images/Twitter_icon.png" alt="Twitter Page"></a></li>
-<li class="item-10856"><a href="https://instagram.com/woodscanada"><img src="../_ui/responsive/theme-alpha/images/instagram.png" alt="Instagram Page"></a></li></ul>
+                                        
+<li class="item-10854"><a href="https://www.facebook.com/" target="_blank"><img src="${themeResourcePath}/images/facebook.png" alt="Facebook Page"></a></li>
+<li class="item-10867"><a href="https://twitter.com/Woods_Canada" target="_blank"><img src="${themeResourcePath}/images/Twitter_icon.png" alt="Twitter Page"></a></li>
+<li class="item-10856"><a href="https://instagram.com/woodscanada"><img src="${themeResourcePath}/images/instagram.png" alt="Instagram Page"></a></li></ul>
 
                 </nav>
             </div>
