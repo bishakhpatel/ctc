@@ -436,5 +436,6 @@
 		<property name="commerceCategoryService" ref="commerceCategoryService"/>
 		<property name="rootCategoryCode" value="categories"/>
 	</bean>
-	
+	<alias name="ctcSampleDataImportService" alias="sampleDataImportService"/>
+	<bean id="ctcSampleDataImportService" class="com.ctc.core.dataimport.impl.CTCSampleDataImportService" parent="defaultSampleDataImportService"></bean>
 </beans>
