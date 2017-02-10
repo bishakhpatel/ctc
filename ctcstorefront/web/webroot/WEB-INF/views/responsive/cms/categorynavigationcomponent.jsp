@@ -35,15 +35,17 @@
 	    <!-- <header class="menu__products__header" data-products-menu-title="">Products</header> -->
 	    	<ul class="menu__products__items">
 <c:forEach items="${component.navigationNode.children}" var="childLevel1">
+<li class="menu__products__item"><div class="primary-header">${childLevel1.title }</div></li>
 <c:if test="${not empty childLevel1.children}">
 	<c:choose>
 		<c:when test="${hasSubChild}">
 			<c:forEach items="${childLevel1.children}" var="childLevel2">
 				<c:choose>
 					<c:when test="${not empty childLevel2.children}">
+					
 					<li class="menu__products__item">
 						<a href="javascript:void(0)">${childLevel2.title}</a>
-						
+						<div class="side-arrow">></div>
 						<c:if test="${not empty childLevel2.children }">
 													<ul>
 															<c:forEach items="${childLevel2.children}" var="childLevel3" begin="${i.index}" end="${i.index + component.wrapAfter - 1}">
@@ -77,8 +79,13 @@
                 </div>
                 
                                 
+                            <cms:pageSlot position="MiniCart" var="cart" element="div" class="miniCartSlot componentContainer mobile__nav__row--table hidden-sm hidden-md hidden-lg">
+								<cms:component component="${cart}" element="div" class="mobile__nav__row--table-cell" />
+							</cms:pageSlot>
                                     <cms:pageSlot position="SearchBox" var="component">
 									<cms:component component="${component}" element="div"/>
 								</cms:pageSlot>
+								
+								<div class="advance-search"><a href="javascript:void(0)">Advance Search</a></div>
 
             </div>
