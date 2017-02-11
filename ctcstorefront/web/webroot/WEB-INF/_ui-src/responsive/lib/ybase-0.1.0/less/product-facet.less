@@ -1,11 +1,10 @@
 .product__facet {
   margin: 0;
-  border-right: 1px solid @border-color-3;
+  border: 1px solid @border-color-3;
   padding: 0;
 }
 
 .product__facet .facet {
-  padding: 45px 30px 30px 30px;
   border-bottom: 1px solid @border-color-3;
   .clearfix;
 
@@ -17,7 +16,9 @@
 	font-size: 18px;
 	font-weight: bold;
 	color: @headline-color;
-	margin-left: -5px;
+	font: 16px/30px HelveticaLTStd-Cond,Helvetica,Arial,sans-serif;
+    padding: 5px 5px 6px 14px;
+    cursor:pointer;
   }
 
   .facet__list {
@@ -129,6 +130,33 @@
   .facet__results__hidden {
 	display: none;
   }
+}
+@media (min-width: @screen-md) {
+	.js-facet{
+		.js-facet-values{
+			display:none;	
+		}
+		.active + .js-facet-values{
+			display:block !important;	
+		}
+		.js-facet-name{
+			.facet__arrow{
+				float:right;
+				margin:7px;
+				display: inline-block;
+			    font: normal normal normal 14px/1 FontAwesome;
+			    font-size: inherit;
+			    text-rendering: auto;
+			    -webkit-font-smoothing: antialiased;
+			}
+			.facet__arrow:before{
+				content: "\f105";
+			}
+			&.active .facet__arrow:before{
+				    content: "\f107" !important;
+			}
+		}
+	}
 }
 
 @media (max-width: @screen-sm-max) { 

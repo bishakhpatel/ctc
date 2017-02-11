@@ -92,6 +92,11 @@
 				  function(){$(this).addClass('active')}, 
 				  function(){$(this).removeClass('active')}
 				);
+				$('.facet .facet__name').click(
+				  function(){$(this).toggleClass('active')}
+				);
+				
+				 
 		</script>
 		
 		<%-- Cms Action JavaScript files --%>

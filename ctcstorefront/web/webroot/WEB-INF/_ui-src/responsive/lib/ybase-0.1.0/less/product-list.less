@@ -180,9 +180,9 @@
 
 	  .product-item {
 		.make-xs-column(6);
-		.make-sm-column(3);
-		.make-md-column(3);
-		.make-lg-column(3);
+		.make-sm-column(4);
+		.make-md-column(4);
+		.make-lg-column(4);
 
 		padding: @grid-gutter-width;
 		.flex-display(flex);
@@ -237,7 +237,7 @@
 
 	  // Clearfixes
 	  @media (min-width: @screen-sm-min) {
-		.product-item:nth-child(4n+1) {
+		.product-item:nth-child(3n+1) {
 		  clear: both;
 		}
 	  }

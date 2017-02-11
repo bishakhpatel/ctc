@@ -10,6 +10,7 @@
 <%@ taglib prefix="footer" tagdir="/WEB-INF/tags/responsive/common/footer"%>
 <%@ taglib prefix="common" tagdir="/WEB-INF/tags/responsive/common"%>
 <%@ taglib prefix="cart" tagdir="/WEB-INF/tags/responsive/cart" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <template:master pageTitle="${pageTitle}">
 
@@ -40,8 +41,10 @@
 			
 			
 			<a id="skip-to-content"></a>
-		
-			<div>
+			<c:if test="${cmsPage.name ne'Homepage'}">
+				<c:set var="nonhomepage" value="no-homepage"/>
+			</c:if>
+			<div class="${nonhomepage}">
 				<common:globalMessages />
 				<cart:cartRestoration />
 				<jsp:doBody />

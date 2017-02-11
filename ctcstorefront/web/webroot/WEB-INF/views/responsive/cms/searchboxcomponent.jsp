@@ -17,5 +17,6 @@
 					maxlength="100" placeholder="${searchPlaceholder}"
 					data-options='{"autocompleteUrl" : "${autocompleteUrl}","minCharactersBeforeRequest" : "${component.minCharactersBeforeRequest}","waitTimeBeforeRequest" : "${component.waitTimeBeforeRequest}","displayProductImages" : ${component.displayProductImages}}'><input type="submit" value="Search" class="search__button search__button_inactive">
      </form>
+     <div style="clear:both"></div>
 
 </div>
