@@ -6,13 +6,15 @@
 <c:set var="hasSubChild" value="true"/>
 <div class="header__wrapper">
                 <div class="logo">
-                	<!-- <a href="en.html"><img src="templates/woods/image/en-gb/logo.png" alt="logo"></a> -->
                 	<cms:pageSlot position="SiteLogo" var="logo" limit="1">
 						<cms:component component="${logo}" element="div" class="yComponentWrapper"/>
 					</cms:pageSlot>
                 </div>
+                <div class="mobile-site-logo hidden-md hidden-lg">
+                	<a href="/"><img src="${themeResourcePath}/images/mobile-ctc-logo.png"></a>
+                </div>
                 <div class="header__content">
-                <div class="site-caption">Canadian Tire Corporation</div>
+                <div class="site-caption hidden-xs hidden-sm">Canadian Tire Corporation</div>
                     <nav class="menu menu_main">
                         <input type="checkbox" id="main-menu-checkbox">
                         
@@ -92,6 +94,6 @@
 									<cms:component component="${component}" element="div"/>
 								</cms:pageSlot>
 								
-								<div class="advance-search"><a href="javascript:void(0)">Advance Search</a></div>
+								<div class="advance-search hidden-xs hidden-sm"><a href="javascript:void(0)">Advance Search</a></div>
 
             </div>
