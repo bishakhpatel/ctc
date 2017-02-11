@@ -36,7 +36,6 @@
 
 	<%-- CSS Files Are Loaded First as they can be downloaded in parallel --%>
 	<template:styleSheets/>
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 	<%-- Inject any additional CSS required by the page --%>
 	<jsp:invoke fragment="pageCss"/>
