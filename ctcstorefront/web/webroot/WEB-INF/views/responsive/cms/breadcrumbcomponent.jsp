@@ -4,8 +4,8 @@
 <%@ taglib prefix="breadcrumb"
 	tagdir="/WEB-INF/tags/responsive/nav/breadcrumb"%>
 
-<c:if test="${fn:length(breadcrumbs) > 0}">
-	<%-- <div class="breadcrumb-section">
+<%-- <c:if test="${fn:length(breadcrumbs) > 0}">
+	<div class="breadcrumb-section">
 		<breadcrumb:breadcrumb breadcrumbs="${breadcrumbs}" />
-	</div> --%>
-</c:if>
+	</div>
+</c:if> --%>

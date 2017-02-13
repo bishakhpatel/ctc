@@ -95,9 +95,9 @@
 				  function(){$(this).addClass('active')}, 
 				  function(){$(this).removeClass('active')}
 				);
-				$('.facet .facet__name').click(
+				/* $('.facet .facet__name').click(
 				  function(){$(this).toggleClass('active')}
-				);
+				); */
 				
 				$(window).on("resize", function () {
 				   console.log($(this).width());

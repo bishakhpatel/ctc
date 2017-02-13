@@ -11,6 +11,8 @@
 <%@ taglib prefix="common" tagdir="/WEB-INF/tags/responsive/common"%>
 <%@ taglib prefix="cart" tagdir="/WEB-INF/tags/responsive/cart" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="breadcrumb" tagdir="/WEB-INF/tags/responsive/nav/breadcrumb"%>
 
 <template:master pageTitle="${pageTitle}">
 
@@ -47,6 +49,13 @@
 			<div class="${nonhomepage}">
 				<common:globalMessages />
 				<cart:cartRestoration />
+				
+				
+				<c:if test="${fn:length(breadcrumbs) > 0}">
+					<div class="breadcrumb-section">
+						<breadcrumb:breadcrumb breadcrumbs="${breadcrumbs}" />
+					</div>
+				</c:if>
 				<jsp:doBody />
 			</div>
 

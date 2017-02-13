@@ -2,6 +2,7 @@
   margin: 0;
   border: 1px solid @border-color-3;
   padding: 0;
+  padding-bottom: 25px;
 }
 
 .product__facet .facet {
@@ -13,20 +14,19 @@
   }
 
   .facet__name {
-	font-size: 18px;
 	font-weight: bold;
-	color: @headline-color;
-	font: 16px/30px HelveticaLTStd-Cond,Helvetica,Arial,sans-serif;
-    padding: 5px 5px 6px 14px;
-    cursor:pointer;
+    color: #154259;
+    font: 18px/30px HelveticaLTStd-BlkCond, Helvetica, Arial, sans-serif;
+    padding: 5px 5px 6px 30px;
+    margin-top: 20px;
   }
 
   .facet__list {
 	.list-unstyled;
-	margin:  (@grid-gutter-width/2) 0;
+	margin: 5px 0px 0px 35px;
 
 	li{
-	  padding: (@grid-gutter-width/2) 0;
+	  padding: 5px 0 0 0;
 	}
 
 	label{
@@ -82,6 +82,7 @@
 
   .facet__values__more {
 	display: block;
+	margin: 5px 0px 0px 20px;
   }
 
   .facet__values__less {
@@ -132,31 +133,21 @@
   }
 }
 @media (min-width: @screen-md) {
-	.js-facet{
-		.js-facet-values{
-			display:none;	
-		}
-		.active + .js-facet-values{
-			display:block !important;	
-		}
-		.js-facet-name{
-			.facet__arrow{
-				float:right;
-				margin:7px;
-				display: inline-block;
-			    font: normal normal normal 14px/1 FontAwesome;
-			    font-size: inherit;
-			    text-rendering: auto;
-			    -webkit-font-smoothing: antialiased;
-			}
-			.facet__arrow:before{
-				content: "\f105";
-			}
-			&.active .facet__arrow:before{
-				    content: "\f107" !important;
-			}
+	.product__facet{
+		border: 1px solid #666;
+		.facet{
+			border-bottom:1px solid transparent;
 		}
 	}
+}
+.facet__values {
+	.facet__text a{
+		color: #009d57;
+		font: 16px HelveticaLTStd-BoldCond,Helvetica,Arial,sans-serif;
+	}
+}
+.glyphicon-remove{
+	color: #009d57;
 }
 
 @media (max-width: @screen-sm-max) { 

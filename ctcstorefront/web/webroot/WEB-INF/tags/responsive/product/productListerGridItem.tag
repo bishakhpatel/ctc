@@ -41,7 +41,13 @@
 			</c:if>
 			
 			<ycommerce:testId code="product_productPrice">
-				<div class="price"><spring:theme code="suggested.price"/><product:productListerItemPrice product="${product}"/></div>
+			<div>
+				<div>
+				<spring:theme code="suggested.price"/>
+				</div>
+				<div class="price"><product:productListerItemPrice product="${product}"/></div>
+			</div>
+				
 			</ycommerce:testId>
 			
 			<c:forEach var="variantOption" items="${product.variantOptions}">
