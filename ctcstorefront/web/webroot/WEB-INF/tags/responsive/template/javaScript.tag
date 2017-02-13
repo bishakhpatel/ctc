@@ -84,10 +84,13 @@
 		<script type="text/javascript" src="${commonResourcePath}/js/_autoload.js"></script>
 		
 		<script type="text/javascript">
-				$('.menu #first-menu , .menu__holder').hover(
-				  function(){$('.menu__holder').css('display', 'block')}, 
-				  function(){$('.menu__holder').css('display', 'none')}
-				);
+				$('.menu #first-menu , .menu__holder').hover(function(){
+					$('nav > .menu__holder').toggleClass('active-big');
+				});
+				$('.menu #first-menu a').click(function(){
+					$('#first-menu .menu__holder').toggleClass('active-small');
+				});
+				
 				$('.menu__holder .menu__products__item').hover(
 				  function(){$(this).addClass('active')}, 
 				  function(){$(this).removeClass('active')}
@@ -95,6 +98,15 @@
 				$('.facet .facet__name').click(
 				  function(){$(this).toggleClass('active')}
 				);
+				
+				$(window).on("resize", function () {
+				   console.log($(this).width());
+				   if($(this).width() <= 1028){
+					   if($("#first-menu").find('div.menu__holder').length == 0){
+						   $('#first-menu').append( $('div.menu__holder').clone());
+					   }
+				   }
+				}).resize();
 				
 				 
 		</script>

@@ -1687,11 +1687,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 .menu_main input:checked ~ ul > li
 {
-	width:100%;
-	background-color:#64a70b;
-	line-height:3.5rem;
-	font-size:1.5rem;
-	padding-left:3rem
+	width: 100%;
+    background-color: rgba(0,157,84,0.9);
+    text-transform: uppercase;
+    border-bottom: 1px solid #cecece;
+    font: 16px/24px HelveticaLTStd-BoldCond, Helvetica, Arial, sans-serif;
 }
 .menu_main input:checked ~ label
 {
@@ -1939,7 +1939,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	left:12px;
 	top:118px;
 	box-sizing:content-box;
-	box-shadow:0 0 12px rgba(0,0,0,0.54)
+	box-shadow:0 0 12px rgba(0,0,0,0.54);
+	display:none;
+	&.active-big{
+		display:block;
+	}
 }
 .menu__holder::before
 {
@@ -1960,7 +1964,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 {
 .menu__holder
 {
-	position:relative
+	position:relative;
+	display:none;
+	&.active-small{
+		display:block;
+	}
 }
 
 }

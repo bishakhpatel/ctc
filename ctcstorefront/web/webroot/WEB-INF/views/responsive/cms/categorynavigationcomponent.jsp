@@ -32,12 +32,12 @@
 <li class="item"><a href="en/woods-legacy.html" class="menu__item menu_main__item">Wood Legacy</a></li>
 <li class="item"><a href="en/where-to-buy.html" class="menu__item menu_main__item">Where to buy</a></li>
 </ul>
-<div class="menu__holder" id="products-menu" style="display:none">
+<div class="menu__holder" id="products-menu">
 	<nav class="menu menu__products">
 	    <!-- <header class="menu__products__header" data-products-menu-title="">Products</header> -->
 	    	<ul class="menu__products__items">
 <c:forEach items="${component.navigationNode.children}" var="childLevel1">
-<li class="menu__products__item"><div class="primary-header">${childLevel1.title }</div></li>
+<li class="menu__products__item hidden-xs hidden-sm"><div class="primary-header">${childLevel1.title }</div></li>
 <c:if test="${not empty childLevel1.children}">
 	<c:choose>
 		<c:when test="${hasSubChild}">
