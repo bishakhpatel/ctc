@@ -23,7 +23,7 @@
 			</c:when>
 			<c:otherwise>
 				<p class="price">
-					<format:fromPrice priceData="${product.price}"/>
+					<spring:theme code="suggested.price"/><format:fromPrice priceData="${product.price}"/>
 				</p>
 			</c:otherwise>
 		</c:choose>
