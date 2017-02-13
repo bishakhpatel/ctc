@@ -1465,7 +1465,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
  	text-align:center;
  	a {
  		img{
- 			height:62px;
+ 			height: 56px;
+    		margin-bottom: 2px;
  		}
  	}
 }
@@ -1580,7 +1581,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 {
 	display:inline-block;
 	text-align:center;
-	border-left:1px solid #fff
+	border-left:1px solid #fff;
+	
+	&.last-item{
+		position: absolute;
+	    right: 57px;
+	    font-size: 16px;
+	    top: 37px;
+	    border-left: 1px solid transparent;
+	    a{
+	    	color: #cecece;
+	    }
+	}
 }
 .menu_main .nav.menu li:first-child
 {

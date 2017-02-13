@@ -43,8 +43,6 @@ footer {
 .footer__right {
   .full-width-padding();
   @media (max-width: @screen-md) {
-    border-top: 1px solid @footer-border-color;
-    padding-top: 30px;
     margin-top: 25px;
   }
 
@@ -127,34 +125,24 @@ footer {
 {
 	padding:1.8rem 4.6rem 0
 }
-
-}
-	@media screen and (max-width: 1028px)
-{
-.footer
-{
-	height:19.6rem
+footer .container-fluid{
+	padding-left: 0px;
+    padding-right: 0px;
 }
 
 }
-.footer__button_top
-{
-	background-color:#969696;
-	height:3.7rem;
-	line-height:3.7rem;
-	width:7.2rem;
-	right:1.3rem;
-	border-radius:5px 5px 0 0;
-	font-size:1.25rem;
-	display:none
-}
-.footer__button_top:before
-{
-	content:'тЦ▓';
-	padding-right:.7rem
-}
+
+
 	@media screen and (min-width: 1028px)
 {
+.footer__left{
+	margin-top:15px;
+	padding-left: 0%;
+}
+.footer__right{
+	margin-top:15px;
+	padding-left: 5%;
+}
 .footer__button_top
 {
 	display:none
@@ -180,10 +168,7 @@ footer {
 }
 	@media screen and (min-width: 1028px)
 {
-.menu_footer,.footer-main-menu .nav.menu
-{
-	width:535px
-}
+
 .menu_footer > li,.footer-main-menu .nav.menu > li
 {
 	display:inline-block;
@@ -203,10 +188,7 @@ footer {
 }
 
 }
-.menu_footer > li:first-child,.footer-main-menu .nav.menu > li:first-child
-{
-	display:none
-}
+
 	footer .nav.menu a
 {
 	color:#fff;
@@ -237,8 +219,17 @@ footer {
 {
 	float:none
 }
+.menu_social .nav.menu
+{
+	width:125px;
+	margin: 0 auto;
+	-webkit-box-pack:justify;
+	justify-content:space-between
+}
 
 }
+	@media screen and (min-width: 1028px)
+{
 .menu_social .nav.menu
 {
 	width:86px;
@@ -247,6 +238,7 @@ footer {
 	display:flex;
 	-webkit-box-pack:justify;
 	justify-content:space-between
+}
 }
 .menu_social .nav.menu li
 {
@@ -259,8 +251,21 @@ footer {
 	margin-right:18px;
 	text-transform: uppercase;
 }
+
+.footer__nav--links li{
+	float: left;
+    font:14px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
+	margin-right:18px;
+	text-transform: uppercase;
+}
 	@media screen and (max-width: 1028px)
 {
+.footer__nav--links{
+	text-align: center;
+}
+.footer__nav--links li{
+	float: none;
+}
 .menu_social__header
 {
 	font-size:1.125rem;
@@ -283,7 +288,7 @@ footer {
 {
 .menu.menu_social
 {
-	margin-top:1.5rem
+	margin-top:0px;
 }
 }
 .created

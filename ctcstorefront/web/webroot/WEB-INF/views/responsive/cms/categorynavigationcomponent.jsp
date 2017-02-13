@@ -11,7 +11,7 @@
 					</cms:pageSlot>
                 </div>
                 <div class="mobile-site-logo hidden-md hidden-lg">
-                	<a href="/"><img src="${themeResourcePath}/images/mobile-ctc-logo.png"></a>
+                	<a href="/"><img src="${themeResourcePath}/images/mobile-ctc-logo-small.png"></a>
                 </div>
                 <div class="header__content">
                 <div class="site-caption hidden-xs hidden-sm">Canadian Tire Corporation</div>
@@ -27,10 +27,11 @@
 								</c:forEach>
                         	</li>
                         </c:forEach>
-<!-- <li class="item" id="first-menu"><a href="en/products.html" class="menu__item menu_main__item">Products</a></li> -->
+
 <li class="item"><a href="en/inspiration.html" class="menu__item menu_main__item">Inspiration</a></li>
 <li class="item"><a href="en/woods-legacy.html" class="menu__item menu_main__item">Wood Legacy</a></li>
 <li class="item"><a href="en/where-to-buy.html" class="menu__item menu_main__item">Where to buy</a></li>
+<li class="item last-item"><a href="en/contactus.html" class="menu__item menu_main__item">Contact Us</a></li>
 </ul>
 <div class="menu__holder" id="products-menu">
 	<nav class="menu menu__products">
