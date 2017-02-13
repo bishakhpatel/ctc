@@ -468,7 +468,7 @@ INSERT_UPDATE NavigationComponent;$contentCV[unique=true];uid[unique=true];name;
 
 # Content Slots
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];cmsComponents(uid, $contentCV)
-;;MiniCartSlot;OrderComponent,MiniCart
+;;MiniCartSlot;MiniCart
 
 ###### Quick Order Page Start ######
 
@@ -775,14 +775,14 @@ INSERT_UPDATE FooterNavigationComponent;$contentCV[unique=true];uid[unique=true]
 
 # the order of children is the same as the display order on the site
 INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);&nodeRef;children(uid,$contentCV)
-;FooterNavNode;;FooterPages;CTCNavNode;FooterNavNode;OthersNavNode,FollowUsNavNode
+;FooterNavNode;;FooterPages;CTCNavNode;FooterNavNode;OthersNavNode
 
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;target(code)[default='sameWindow'];linkName[lang=en]
 ;;FAQPageLink;FAQ Link;"#";newWindow;"FAQ"
-;;ContactUsLink;Contact Us Link;"#";newWindow;"Contact Us"
+;;ContactUsLink;Contact Us Link;"/contactus";newWindow;"Contact Us"
 ;;SiteMapLink;Site Map Link;"#";newWindow;"Site Map"
 ;;PrivacyLink;Privacy Policy Link;"#";newWindow;"Privacy Policy"
-;;TermsLink;Linked In Link;"#";newWindow;"Terms & Conditions"
+;;TermsLink;Linked In Link;"/terms";newWindow;"Terms & Conditions"
 ;;FacebookLink;Facebook Link;http://www.facebook.com;newWindow;"Facebook"
 ;;TwitterLink;Twitter Link;http://twitter.com/;newWindow;"Twitter"
 ;;InstagramLink;Instagram Link;http://www.instagram.com;newWindow;"Instagram"

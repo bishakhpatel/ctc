@@ -41,7 +41,7 @@
 			</c:if>
 			
 			<ycommerce:testId code="product_productPrice">
-				<div class="price"><product:productListerItemPrice product="${product}"/></div>
+				<div class="price"><spring:theme code="suggested.price"/><product:productListerItemPrice product="${product}"/></div>
 			</ycommerce:testId>
 			
 			<c:forEach var="variantOption" items="${product.variantOptions}">
@@ -59,16 +59,19 @@
 				<img style="width: 32px; height: 32px;" src="${imageUrl}" title="${variantName}" alt="${variantName}"/>
 			</c:forEach>
 		</div>
+<a href="${productUrl}">
+		<button id="viewButton-${product.code }" class="btn btn-primary btn-block js-add-to-cart js-enable-btn" disabled="disabled">
+					<spring:theme code="view.details"/>
+				</button></a>
 
-
-		<c:set var="product" value="${product}" scope="request"/>
-		<c:set var="addToCartText" value="${addToCartText}" scope="request"/>
-		<c:set var="addToCartUrl" value="${addToCartUrl}" scope="request"/>
-		<c:set var="isGrid" value="true" scope="request"/>
-		<div class="addtocart">
-			<div class="actions-container-for-${component.uid} <c:if test="${ycommerce:checkIfPickupEnabledForStore() and product.availableForPickup}"> pickup-in-store-available</c:if>">
-				<action:actions element="div" parentComponent="${component}"/>
-			</div>
-		</div>
+<%-- 		<c:set var="product" value="${product}" scope="request"/> --%>
+<%-- 		<c:set var="addToCartText" value="${addToCartText}" scope="request"/> --%>
+<%-- 		<c:set var="addToCartUrl" value="${addToCartUrl}" scope="request"/> --%>
+<%-- 		<c:set var="isGrid" value="true" scope="request"/> --%>
+<!-- 		<div class="addtocart"> -->
+<%-- 			<div class="actions-container-for-${component.uid} <c:if test="${ycommerce:checkIfPickupEnabledForStore() and product.availableForPickup}"> pickup-in-store-available</c:if>"> --%>
+<%-- 				<action:actions element="div" parentComponent="${component}"/> --%>
+<!-- 			</div> -->
+<!-- 		</div> -->
 	</ycommerce:testId>
 </div>
