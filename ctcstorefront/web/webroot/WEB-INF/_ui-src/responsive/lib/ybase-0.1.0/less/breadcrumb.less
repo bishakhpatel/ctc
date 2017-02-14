@@ -5,16 +5,22 @@
 
 .breadcrumb-section{
   	.full-width-padding();
-
+	padding-left: 0px; 
 	.breadcrumb{
 		font-size: 12px;
 		font-weight: 500;
 		text-transform: uppercase;
 		margin: 0 auto;
 		background: transparent;
-		
+		font: 13px HelveticaLTStd-Cond,Helvetica,Arial,sans-serif;
+    	font-weight: 700;
 		a{
-			color: #009d57;
+			color: #005841;
 		}
+	}
+	.breadcrumb > li + li:before{
+		    padding: 0 4px !important;
+    		color: #005841 !important;
+    		font-size: 17px;
 	}
 }

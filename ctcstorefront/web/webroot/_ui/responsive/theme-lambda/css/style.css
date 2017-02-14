@@ -4296,7 +4296,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   display: inline-block;
 }
 .breadcrumb > li + li:before {
-  content: "/\00a0";
+  content: ">\00a0";
   padding: 0 5px;
   color: #3c3c3c;
 }
@@ -7587,7 +7587,7 @@ output {
 }
 @media (min-width: 1028px) {
   .container-fluid {
-    margin-top: 145px;
+    margin-top: 123px;
   }
   .page-homepage .container-fluid {
     margin-top: 0px !important;
@@ -7595,6 +7595,7 @@ output {
   body .no-homepage {
     margin: 0 auto;
     width: 1024px;
+    font-family: HelveticaLTStd-Cond, Helvetica, Arial, sans-serif;
   }
 }
 @media (max-width: 1027px) {
@@ -9113,7 +9114,7 @@ ul.nav__links::after {
 }
 @media screen and (min-width: 1028px) {
   .header {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 88, 65, 0.85);
     height: 118px;
     position: fixed;
     top: 0;
@@ -9138,9 +9139,9 @@ ul.nav__links::after {
 }
 @media screen and (min-width: 1028px) {
   .header__content {
-    padding: 40px 0 0 0px;
+    padding: 32px 0 0 0px;
     float: left;
-    margin-left: -37px;
+    margin-left: 50px;
   }
 }
 @media screen and (max-width: 1028px) {
@@ -9194,7 +9195,8 @@ ul.nav__links::after {
   padding-left: 12px;
 }
 .logo img {
-  height: 108px;
+  height: 108px !important;
+  width: auto !important;
 }
 @media screen and (max-width: 1028px) {
   .logo {
@@ -9538,7 +9540,7 @@ ul.nav__links::after {
     left: 12px;
     top: 118px;
     box-sizing: content-box;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.54);
+    box-shadow: 0 0 12px rgba(0, 88, 65, 0.85);
     display: none;
   }
   .menu__holder.active-big {
@@ -9553,7 +9555,7 @@ ul.nav__links::after {
     top: -10px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 11px solid #009d57;
+    border-bottom: 11px solid #fff;
   }
 }
 @media screen and (max-width: 1028px) {
@@ -9571,7 +9573,7 @@ ul.nav__links::after {
     background-color: #fff;
     clear: both;
     box-sizing: content-box;
-    border-bottom: 9px solid rgba(0, 0, 0, 0.65);
+    border-bottom: 9px solid rgba(0, 88, 65, 0.85);
   }
   .menu__products__header {
     text-transform: uppercase;
@@ -9596,7 +9598,7 @@ ul.nav__links::after {
   .menu__products__item > a:hover,
   .menu__products__item > a:active {
     background-color: #cecece;
-    border-left: 7px solid #009d57;
+    border-left: 7px solid #005841;
     padding-left: 31px;
   }
   nav.menu__products > ul > li > ul > li a,
@@ -9679,19 +9681,19 @@ ul.nav__links::after {
   padding-left: 0;
   width: 85%;
   top: 0;
-  border-bottom: 9px solid rgba(0, 0, 0, 0.65);
+  border-bottom: 9px solid rgba(0, 88, 65, 0.85);
 }
 .menu__products__items .menu__products__item ul li {
   list-style: none;
 }
 .primary-header {
   height: 44px;
-  color: #fff;
+  color: #005841;
   font: 21px/47px HelveticaLTStd-BoldCond, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   text-align: left;
   padding-left: 38px;
-  background: #009d57;
+  background: #fff;
 }
 .advance-search {
   position: absolute;
@@ -10213,6 +10215,7 @@ fieldset[disabled] .btn-primary.active {
 .breadcrumb-section {
   padding-left: 30px;
   padding-right: 30px;
+  padding-left: 0px;
 }
 @media (max-width: 1028px) {
   .breadcrumb-section {
@@ -10226,9 +10229,16 @@ fieldset[disabled] .btn-primary.active {
   text-transform: uppercase;
   margin: 0 auto;
   background: transparent;
+  font: 13px HelveticaLTStd-Cond, Helvetica, Arial, sans-serif;
+  font-weight: 700;
 }
 .breadcrumb-section .breadcrumb a {
-  color: #009d57;
+  color: #005841;
+}
+.breadcrumb-section .breadcrumb > li + li:before {
+  padding: 0 4px !important;
+  color: #005841 !important;
+  font-size: 17px;
 }
 .image-gallery__image {
   cursor: pointer;
@@ -10245,6 +10255,7 @@ fieldset[disabled] .btn-primary.active {
   .page-productDetails .carousel {
     padding-left: 30px;
     padding-right: 30px;
+    border: 1px solid #cecece;
   }
 }
 .product-details,
@@ -10266,6 +10277,8 @@ fieldset[disabled] .btn-primary.active {
   padding: 20px 0;
   margin: 0;
   padding: 0;
+  font: 40px HelveticaLTStd-BlkCond, Helvetica, Arial, sans-serif;
+  text-decoration: none;
 }
 .product-details .name.border,
 .product-details-price .name.border {
@@ -10341,6 +10354,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .product-main-info .product-details {
   padding: 0;
+  margin-left: 10px;
 }
 .variant-section {
   margin-bottom: 30px;
@@ -10567,6 +10581,21 @@ fieldset[disabled] .btn-primary.active {
 }
 .tab-review .write-review {
   display: none;
+}
+.price-det {
+  margin-left: -10px;
+}
+.price-det .sugg-price {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 5px;
+  margin-right: 7px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.price-det .price {
+  display: inline-block;
+  vertical-align: top;
 }
 #AddToCart-PickUpInStoreAction {
   position: relative;

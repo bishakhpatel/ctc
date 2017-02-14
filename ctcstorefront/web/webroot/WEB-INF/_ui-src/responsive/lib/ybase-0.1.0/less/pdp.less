@@ -16,6 +16,7 @@
 	@media (min-width: @screen-sm){
 	  padding-left: 30px;
 	  padding-right: 30px;
+	  border: 1px solid #cecece;
 	}
   }
 }
@@ -31,6 +32,8 @@
   .name {
     .page-headline();
     padding: 0;
+    font: 40px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
+    text-decoration: none;
 
     .sku{
         font-size: 18px;
@@ -93,6 +96,7 @@
 
   .product-details {
 	padding: 0;
+	margin-left: 10px;
   }
 }
 
@@ -323,7 +327,21 @@
 
 
 
-
+.price-det {
+	 margin-left: -10px;
+	.sugg-price{
+		display: inline-block;
+	    vertical-align: top;
+	    margin-top: 5px;
+	    margin-right: 7px;
+	    text-transform: capitalize;
+	    font-size: 18px;
+	}
+	.price{
+		display: inline-block;
+		vertical-align: top;
+	}
+}
 
 
 

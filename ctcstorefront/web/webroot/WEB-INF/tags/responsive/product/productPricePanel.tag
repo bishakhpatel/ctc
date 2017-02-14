@@ -22,8 +22,8 @@
 				</span>
 			</c:when>
 			<c:otherwise>
-				<span style="text-transform: capitalize;font-weight: bold;font-size: 1.2em;"><spring:theme code="suggested.price"/></span>
-				<p class="price" style="float: right;">
+				<p class="sugg-price"><spring:theme code="suggested.price"/>:</p>
+				<p class="price">
 					<format:fromPrice priceData="${product.price}"/>
 				</p>
 			</c:otherwise>

@@ -105,7 +105,7 @@
                 </c:otherwise>
             </c:choose>
             <div class="variant-section">
-                <c:if test="${not empty variantStyles}">
+                <%-- <c:if test="${not empty variantStyles}">
                     <div class="variant-selector">
                         <div class="variant-name">
                             <spring:theme code="product.variants.colour"/><span
@@ -136,7 +136,7 @@
                             </c:forEach>
                         </ul>
                     </div>
-                </c:if>
+                </c:if> --%>
                 <c:if test="${not empty variantSizes}">
                     <div class="variant-selector">
                             <div class="variant-name">
@@ -185,7 +185,7 @@
 
                                         <option value="${variantOptionUrl}" ${(variantSize.url eq product.url) ? 'selected="selected"' : ''}>
                                                 ${optionsString}&nbsp;<format:price
-                                                priceData="${variantSize.priceData}"/>&nbsp;&nbsp;${variantSize.stock.stockLevel}
+                                                priceData="${variantSize.priceData}"/>
                                         </option>
                                     </c:forEach>
                                 </c:if>

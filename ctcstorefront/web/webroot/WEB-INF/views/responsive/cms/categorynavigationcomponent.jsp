@@ -11,10 +11,10 @@
 					</cms:pageSlot>
                 </div>
                 <div class="mobile-site-logo hidden-md hidden-lg">
-                	<a href="/"><img src="${themeResourcePath}/images/mobile-ctc-logo-small.png"></a>
+                	<a href="/"><img src="${themeResourcePath}/images/ctc-logo-responsive.png"></a>
                 </div>
                 <div class="header__content">
-                <div class="site-caption hidden-xs hidden-sm">Canadian Tire Corporation</div>
+                <div class="site-caption hidden-xs hidden-sm"><img src="${themeResourcePath}/images/motto.png"></div>
                     <nav class="menu menu_main">
                         <input type="checkbox" id="main-menu-checkbox">
                         
