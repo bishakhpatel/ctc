@@ -1,6 +1,6 @@
 $productCatalog=ctcProductCatalog
 $productCatalogName=CTC Product Catalog
-$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Online'])[unique=true,default=$productCatalog:Online]
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
 $siteResource=jar:com.ctc.initialdata.constants.CtcInitialDataConstants&/ctcinitialdata/import/sampledata/productCatalogs/$productCatalog
 $thumbnail=thumbnail(code, $catalogVersion)
