@@ -136,7 +136,7 @@ INSERT_UPDATE StockLevel;available[unique=true];warehouse(code)[unique=true];inS
 ;1000;ctc_warehouse;forceInStock;0;0;0;0;2992132;0
 
 
-########## Products do not have variants ##########
+########## EN Products do not have variants #######
 ################################################### 
 ;1000;ctc_warehouse;forceInStock;0;0;0;0;0762639P;0
 ;1000;ctc_warehouse;forceInStock;0;0;0;0;0762104P;0
@@ -288,3 +288,33 @@ INSERT_UPDATE StockLevel;available[unique=true];warehouse(code)[unique=true];inS
 ;1000;ctc_warehouse;forceInStock;0;0;0;0;0765658P;0
 ;1000;ctc_warehouse;forceInStock;0;0;0;0;0765657P;0
 ;1000;ctc_warehouse;forceInStock;0;0;0;0;0765787P;0
+
+
+########## FR Products do not have variants #######
+###################################################
+;1000;ctc_warehouse;forceInStock;0;0;0;0;0765556P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870275P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870252P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870246P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870240P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870470P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870474P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870498P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870478P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870494P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870490P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;0762139P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;0762122P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;0771640P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;0771645P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;0771650P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870166P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870156P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870161P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870100P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;1870151P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;0765401P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;0765405P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;0765593P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;0765761P;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;2992131P;0

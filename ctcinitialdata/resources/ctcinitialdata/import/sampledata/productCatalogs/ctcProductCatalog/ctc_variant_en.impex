@@ -33,10 +33,6 @@ INSERT_UPDATE ApparelStyleVariantProduct;code[unique=true];$catalogVersion;$base
 ;	0765761P_S_37238	;;	0765761P	;	pieces;;	37238	;ApparelSizeVariantProduct
 #;	2992131P_S_37200	;;	2992131P	;	pieces;;	37200	;ApparelSizeVariantProduct
 
-
-
-
-
 INSERT_UPDATE ApparelSizeVariantProduct;code[unique=true];$catalogVersion;$baseProduct;ean;unit(code);swatchColors(code);supercategories(code,$catalogVersion);;$approved;
 ;	0765558	;;	0765556P_S_37212	;;	pieces	;;	37212
 ;	0765557	;;	0765556P_S_37212	;;	pieces	;;	37212
@@ -273,12 +269,6 @@ UPDATE Product;$catalogVersion;ApparelSizeVariantProduct.size[lang=$lang];code[u
 ;;"Small: 6-1\/2 D x 18\/ H (16.5 x 46 cm)";0765761
 #;;"Blue";2992131
 #;;"Pink";2992132
-
-$lang=en
-$productCatalog=ctcProductCatalog
-$catalogVersion=catalogVersion(catalog(id[default='ctcProductCatalog']),version[default='Staged'])[unique=true,default='ctcProductCatalog:Staged']
-$baseProduct=baseProduct(code, catalogVersion(catalog(id[default='$productCatalog']),version[default='Staged']))
-$approved=approvalstatus(code)[default='approved']
 
 
 UPDATE Product;code[unique=true];name[lang=$lang];summary[lang=$lang];$catalogVersion

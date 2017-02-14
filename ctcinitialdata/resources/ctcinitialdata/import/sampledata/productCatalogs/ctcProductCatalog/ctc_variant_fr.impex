@@ -4,113 +4,369 @@ $catalogVersion=catalogVersion(catalog(id[default='ctcProductCatalog']),version[
 $baseProduct=baseProduct(code, catalogVersion(catalog(id[default='$productCatalog']),version[default='Staged']))
 $approved=approvalstatus(code)[default='approved']
 
-INSERT_UPDATE ApparelStyleVariantProduct;$approved;$catalogVersion;$baseProduct;name[lang=$lang];code[unique=true]
 
-;;;0765556P;"Centre de 10\u00a0cm (4\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765558
-;;;0765556P;"Centre de 7,6\u00a0cm (3\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765557  
-;;;0765556P;"Centre de 5\u00a0cm (2\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765556  
-;;;1870275P;"Taille 7";1870276  
-;;;1870275P;"Taille 8";1870277  
-;;;1870275P;"Taille 10";1870279  
-;;;1870275P;"Taille 9";1870278  
-;;;1870275P;"Taille 6";1870275  
-;;;1870252P;"Taille 9";  1870253  
-;;;1870252P;"Taille 12"; 1870256  
-;;;1870252P;"Taille 8";1870252  
-;;;1870252P;"Taille 11"; 1870255  
-;;;1870252P;"Taille 10"; 1870254  
-;;;1870246P;"Taille 9";  1870247  
-;;;1870246P;"Taille 8"; 1870246  
-;;;1870246P;"Taille 12";1870250  
-;;;1870246P;"Taille 13";1870251  
-;;;1870246P;"Taille 11";1870249  
-;;;1870246P;"Taille 10";1870248  
-;;;1870240P;"Taille 8";  1870240  
-;;;1870240P;"Taille 13";1870245  
-;;;1870240P;"Taille 9"; 1870241  
-;;;1870240P;"Taille 11";1870243  
-;;;1870240P;"Taille 10";1870242  
-;;;1870240P;"Taille 12";1870244  
-;;;1870470P;"Tr\u00e8s grand";1870472  
-;;;1870470P;"Tr\u00e8s tr\u00e8s grand";1870473  
-;;;1870470P;"Grand";1870471  
-;;;1870470P;"Moyen";1870470  
-;;;1870474P;"Moyen";1870474  
-;;;1870474P;"Tr\u00e8s grand";1870476  
-;;;1870474P;"Tr\u00e8s tr\u00e8s grand";1870477  
-;;;1870474P;"Grand";1870475  
-;;;1870498P;"Moyen";1870499  
-;;;1870498P;"Tr\u00e8s grand";1870501  
-;;;1870498P;"Petit";1870498  
-;;;1870498P;"Grand";1870500  
-;;;1870478P;"Moyen";1870478  
-;;;1870478P;"Tr\u00e8s grand";1870480  
-;;;1870478P;"Tr\u00e8s tr\u00e8s grand";1870481  
-;;;1870478P;"Grand";1870479  
-;;;1870494P;"Tr\u00e8s grand";1870497  
-;;;1870494P;"Moyen";1870495  
-;;;1870494P;"Petit";1870494  
-;;;1870494P;"Grand";1870496  
-;;;1870490P;"Moyen";1870491  
-;;;1870490P;"Grand";1870492  
-;;;1870490P;"Petit";1870490  
-;;;1870490P;"Tr\u00e8s grand"; 1870493  
-;;;0762139P;"9,46 L";   0762141  
-;;;0762139P;"4 L";0762140  
-;;;0762139P;"1 L";0762139  
-;;;0762122P;"Grenade";0762122  
-;;;0762122P;"Nectarine";0762123  
-;;;0762122P;"Eau fra\u00eeche";  0762124  
-;;;0771640P;"12";0771644  
-;;;0771640P;"8";0771640  
-;;;0771640P;"11";0771643  
-;;;0771640P;"9";0771641  
-;;;0771640P;"10";0771642           
-;;;0771645P;"9";0771646  
-;;;0771645P;"10";0771647  
-;;;0771645P;"8";0771645  
-;;;0771645P;"12";0771649  
-;;;0771645P;"11";0771648        
-;;;0771650P;"8";0771650  
-;;;0771650P;"11";0771653  
-;;;0771650P;"12";0771654  
-;;;0771650P;"9";0771651  
-;;;0771650P;"10";0771652  
-;;;1870166P;"Taille 7";1870166  
-;;;1870166P;"Taille 12";1870171  
-;;;1870166P;"Taille 9";1870168  
-;;;1870166P;"Taille 8";1870167  
-;;;1870166P;"Taille 11";1870170  
-;;;1870166P;"Taille 10";1870169  
-;;;1870156P;"Taille 10";  1870160  
-;;;1870156P;"Taille 7";1870157  
-;;;1870156P;"Taille 9";1870159  
-;;;1870156P;"Taille 8";1870158  
-;;;1870156P;"Taille 6";1870156  
-;;;1870161P;"Taille 9";1870162  
-;;;1870161P;"Taille 12";1870165  
-;;;1870161P;"Taille 11";1870164  
-;;;1870161P;"Taille 8";1870161  
-;;;1870161P;"Taille 10";1870163  
-;;;1870100P;"Taille 12";1870105  
-;;;1870100P;"Taille 7";1870100  
-;;;1870100P;"Taille 9";1870102  
-;;;1870100P;"Taille 10";1870103  
-;;;1870100P;"Taille 11";1870104  
-;;;1870100P;"Taille 8";1870101  
-;;;1870151P;"Taille 6";1870151  
-;;;1870151P;"Taille 9";1870154  
-;;;1870151P;"Taille 8";1870153  
-;;;1870151P;"Taille 7";1870152  
-;;;1870151P;"Taille 10";1870155  
-;;;0765401P;"60 L - 65,5\u00a0cm L\u00a0x\u00a040\u00a0cm la. (25 3\/4\u00a0x\u00a015 3\/4\u00a0po)";  0765402  
-;;;0765401P;"30 L - 55,5\u00a0cm L\u00a0x\u00a035\u00a0cm la. (22\u00a0x\u00a013 3\/4\u00a0po)";  0765401  
-;;;0765405P;"Grand - 72\u00a0cm L\u00a0x\u00a041\u00a0cm la.\u00a0x\u00a032\u00a0cm H (28\u00a01\/2\u00a0x\u00a016\u00a0x\u00a012 1\/2\u00a0po)";  0765406  
-;;;0765405P;"Moyen - 53\u00a0cm L\u00a0x\u00a034\u00a0cm la.\u00a0x\u00a025\u00a0cm H (21\u00a0x\u00a013\u00a01\/2\u00a0x\u00a010\u00a0po)";  0765405  
-;;;0765593P;"Grand\u00a0: 24,1\u00a0cm dia.\u00a0x\u00a045,7\u00a0cm H (9\u00a01\/2\u00a0x\u00a018\u00a0po)";  0765594  
-;;;0765593P;"Moyen\u00a0: 22,9\u00a0cm dia.\u00a0x\u00a038,1\u00a0cm H (9\u00a0x\u00a015\u00a0po)";  0765593  
-;;;0765761P;"Grand\u00a0: 25\u00a0cm dia.\u00a0x\u00a023\u00a0cm H (10\u00a0x\u00a021\u00a0po)";  0765762  
-;;;0765761P;"Petit\u00a0: 16,5\u00a0cm dia.\u00a0x\u00a046\u00a0cm H (6\u00a01\/2\u00a0x\u00a018\u00a0po)";  0765761  
-;;;2992131P;"Bleu";  2992131  
-;;;2992131P;"Rose";  2992132  
-           
+INSERT_UPDATE ApparelStyleVariantProduct;code[unique=true];$catalogVersion;$baseProduct;unit(code);swatchColors(code);supercategories(code,$catalogVersion);varianttype(code);$approved
+;0765556P_S_37213	;;0765556P	;pieces;;	37213	;ApparelSizeVariantProduct
+;1870275P_S_37251	;;1870275P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870252P_S_37251	;;1870252P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870246P_S_37251	;;1870246P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870240P_S_37251	;;1870240P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870470P_S_37253	;;1870470P	;pieces;;	37253	;ApparelSizeVariantProduct
+;1870474P_S_37253	;;1870474P	;pieces;;	37253	;ApparelSizeVariantProduct
+;1870498P_S_37253	;;1870498P	;pieces;;	37253	;ApparelSizeVariantProduct
+;1870478P_S_37253	;;1870478P	;pieces;;	37253	;ApparelSizeVariantProduct
+;1870494P_S_37253	;;1870494P	;pieces;;	37253	;ApparelSizeVariantProduct
+;1870490P_S_37253	;;1870490P	;pieces;;	37253	;ApparelSizeVariantProduct
+;0762139P_S_37221	;;0762139P	;pieces;;	37221	;ApparelSizeVariantProduct
+;0762122P_S_37233	;;0762122P	;pieces;;	37233	;ApparelSizeVariantProduct
+;0771640P_S_37275	;;0771640P	;pieces;;	37275	;ApparelSizeVariantProduct
+;0771645P_S_37275	;;0771645P	;pieces;;	37275	;ApparelSizeVariantProduct
+;0771650P_S_37275	;;0771650P	;pieces;;	37275	;ApparelSizeVariantProduct
+;1870166P_S_37251	;;1870166P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870156P_S_37251	;;1870156P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870161P_S_37251	;;1870161P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870100P_S_37251	;;1870100P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870151P_S_37251	;;1870151P	;pieces;;	37251	;ApparelSizeVariantProduct
+;0765401P_S_37227	;;0765401P	;pieces;;	37227	;ApparelSizeVariantProduct
+;0765405P_S_37239	;;0765405P	;pieces;;	37239	;ApparelSizeVariantProduct
+;0765593P_S_37239	;;0765593P	;pieces;;	37239	;ApparelSizeVariantProduct
+;0765761P_S_37239	;;0765761P	;pieces;;	37239	;ApparelSizeVariantProduct
+#;2992131P_S_37201	;;2992131P	;pieces;;	37201	;ApparelSizeVariantProduct
+
+INSERT_UPDATE ApparelSizeVariantProduct;code[unique=true];$catalogVersion;$baseProduct;ean;unit(code);swatchColors(code);supercategories(code,$catalogVersion);;$approved;
+#;	0765558	;;	0765556P_S_37213		;;	pieces	;;	37213
+#;	0765557  	;;	0765556P_S_37213		;;	pieces	;;	37213
+#;	0765556  	;;	0765556P_S_37213		;;	pieces	;;	37213
+;	1870276  	;;	1870275P_S_37251		;;	pieces	;;	37251
+;	1870277  	;;	1870275P_S_37251		;;	pieces	;;	37251
+;	1870279  	;;	1870275P_S_37251		;;	pieces	;;	37251
+;	1870278  	;;	1870275P_S_37251		;;	pieces	;;	37251
+;	1870275  	;;	1870252P_S_37251		;;	pieces	;;	37251
+;	1870253  	;;	1870252P_S_37251		;;	pieces	;;	37251
+;	1870256  	;;	1870252P_S_37251		;;	pieces	;;	37251
+;	1870252  	;;	1870252P_S_37251		;;	pieces	;;	37251
+;	1870255  	;;	1870252P_S_37251		;;	pieces	;;	37251
+;	1870254  	;;	1870246P_S_37251		;;	pieces	;;	37251
+;	1870247  	;;	1870246P_S_37251		;;	pieces	;;	37251
+;	1870246  	;;	1870246P_S_37251		;;	pieces	;;	37251
+;	1870250  	;;	1870246P_S_37251		;;	pieces	;;	37251
+;	1870251  	;;	1870246P_S_37251		;;	pieces	;;	37251
+;	1870249  	;;	1870246P_S_37251		;;	pieces	;;	37251
+;	1870248  	;;	1870240P_S_37251		;;	pieces	;;	37251
+;	1870240  	;;	1870240P_S_37251		;;	pieces	;;	37251
+;	1870245  	;;	1870240P_S_37251		;;	pieces	;;	37251
+;	 1870241  	;;	1870240P_S_37251		;;	pieces	;;	37251
+;	1870243  	;;	1870240P_S_37251		;;	pieces	;;	37251
+;	1870242  	;;	1870240P_S_37251		;;	pieces	;;	37251
+;	1870244  	;;	1870240P_S_37251		;;	pieces	;;	37251
+;	1870472  	;;	1870470P_S_37253		;;	pieces	;;	37253
+;	1870473  	;;	1870470P_S_37253		;;	pieces	;;	37253
+;	1870471  	;;	1870470P_S_37253		;;	pieces	;;	37253
+;	1870470  	;;	1870474P_S_37253		;;	pieces	;;	37253
+;	1870474  	;;	1870474P_S_37253		;;	pieces	;;	37253
+;	1870476  	;;	1870474P_S_37253		;;	pieces	;;	37253
+;	1870477  	;;	1870474P_S_37253		;;	pieces	;;	37253
+;	1870475  	;;	1870498P_S_37253		;;	pieces	;;	37253
+;	1870499  	;;	1870498P_S_37253		;;	pieces	;;	37253
+;	1870501  	;;	1870498P_S_37253		;;	pieces	;;	37253
+;	1870498  	;;	1870498P_S_37253		;;	pieces	;;	37253
+;	1870500  	;;	1870478P_S_37253		;;	pieces	;;	37253
+;	1870478  	;;	1870478P_S_37253		;;	pieces	;;	37253
+;	1870480  	;;	1870478P_S_37253		;;	pieces	;;	37253
+;	1870481  	;;	1870478P_S_37253		;;	pieces	;;	37253
+;	1870479  	;;	1870494P_S_37253		;;	pieces	;;	37253
+;	1870497  	;;	1870494P_S_37253		;;	pieces	;;	37253
+;	1870495  	;;	1870494P_S_37253		;;	pieces	;;	37253
+;	1870494  	;;	1870494P_S_37253		;;	pieces	;;	37253
+;	1870496  	;;	1870490P_S_37253		;;	pieces	;;	37253
+;	1870491  	;;	1870490P_S_37253		;;	pieces	;;	37253
+;	1870492  	;;	1870490P_S_37253		;;	pieces	;;	37253
+;	1870490  	;;	1870490P_S_37253		;;	pieces	;;	37253
+;	1870493  	;;	1870490P_S_37253		;;	pieces	;;	37253
+;	0762141  	;;	0762139P_S_37221		;;	pieces	;;	37221
+;	0762140  	;;	0762139P_S_37221		;;	pieces	;;	37221
+;	0762139  	;;	0762139P_S_37221		;;	pieces	;;	37221
+;	0762122  	;;	0762122P_S_37233		;;	pieces	;;	37233
+;	0762123  	;;	0762122P_S_37233		;;	pieces	;;	37233
+;	0762124  	;;	0762122P_S_37233		;;	pieces	;;	37233
+;	0771644  	;;	0771640P_S_37275		;;	pieces	;;	37275
+;	0771640  	;;	0771640P_S_37275		;;	pieces	;;	37275
+;	0771643  	;;	0771640P_S_37275		;;	pieces	;;	37275
+;	0771641  	;;	0771640P_S_37275		;;	pieces	;;	37275
+;	0771642        	;;	0771645P_S_37275		;;	pieces	;;37275
+;	0771646  	;;	0771645P_S_37275		;;	pieces	;;	37275
+;	0771647  	;;	0771645P_S_37275		;;	pieces	;;	37275
+;	0771645  	;;	0771645P_S_37275		;;	pieces	;;	37275
+;	0771649  	;;	0771645P_S_37275		;;	pieces	;;	37275
+;	0771648        	;;	0771650P_S_37275		;;	pieces	;;	37275
+;	0771650  	;;	0771650P_S_37275		;;	pieces	;;	37275
+;	0771653  	;;	0771650P_S_37275		;;	pieces	;;	37275
+;	0771654  	;;	0771650P_S_37275		;;	pieces	;;	37275
+;	0771651  	;;	0771650P_S_37275		;;	pieces	;;	37275
+;	0771652  	;;	0771650P_S_37275		;;	pieces	;;	37275
+;	1870166  	;;	1870166P_S_37251		;;	pieces	;;	37251
+;	1870171  	;;	1870166P_S_37251		;;	pieces	;;	37251
+;	1870168  	;;	1870166P_S_37251		;;	pieces	;;	37251
+;	1870167  	;;	1870166P_S_37251		;;	pieces	;;	37251
+;	1870170  	;;	1870166P_S_37251		;;	pieces	;;	37251
+;	1870169  	;;	1870156P_S_37251		;;	pieces	;;	37251
+;	1870160  	;;	1870156P_S_37251		;;	pieces	;;	37251
+;	1870157  	;;	1870156P_S_37251		;;	pieces	;;	37251
+;	1870159  	;;	1870156P_S_37251		;;	pieces	;;	37251
+;	1870158  	;;	1870156P_S_37251		;;	pieces	;;	37251
+;	1870156  	;;	1870161P_S_37251		;;	pieces	;;	37251
+;	1870162  	;;	1870161P_S_37251		;;	pieces	;;	37251
+;	1870165  	;;	1870161P_S_37251		;;	pieces	;;	37251
+;	1870164  	;;	1870161P_S_37251		;;	pieces	;;	37251
+;	1870161  	;;	1870161P_S_37251		;;	pieces	;;	37251
+;	1870163  	;;	1870100P_S_37251		;;	pieces	;;	37251
+;	1870105  	;;	1870100P_S_37251		;;	pieces	;;	37251
+;	1870100  	;;	1870100P_S_37251		;;	pieces	;;	37251
+;	1870102  	;;	1870100P_S_37251		;;	pieces	;;	37251
+;	1870103  	;;	1870100P_S_37251		;;	pieces	;;	37251
+;	1870104  	;;	1870100P_S_37251		;;	pieces	;;	37251
+;	1870101  	;;	1870151P_S_37251		;;	pieces	;;	37251
+;	1870151  	;;	1870151P_S_37251		;;	pieces	;;	37251
+;	1870154  	;;	1870151P_S_37251		;;	pieces	;;	37251
+;	1870153  	;;	1870151P_S_37251		;;	pieces	;;	37251
+;	1870152  	;;	1870151P_S_37251		;;	pieces	;;	37251
+;	1870155  	;;	1870151P_S_37251		;;	pieces	;;	37251
+;	0765402  	;;	0765401P_S_37227		;;	pieces	;;	37227
+;	0765401  	;;	0765401P_S_37227		;;	pieces	;;	37227
+;	0765406  	;;	0765405P_S_37239		;;	pieces	;;	37239
+;	0765405  	;;	0765405P_S_37239		;;	pieces	;;	37239
+;	0765594  	;;	0765593P_S_37239		;;	pieces	;;	37239
+;	0765593  	;;	0765593P_S_37239		;;	pieces	;;	37239
+;	0765762  	;;	0765761P_S_37239		;;	pieces	;;	37239
+;	0765761  	;;	0765761P_S_37239		;;	pieces	;;	37239
+#;	2992131  	;;	2992131P_S_37201		;;	pieces	;;	37201
+#;	2992132  	;;	2992131P_S_37201		;;	pieces	;;	37201
+
+
+
+
+UPDATE Product;$catalogVersion;ApparelSizeVariantProduct.size[lang=$lang];code[unique=true]
+
+;;"Centre de 10\u00a0cm (4\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765558
+;;"Centre de 7,6\u00a0cm (3\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765557  
+;;"Centre de 5\u00a0cm (2\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765556  
+;;"Taille 7";1870276  
+;;"Taille 8";1870277  
+;;"Taille 10";1870279  
+;;"Taille 9";1870278  
+;;"Taille 6";1870275  
+;;"Taille 9";  1870253  
+;;"Taille 12"; 1870256  
+;;"Taille 8";1870252  
+;;"Taille 11"; 1870255  
+;;"Taille 10"; 1870254  
+;;"Taille 9";  1870247  
+;;"Taille 8"; 1870246  
+;;"Taille 12";1870250  
+;;"Taille 13";1870251  
+;;"Taille 11";1870249  
+;;"Taille 10";1870248  
+;;"Taille 8";  1870240  
+;;"Taille 13";1870245  
+;;"Taille 9"; 1870241  
+;;"Taille 11";1870243  
+;;"Taille 10";1870242  
+;;"Taille 12";1870244  
+;;"Tr\u00e8s grand";1870472  
+;;"Tr\u00e8s tr\u00e8s grand";1870473  
+;;"Grand";1870471  
+;;"Moyen";1870470  
+;;"Moyen";1870474  
+;;"Tr\u00e8s grand";1870476  
+;;"Tr\u00e8s tr\u00e8s grand";1870477  
+;;"Grand";1870475  
+;;"Moyen";1870499  
+;;"Tr\u00e8s grand";1870501  
+;;"Petit";1870498  
+;;"Grand";1870500  
+;;"Moyen";1870478  
+;;"Tr\u00e8s grand";1870480  
+;;"Tr\u00e8s tr\u00e8s grand";1870481  
+;;"Grand";1870479  
+;;"Tr\u00e8s grand";1870497  
+;;"Moyen";1870495  
+;;"Petit";1870494  
+;;"Grand";1870496  
+;;"Moyen";1870491  
+;;"Grand";1870492  
+;;"Petit";1870490  
+;;"Tr\u00e8s grand"; 1870493  
+;;"9,46 L";   0762141  
+;;"4 L";0762140  
+;;"1 L";0762139  
+;;"Grenade";0762122  
+;;"Nectarine";0762123  
+;;"Eau fra\u00eeche";  0762124  
+;;"12";0771644  
+;;"8";0771640  
+;;"11";0771643  
+;;"9";0771641  
+;;"10";0771642           
+;;"9";0771646  
+;;"10";0771647  
+;;"8";0771645  
+;;"12";0771649  
+;;"11";0771648        
+;;"8";0771650  
+;;"11";0771653  
+;;"12";0771654  
+;;"9";0771651  
+;;"10";0771652  
+;;"Taille 7";1870166  
+;;"Taille 12";1870171  
+;;"Taille 9";1870168  
+;;"Taille 8";1870167  
+;;"Taille 11";1870170  
+;;"Taille 10";1870169  
+;;"Taille 10";  1870160  
+;;"Taille 7";1870157  
+;;"Taille 9";1870159  
+;;"Taille 8";1870158  
+;;"Taille 6";1870156  
+;;"Taille 9";1870162  
+;;"Taille 12";1870165  
+;;"Taille 11";1870164  
+;;"Taille 8";1870161  
+;;"Taille 10";1870163  
+;;"Taille 12";1870105  
+;;"Taille 7";1870100  
+;;"Taille 9";1870102  
+;;"Taille 10";1870103  
+;;"Taille 11";1870104  
+;;"Taille 8";1870101  
+;;"Taille 6";1870151  
+;;"Taille 9";1870154  
+;;"Taille 8";1870153  
+;;"Taille 7";1870152  
+;;"Taille 10";1870155  
+;;"60 L - 65,5\u00a0cm L\u00a0x\u00a040\u00a0cm la. (25 3\/4\u00a0x\u00a015 3\/4\u00a0po)";  0765402  
+;;"30 L - 55,5\u00a0cm L\u00a0x\u00a035\u00a0cm la. (22\u00a0x\u00a013 3\/4\u00a0po)";  0765401  
+;;"Grand - 72\u00a0cm L\u00a0x\u00a041\u00a0cm la.\u00a0x\u00a032\u00a0cm H (28\u00a01\/2\u00a0x\u00a016\u00a0x\u00a012 1\/2\u00a0po)";  0765406  
+;;"Moyen - 53\u00a0cm L\u00a0x\u00a034\u00a0cm la.\u00a0x\u00a025\u00a0cm H (21\u00a0x\u00a013\u00a01\/2\u00a0x\u00a010\u00a0po)";  0765405  
+;;"Grand\u00a0: 24,1\u00a0cm dia.\u00a0x\u00a045,7\u00a0cm H (9\u00a01\/2\u00a0x\u00a018\u00a0po)";  0765594  
+;;"Moyen\u00a0: 22,9\u00a0cm dia.\u00a0x\u00a038,1\u00a0cm H (9\u00a0x\u00a015\u00a0po)";  0765593  
+;;"Grand\u00a0: 25\u00a0cm dia.\u00a0x\u00a023\u00a0cm H (10\u00a0x\u00a021\u00a0po)";  0765762  
+;;"Petit\u00a0: 16,5\u00a0cm dia.\u00a0x\u00a046\u00a0cm H (6\u00a01\/2\u00a0x\u00a018\u00a0po)";  0765761  
+#;;"Bleu";2992131  
+#;;"Rose";2992132  
+
+$lang=fr
+$productCatalog=ctcProductCatalog
+$catalogVersion=catalogVersion(catalog(id[default='ctcProductCatalog']),version[default='Staged'])[unique=true,default='ctcProductCatalog:Staged']
+$baseProduct=baseProduct(code, catalogVersion(catalog(id[default='$productCatalog']),version[default='Staged']))
+$approved=approvalstatus(code)[default='approved']
+
+UPDATE Product;code[unique=true];name[lang=$lang];summary[lang=$lang];$catalogVersion
+
+;	0765558	;	Matelas autogonflant Woodsâ„¢	;	"Matelas autogonflant Woodsâ„¢, lÃ©ger et facile Ã  transporter, idÃ©al pour le voyage:|:Technologie MicroBan continuellement active pour aider Ã  prÃ©venir l'apparition de taches et d'odeurs causÃ©es par les bactÃ©ries et les moisissures:|:Surface enÂ polyester indÃ©chirable et durable aidant Ã  prÃ©venir les dÃ©chirures et Ã  rÃ©duire les dommages:|:Centre en mousse offrant un confort inÃ©galÃ© sur les sols durs et inÃ©gaux:|:Surface impermÃ©able offrant une protection contre les surfaces froides et humides:|:Facile Ã  emballer, il suffit de le rouler pour le dÃ©gonfler:|:Sac facilitant le rangement:|:IdÃ©al pour un utilisateur:|:Choix de formats"	;
+;	0765557  	;	Matelas autogonflant Woodsâ„¢	;	"Matelas autogonflant Woodsâ„¢, lÃ©ger et facile Ã  transporter, idÃ©al pour le voyage:|:Technologie MicroBan continuellement active pour aider Ã  prÃ©venir l'apparition de taches et d'odeurs causÃ©es par les bactÃ©ries et les moisissures:|:Surface enÂ polyester indÃ©chirable et durable aidant Ã  prÃ©venir les dÃ©chirures et Ã  rÃ©duire les dommages:|:Centre en mousse offrant un confort inÃ©galÃ© sur les sols durs et inÃ©gaux:|:Surface impermÃ©able offrant une protection contre les surfaces froides et humides:|:Facile Ã  emballer, il suffit de le rouler pour le dÃ©gonfler:|:Sac facilitant le rangement:|:IdÃ©al pour un utilisateur:|:Choix de formats"	;
+;	0765556  	;	Matelas autogonflant Woodsâ„¢	;	"Matelas autogonflant Woodsâ„¢, lÃ©ger et facile Ã  transporter, idÃ©al pour le voyage:|:Technologie MicroBan continuellement active pour aider Ã  prÃ©venir l'apparition de taches et d'odeurs causÃ©es par les bactÃ©ries et les moisissures:|:Surface enÂ polyester indÃ©chirable et durable aidant Ã  prÃ©venir les dÃ©chirures et Ã  rÃ©duire les dommages:|:Centre en mousse offrant un confort inÃ©galÃ© sur les sols durs et inÃ©gaux:|:Surface impermÃ©able offrant une protection contre les surfaces froides et humides:|:Facile Ã  emballer, il suffit de le rouler pour le dÃ©gonfler:|:Sac facilitant le rangement:|:IdÃ©al pour un utilisateur:|:Choix de formats"	;
+;	1870276  	;	Bottines de randonnÃ©e Woodsâ„¢ Meru Peak, mi-hauteur, dame	;	"Bottines de randonnÃ©e Woodsâ„¢ Meru Peak mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Choix de tailles pour dames"	;
+;	1870277  	;	Bottines de randonnÃ©e Woodsâ„¢ Meru Peak, mi-hauteur, dame	;	"Bottines de randonnÃ©e Woodsâ„¢ Meru Peak mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Choix de tailles pour dames"	;
+;	1870279  	;	Bottines de randonnÃ©e Woodsâ„¢ Meru Peak, mi-hauteur, dame	;	"Bottines de randonnÃ©e Woodsâ„¢ Meru Peak mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Choix de tailles pour dames"	;
+;	1870278  	;	Bottines de randonnÃ©e Woodsâ„¢ Meru Peak, mi-hauteur, dame	;	"Bottines de randonnÃ©e Woodsâ„¢ Meru Peak mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Choix de tailles pour dames"	;
+;	1870275  	;	Bottines de randonnÃ©e Woodsâ„¢ Meru Peak, mi-hauteur, dame	;	"Bottines de randonnÃ©e Woodsâ„¢ Meru Peak mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Choix de tailles pour dames"	;
+;	1870253  	;	Bottines de randonnÃ©e Woodsâ„¢ Rundle, basses, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Rundle, basses, en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870256  	;	Bottines de randonnÃ©e Woodsâ„¢ Rundle, basses, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Rundle, basses, en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870252  	;	Bottines de randonnÃ©e Woodsâ„¢ Rundle, basses, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Rundle, basses, en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870255  	;	Bottines de randonnÃ©e Woodsâ„¢ Rundle, basses, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Rundle, basses, en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870254  	;	Bottines de randonnÃ©e Woodsâ„¢ Rundle, basses, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Rundle, basses, en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870247  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870246  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870250  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870251  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870249  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870248  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, taupe/or, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:CouleurÂ : taupe et or:|:Choix de tailles pour hommes"	;
+;	1870240  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, mi-hauteur, gris foncÃ©/gris/bleu, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Couleur : gris foncÃ©/gris/bleu:|:Choix de tailles pour hommes"	;
+;	1870245  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, mi-hauteur, gris foncÃ©/gris/bleu, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Couleur : gris foncÃ©/gris/bleu:|:Choix de tailles pour hommes"	;
+;	 1870241  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, mi-hauteur, gris foncÃ©/gris/bleu, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Couleur : gris foncÃ©/gris/bleu:|:Choix de tailles pour hommes"	;
+;	1870243  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, mi-hauteur, gris foncÃ©/gris/bleu, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Couleur : gris foncÃ©/gris/bleu:|:Choix de tailles pour hommes"	;
+;	1870242  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, mi-hauteur, gris foncÃ©/gris/bleu, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Couleur : gris foncÃ©/gris/bleu:|:Choix de tailles pour hommes"	;
+;	1870244  	;	Bottines de randonnÃ©e Woodsâ„¢ Michener, mi-hauteur, gris foncÃ©/gris/bleu, homme	;	"Bottines de randonnÃ©e Woodsâ„¢ Michener mi-hauteur en suÃ¨de impermÃ©able avec tige en tissu maillÃ© et membrane respirante, pour une durabilitÃ©, une protection et un confort de qualitÃ©:|:Semelle en caoutchouc Ã  traction multidirectionnelle pour une meilleure adhÃ©rence:|:Semelle intercalaire en EVA moulÃ©e par compression absorbant les chocs et rÃ©duisant la tension:|:SystÃ¨me de laÃ§age Ghillie et languette Ã  gousset pour empÃªcher les dÃ©bris d'entrer et offrir un ajustement confortable:|:Membrane impermÃ©able Dri-Tec pour garder lesÂ pieds au sec:|:PiÃ¨ces mÃ©talliques rÃ©sistantes Ã  la rouille:|:Semelle intÃ©rieure en mousse viscoÃ©lastique Hi-Tec de 5Â mm:|:Couleur : gris foncÃ©/gris/bleu:|:Choix de tailles pour hommes"	;
+;	1870472  	;	Veste impermÃ©able Woodsâ„¢ Gritstone, noir, homme	;	"Veste impermÃ©able Woodsâ„¢ Gritstone, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour hommes"	;
+;	1870473  	;	Veste impermÃ©able Woodsâ„¢ Gritstone, noir, homme	;	"Veste impermÃ©able Woodsâ„¢ Gritstone, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour hommes"	;
+;	1870471  	;	Veste impermÃ©able Woodsâ„¢ Gritstone, noir, homme	;	"Veste impermÃ©able Woodsâ„¢ Gritstone, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour hommes"	;
+;	1870470  	;	Veste impermÃ©able Woodsâ„¢ Gritstone, noir, homme	;	"Veste impermÃ©able Woodsâ„¢ Gritstone, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour hommes"	;
+;	1870474  	;	Veste impermÃ©able Woodsâ„¢ Gritstone, vert, homme	;	"Veste impermÃ©able Woodsâ„¢ Gritstone, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : vert:|:Choix de tailles pour hommes"	;
+;	1870476  	;	Veste impermÃ©able Woodsâ„¢ Gritstone, vert, homme	;	"Veste impermÃ©able Woodsâ„¢ Gritstone, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : vert:|:Choix de tailles pour hommes"	;
+;	1870477  	;	Veste impermÃ©able Woodsâ„¢ Gritstone, vert, homme	;	"Veste impermÃ©able Woodsâ„¢ Gritstone, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : vert:|:Choix de tailles pour hommes"	;
+;	1870475  	;	Veste impermÃ©able Woodsâ„¢ Gritstone, vert, homme	;	"Veste impermÃ©able Woodsâ„¢ Gritstone, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : vert:|:Choix de tailles pour hommes"	;
+;	1870499  	;	Pantalon impermÃ©able Woodsâ„¢ Breccia, noir, dame	;	"Pantalon impermÃ©able Woodsâ„¢ Breccia, facile Ã  transporter, en tissu impermÃ©able et respirant:|:GuÃªtres de bottes protÃ©geant contre l'eau, la neige et la saletÃ©:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : genoux articulÃ©s, ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour dames"	;
+;	1870501  	;	Pantalon impermÃ©able Woodsâ„¢ Breccia, noir, dame	;	"Pantalon impermÃ©able Woodsâ„¢ Breccia, facile Ã  transporter, en tissu impermÃ©able et respirant:|:GuÃªtres de bottes protÃ©geant contre l'eau, la neige et la saletÃ©:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : genoux articulÃ©s, ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour dames"	;
+;	1870498  	;	Pantalon impermÃ©able Woodsâ„¢ Breccia, noir, dame	;	"Pantalon impermÃ©able Woodsâ„¢ Breccia, facile Ã  transporter, en tissu impermÃ©able et respirant:|:GuÃªtres de bottes protÃ©geant contre l'eau, la neige et la saletÃ©:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : genoux articulÃ©s, ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour dames"	;
+;	1870500  	;	Pantalon impermÃ©able Woodsâ„¢ Breccia, noir, dame	;	"Pantalon impermÃ©able Woodsâ„¢ Breccia, facile Ã  transporter, en tissu impermÃ©able et respirant:|:GuÃªtres de bottes protÃ©geant contre l'eau, la neige et la saletÃ©:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : genoux articulÃ©s, ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour dames"	;
+;	1870478  	;	Pantalon impermÃ©able Woodsâ„¢ Oolite, noir, homme	;	"Pantalon impermÃ©able Woodsâ„¢ Oolite, facile Ã  transporter, en tissu impermÃ©able et respirant:|:GuÃªtres de bottes protÃ©geant contre l'eau, la neige et la saletÃ©:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : genoux articulÃ©s, ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour hommes"	;
+;	1870480  	;	Pantalon impermÃ©able Woodsâ„¢ Oolite, noir, homme	;	"Pantalon impermÃ©able Woodsâ„¢ Oolite, facile Ã  transporter, en tissu impermÃ©able et respirant:|:GuÃªtres de bottes protÃ©geant contre l'eau, la neige et la saletÃ©:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : genoux articulÃ©s, ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour hommes"	;
+;	1870481  	;	Pantalon impermÃ©able Woodsâ„¢ Oolite, noir, homme	;	"Pantalon impermÃ©able Woodsâ„¢ Oolite, facile Ã  transporter, en tissu impermÃ©able et respirant:|:GuÃªtres de bottes protÃ©geant contre l'eau, la neige et la saletÃ©:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : genoux articulÃ©s, ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour hommes"	;
+;	1870479  	;	Pantalon impermÃ©able Woodsâ„¢ Oolite, noir, homme	;	"Pantalon impermÃ©able Woodsâ„¢ Oolite, facile Ã  transporter, en tissu impermÃ©able et respirant:|:GuÃªtres de bottes protÃ©geant contre l'eau, la neige et la saletÃ©:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : genoux articulÃ©s, ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour hommes"	;
+;	1870497  	;	Veste impermÃ©able Woodsâ„¢ Marble, turquoise, dame	;	"Veste impermÃ©able Woodsâ„¢ Marble, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : cÃ©ramique:|:Choix de tailles pour dames"	;
+;	1870495  	;	Veste impermÃ©able Woodsâ„¢ Marble, turquoise, dame	;	"Veste impermÃ©able Woodsâ„¢ Marble, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : cÃ©ramique:|:Choix de tailles pour dames"	;
+;	1870494  	;	Veste impermÃ©able Woodsâ„¢ Marble, turquoise, dame	;	"Veste impermÃ©able Woodsâ„¢ Marble, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : cÃ©ramique:|:Choix de tailles pour dames"	;
+;	1870496  	;	Veste impermÃ©able Woodsâ„¢ Marble, turquoise, dame	;	"Veste impermÃ©able Woodsâ„¢ Marble, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : cÃ©ramique:|:Choix de tailles pour dames"	;
+;	1870491  	;	Veste impermÃ©able Woodsâ„¢ Marble, noir, dame	;	"Veste impermÃ©able Woodsâ„¢ Marble, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour dames"	;
+;	1870492  	;	Veste impermÃ©able Woodsâ„¢ Marble, noir, dame	;	"Veste impermÃ©able Woodsâ„¢ Marble, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour dames"	;
+;	1870490  	;	Veste impermÃ©able Woodsâ„¢ Marble, noir, dame	;	"Veste impermÃ©able Woodsâ„¢ Marble, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour dames"	;
+;	1870493  	;	Veste impermÃ©able Woodsâ„¢ Marble, noir, dame	;	"Veste impermÃ©able Woodsâ„¢ Marble, facile Ã  transporter, en tissu impermÃ©able et respirant:|:AÃ©ration sous les aisselles:|:Coutures complÃ¨tement scellÃ©es:|:Autres caractÃ©ristiquesÂ : ceinture rÃ©glable, motifs rÃ©flÃ©chissants, modÃ¨le facile Ã  transporter:|:CouleurÂ : noir:|:Choix de tailles pour dames"	;
+;	0762141  	;	Combustible au kÃ©rosÃ¨ne Woodsâ„¢	;	"Combustible au kÃ©rosÃ¨ne Woodsâ„¢ filtrÃ© trois fois pour en assurer la puretÃ© et brÃ»lant en dÃ©gageant trÃ¨s peu de fumÃ©e ni d'odeur:|:Pour les lampes Ã  mÃ¨che rÃ©glable, les rÃ©chauds catalytiques et les rÃ©chauds Ã  kÃ©rosÃ¨ne:|:Faible teneur en soufre:|:Choix de formats"	;
+;	0762140  	;	Combustible au kÃ©rosÃ¨ne Woodsâ„¢	;	"Combustible au kÃ©rosÃ¨ne Woodsâ„¢ filtrÃ© trois fois pour en assurer la puretÃ© et brÃ»lant en dÃ©gageant trÃ¨s peu de fumÃ©e ni d'odeur:|:Pour les lampes Ã  mÃ¨che rÃ©glable, les rÃ©chauds catalytiques et les rÃ©chauds Ã  kÃ©rosÃ¨ne:|:Faible teneur en soufre:|:Choix de formats"	;
+;	0762139  	;	Combustible au kÃ©rosÃ¨ne Woodsâ„¢	;	"Combustible au kÃ©rosÃ¨ne Woodsâ„¢ filtrÃ© trois fois pour en assurer la puretÃ© et brÃ»lant en dÃ©gageant trÃ¨s peu de fumÃ©e ni d'odeur:|:Pour les lampes Ã  mÃ¨che rÃ©glable, les rÃ©chauds catalytiques et les rÃ©chauds Ã  kÃ©rosÃ¨ne:|:Faible teneur en soufre:|:Choix de formats"	;
+;	0762122  	;	Huile Ã  lampe parfumÃ©e Woodsâ„¢, 710Â mL	;	"Huile Ã  lampe parfumÃ©e Woodsâ„¢ Ã  base de paraffine produisant une flamme vive qui brÃ»le sans dÃ©gager de fumÃ©e:|:DÃ©gage un parfum agrÃ©able en brÃ»lant:|:Pour les lampes Ã  mÃ¨che rÃ©glable et les lampes-chandelles:|:FormatÂ : 710Â mL:|:Choix de plusieurs parfums"	;
+;	0762123  	;	Huile Ã  lampe parfumÃ©e Woodsâ„¢, 710Â mL	;	"Huile Ã  lampe parfumÃ©e Woodsâ„¢ Ã  base de paraffine produisant une flamme vive qui brÃ»le sans dÃ©gager de fumÃ©e:|:DÃ©gage un parfum agrÃ©able en brÃ»lant:|:Pour les lampes Ã  mÃ¨che rÃ©glable et les lampes-chandelles:|:FormatÂ : 710Â mL:|:Choix de plusieurs parfums"	;
+;	0762124  	;	Huile Ã  lampe parfumÃ©e Woodsâ„¢, 710Â mL	;	"Huile Ã  lampe parfumÃ©e Woodsâ„¢ Ã  base de paraffine produisant une flamme vive qui brÃ»le sans dÃ©gager de fumÃ©e:|:DÃ©gage un parfum agrÃ©able en brÃ»lant:|:Pour les lampes Ã  mÃ¨che rÃ©glable et les lampes-chandelles:|:FormatÂ : 710Â mL:|:Choix de plusieurs parfums"	;
+;	0771644  	;	Bottes-pantalon Woodsâ„¢, camouflage	;	"Bottes-pantalon Woodsâ„¢ camouflage, en matÃ©riel laminÃ© trois couches 100Â % Ã©tanche avec membrane entiÃ¨rement respirante pour plus de confort:|:Coutures scellÃ©es impermÃ©ables pour une meilleure protection contre les entrÃ©es d'eau:|:Soutiens de genou matelassÃ©s et siÃ¨ge renforcÃ© pour une plus grande durabilitÃ©:|:Bottes de caoutchouc doublÃ©es de nÃ©oprÃ¨ne avec semelles Ã  crampons et 200Â g d'isolant thermique:|:Ceinture rÃ©glable pour une protection contre les entrÃ©es d'eau:|:Â pochettes en filet Ã  l'avant pour ranger les accessoires et garder les mains au chaud:|:CouleurÂ : camouflage:|:Choix de tailles"	;
+;	0771640  	;	Bottes-pantalon Woodsâ„¢, camouflage	;	"Bottes-pantalon Woodsâ„¢ camouflage, en matÃ©riel laminÃ© trois couches 100Â % Ã©tanche avec membrane entiÃ¨rement respirante pour plus de confort:|:Coutures scellÃ©es impermÃ©ables pour une meilleure protection contre les entrÃ©es d'eau:|:Soutiens de genou matelassÃ©s et siÃ¨ge renforcÃ© pour une plus grande durabilitÃ©:|:Bottes de caoutchouc doublÃ©es de nÃ©oprÃ¨ne avec semelles Ã  crampons et 200Â g d'isolant thermique:|:Ceinture rÃ©glable pour une protection contre les entrÃ©es d'eau:|:Â pochettes en filet Ã  l'avant pour ranger les accessoires et garder les mains au chaud:|:CouleurÂ : camouflage:|:Choix de tailles"	;
+;	0771643  	;	Bottes-pantalon Woodsâ„¢, camouflage	;	"Bottes-pantalon Woodsâ„¢ camouflage, en matÃ©riel laminÃ© trois couches 100Â % Ã©tanche avec membrane entiÃ¨rement respirante pour plus de confort:|:Coutures scellÃ©es impermÃ©ables pour une meilleure protection contre les entrÃ©es d'eau:|:Soutiens de genou matelassÃ©s et siÃ¨ge renforcÃ© pour une plus grande durabilitÃ©:|:Bottes de caoutchouc doublÃ©es de nÃ©oprÃ¨ne avec semelles Ã  crampons et 200Â g d'isolant thermique:|:Ceinture rÃ©glable pour une protection contre les entrÃ©es d'eau:|:Â pochettes en filet Ã  l'avant pour ranger les accessoires et garder les mains au chaud:|:CouleurÂ : camouflage:|:Choix de tailles"	;
+;	0771641  	;	Bottes-pantalon Woodsâ„¢, camouflage	;	"Bottes-pantalon Woodsâ„¢ camouflage, en matÃ©riel laminÃ© trois couches 100Â % Ã©tanche avec membrane entiÃ¨rement respirante pour plus de confort:|:Coutures scellÃ©es impermÃ©ables pour une meilleure protection contre les entrÃ©es d'eau:|:Soutiens de genou matelassÃ©s et siÃ¨ge renforcÃ© pour une plus grande durabilitÃ©:|:Bottes de caoutchouc doublÃ©es de nÃ©oprÃ¨ne avec semelles Ã  crampons et 200Â g d'isolant thermique:|:Ceinture rÃ©glable pour une protection contre les entrÃ©es d'eau:|:Â pochettes en filet Ã  l'avant pour ranger les accessoires et garder les mains au chaud:|:CouleurÂ : camouflage:|:Choix de tailles"	;
+;	0771642        	;	Bottes-pantalon Woodsâ„¢, camouflage	;	"Bottes-pantalon Woodsâ„¢ camouflage, en matÃ©riel laminÃ© trois couches 100Â % Ã©tanche avec membrane entiÃ¨rement respirante pour plus de confort:|:Coutures scellÃ©es impermÃ©ables pour une meilleure protection contre les entrÃ©es d'eau:|:Soutiens de genou matelassÃ©s et siÃ¨ge renforcÃ© pour une plus grande durabilitÃ©:|:Bottes de caoutchouc doublÃ©es de nÃ©oprÃ¨ne avec semelles Ã  crampons et 200Â g d'isolant thermique:|:Ceinture rÃ©glable pour une protection contre les entrÃ©es d'eau:|:Â pochettes en filet Ã  l'avant pour ranger les accessoires et garder les mains au chaud:|:CouleurÂ : camouflage:|:Choix de tailles"	;
+;	0771646  	;	Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne, camouflage	;	"Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne camouflage, avec bottes en caoutchouc dotÃ©es de 400 g d'isolant thermique pour une excellente conservation de la chaleur dans l'eau froide:|:Poche chauffe-main Ã  l'avant etÂ pochette Ã  accessoires magnÃ©tique pratique:|:Dos Ã©levÃ© offrant un ajustement confortable:|:Coutures impermÃ©ables soudÃ©es et scellÃ©es pour une meilleure protection contre les fuites:|:Partie supÃ©rieure avec 4,5Â mm de nÃ©oprÃ¨ne pour unÂ port plus sec et plus chaud:|:CouleurÂ : camouflage:|:Choix de tailles"	;
+;	0771647  	;	Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne, camouflage	;	"Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne camouflage, avec bottes en caoutchouc dotÃ©es de 400 g d'isolant thermique pour une excellente conservation de la chaleur dans l'eau froide:|:Poche chauffe-main Ã  l'avant etÂ pochette Ã  accessoires magnÃ©tique pratique:|:Dos Ã©levÃ© offrant un ajustement confortable:|:Coutures impermÃ©ables soudÃ©es et scellÃ©es pour une meilleure protection contre les fuites:|:Partie supÃ©rieure avec 4,5Â mm de nÃ©oprÃ¨ne pour unÂ port plus sec et plus chaud:|:CouleurÂ : camouflage:|:Choix de tailles"	;
+;	0771645  	;	Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne, camouflage	;	"Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne camouflage, avec bottes en caoutchouc dotÃ©es de 400 g d'isolant thermique pour une excellente conservation de la chaleur dans l'eau froide:|:Poche chauffe-main Ã  l'avant etÂ pochette Ã  accessoires magnÃ©tique pratique:|:Dos Ã©levÃ© offrant un ajustement confortable:|:Coutures impermÃ©ables soudÃ©es et scellÃ©es pour une meilleure protection contre les fuites:|:Partie supÃ©rieure avec 4,5Â mm de nÃ©oprÃ¨ne pour unÂ port plus sec et plus chaud:|:CouleurÂ : camouflage:|:Choix de tailles"	;
+;	0771649  	;	Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne, camouflage	;	"Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne camouflage, avec bottes en caoutchouc dotÃ©es de 400 g d'isolant thermique pour une excellente conservation de la chaleur dans l'eau froide:|:Poche chauffe-main Ã  l'avant etÂ pochette Ã  accessoires magnÃ©tique pratique:|:Dos Ã©levÃ© offrant un ajustement confortable:|:Coutures impermÃ©ables soudÃ©es et scellÃ©es pour une meilleure protection contre les fuites:|:Partie supÃ©rieure avec 4,5Â mm de nÃ©oprÃ¨ne pour unÂ port plus sec et plus chaud:|:CouleurÂ : camouflage:|:Choix de tailles"	;
+;	0771648        	;	Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne, camouflage	;	"Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne camouflage, avec bottes en caoutchouc dotÃ©es de 400 g d'isolant thermique pour une excellente conservation de la chaleur dans l'eau froide:|:Poche chauffe-main Ã  l'avant etÂ pochette Ã  accessoires magnÃ©tique pratique:|:Dos Ã©levÃ© offrant un ajustement confortable:|:Coutures impermÃ©ables soudÃ©es et scellÃ©es pour une meilleure protection contre les fuites:|:Partie supÃ©rieure avec 4,5Â mm de nÃ©oprÃ¨ne pour unÂ port plus sec et plus chaud:|:CouleurÂ : camouflage:|:Choix de tailles"	;
+;	0771650  	;	Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne	;	"Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne avec bottes en caoutchouc dotÃ©es de 200 g d'isolant thermique pour une conservation supplÃ©mentaire de la chaleur dans l'eau froide:|:Poche chauffe-main Ã  l'avant etÂ pochette deÂ poitrine interne pratique:|:Dos Ã©levÃ© offrant un ajustement confortable:|:Coutures impermÃ©ables soudÃ©es et scellÃ©es pour une meilleure protection contre les fuites:|:Partie supÃ©rieure avec 4,5Â mm de nÃ©oprÃ¨ne pour unÂ port plus sec et plus chaud:|:Choix de tailles"	;
+;	0771653  	;	Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne	;	"Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne avec bottes en caoutchouc dotÃ©es de 200 g d'isolant thermique pour une conservation supplÃ©mentaire de la chaleur dans l'eau froide:|:Poche chauffe-main Ã  l'avant etÂ pochette deÂ poitrine interne pratique:|:Dos Ã©levÃ© offrant un ajustement confortable:|:Coutures impermÃ©ables soudÃ©es et scellÃ©es pour une meilleure protection contre les fuites:|:Partie supÃ©rieure avec 4,5Â mm de nÃ©oprÃ¨ne pour unÂ port plus sec et plus chaud:|:Choix de tailles"	;
+;	0771654  	;	Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne	;	"Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne avec bottes en caoutchouc dotÃ©es de 200 g d'isolant thermique pour une conservation supplÃ©mentaire de la chaleur dans l'eau froide:|:Poche chauffe-main Ã  l'avant etÂ pochette deÂ poitrine interne pratique:|:Dos Ã©levÃ© offrant un ajustement confortable:|:Coutures impermÃ©ables soudÃ©es et scellÃ©es pour une meilleure protection contre les fuites:|:Partie supÃ©rieure avec 4,5Â mm de nÃ©oprÃ¨ne pour unÂ port plus sec et plus chaud:|:Choix de tailles"	;
+;	0771651  	;	Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne	;	"Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne avec bottes en caoutchouc dotÃ©es de 200 g d'isolant thermique pour une conservation supplÃ©mentaire de la chaleur dans l'eau froide:|:Poche chauffe-main Ã  l'avant etÂ pochette deÂ poitrine interne pratique:|:Dos Ã©levÃ© offrant un ajustement confortable:|:Coutures impermÃ©ables soudÃ©es et scellÃ©es pour une meilleure protection contre les fuites:|:Partie supÃ©rieure avec 4,5Â mm de nÃ©oprÃ¨ne pour unÂ port plus sec et plus chaud:|:Choix de tailles"	;
+;	0771652  	;	Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne	;	"Bottes-pantalon Woodsâ„¢ en nÃ©oprÃ¨ne avec bottes en caoutchouc dotÃ©es de 200 g d'isolant thermique pour une conservation supplÃ©mentaire de la chaleur dans l'eau froide:|:Poche chauffe-main Ã  l'avant etÂ pochette deÂ poitrine interne pratique:|:Dos Ã©levÃ© offrant un ajustement confortable:|:Coutures impermÃ©ables soudÃ©es et scellÃ©es pour une meilleure protection contre les fuites:|:Partie supÃ©rieure avec 4,5Â mm de nÃ©oprÃ¨ne pour unÂ port plus sec et plus chaud:|:Choix de tailles"	;
+;	1870166  	;	Bottes Woodsâ„¢ Rancher, vert, homme	;	"Bottes Woodsâ„¢ Rancher 100Â % impermÃ©able en TPE (Ã©lastomÃ¨res thermoplastiques):|:Botte utilitaire durable offrant une excellente adhÃ©rence:|:LÃ©gÃ¨re:|:RÃ©sistante Ã  l'huile et aux acides:|:CouleurÂ : vert:|:Choix de tailles pour hommes"	;
+;	1870171  	;	Bottes Woodsâ„¢ Rancher, vert, homme	;	"Bottes Woodsâ„¢ Rancher 100Â % impermÃ©able en TPE (Ã©lastomÃ¨res thermoplastiques):|:Botte utilitaire durable offrant une excellente adhÃ©rence:|:LÃ©gÃ¨re:|:RÃ©sistante Ã  l'huile et aux acides:|:CouleurÂ : vert:|:Choix de tailles pour hommes"	;
+;	1870168  	;	Bottes Woodsâ„¢ Rancher, vert, homme	;	"Bottes Woodsâ„¢ Rancher 100Â % impermÃ©able en TPE (Ã©lastomÃ¨res thermoplastiques):|:Botte utilitaire durable offrant une excellente adhÃ©rence:|:LÃ©gÃ¨re:|:RÃ©sistante Ã  l'huile et aux acides:|:CouleurÂ : vert:|:Choix de tailles pour hommes"	;
+;	1870167  	;	Bottes Woodsâ„¢ Rancher, vert, homme	;	"Bottes Woodsâ„¢ Rancher 100Â % impermÃ©able en TPE (Ã©lastomÃ¨res thermoplastiques):|:Botte utilitaire durable offrant une excellente adhÃ©rence:|:LÃ©gÃ¨re:|:RÃ©sistante Ã  l'huile et aux acides:|:CouleurÂ : vert:|:Choix de tailles pour hommes"	;
+;	1870170  	;	Bottes Woodsâ„¢ Rancher, vert, homme	;	"Bottes Woodsâ„¢ Rancher 100Â % impermÃ©able en TPE (Ã©lastomÃ¨res thermoplastiques):|:Botte utilitaire durable offrant une excellente adhÃ©rence:|:LÃ©gÃ¨re:|:RÃ©sistante Ã  l'huile et aux acides:|:CouleurÂ : vert:|:Choix de tailles pour hommes"	;
+;	1870169  	;	Bottes Woodsâ„¢ Rancher, vert, homme	;	"Bottes Woodsâ„¢ Rancher 100Â % impermÃ©able en TPE (Ã©lastomÃ¨res thermoplastiques):|:Botte utilitaire durable offrant une excellente adhÃ©rence:|:LÃ©gÃ¨re:|:RÃ©sistante Ã  l'huile et aux acides:|:CouleurÂ : vert:|:Choix de tailles pour hommes"	;
+;	1870160  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Gloss, 14Â po, dame	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Gloss offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Prises sur les cÃ´tÃ©s permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour dames"	;
+;	1870157  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Gloss, 14Â po, dame	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Gloss offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Prises sur les cÃ´tÃ©s permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour dames"	;
+;	1870159  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Gloss, 14Â po, dame	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Gloss offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Prises sur les cÃ´tÃ©s permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour dames"	;
+;	1870158  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Gloss, 14Â po, dame	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Gloss offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Prises sur les cÃ´tÃ©s permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour dames"	;
+;	1870156  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Gloss, 14Â po, dame	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Gloss offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Prises sur les cÃ´tÃ©s permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour dames"	;
+;	1870162  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Homestead, 14Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Homestead offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Bottes isolÃ©es chaudes et confortables:|:Cambrion en acier offrant un soutien solide et protÃ©geant contre les perforations:|:Semelle en caoutchouc avec rainures antidÃ©rapantes pour une adhÃ©rence optimale par temps humide:|:Semelle intercalaire en EVA offrant confort et soutien toute la journÃ©e:|:NÃ©oprÃ¨ne 5Â mm:|:CouleurÂ : noir:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour hommes"	;
+;	1870165  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Homestead, 14Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Homestead offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Bottes isolÃ©es chaudes et confortables:|:Cambrion en acier offrant un soutien solide et protÃ©geant contre les perforations:|:Semelle en caoutchouc avec rainures antidÃ©rapantes pour une adhÃ©rence optimale par temps humide:|:Semelle intercalaire en EVA offrant confort et soutien toute la journÃ©e:|:NÃ©oprÃ¨ne 5Â mm:|:CouleurÂ : noir:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour hommes"	;
+;	1870164  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Homestead, 14Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Homestead offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Bottes isolÃ©es chaudes et confortables:|:Cambrion en acier offrant un soutien solide et protÃ©geant contre les perforations:|:Semelle en caoutchouc avec rainures antidÃ©rapantes pour une adhÃ©rence optimale par temps humide:|:Semelle intercalaire en EVA offrant confort et soutien toute la journÃ©e:|:NÃ©oprÃ¨ne 5Â mm:|:CouleurÂ : noir:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour hommes"	;
+;	1870161  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Homestead, 14Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Homestead offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Bottes isolÃ©es chaudes et confortables:|:Cambrion en acier offrant un soutien solide et protÃ©geant contre les perforations:|:Semelle en caoutchouc avec rainures antidÃ©rapantes pour une adhÃ©rence optimale par temps humide:|:Semelle intercalaire en EVA offrant confort et soutien toute la journÃ©e:|:NÃ©oprÃ¨ne 5Â mm:|:CouleurÂ : noir:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour hommes"	;
+;	1870163  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Homestead, 14Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Homestead offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Bottes isolÃ©es chaudes et confortables:|:Cambrion en acier offrant un soutien solide et protÃ©geant contre les perforations:|:Semelle en caoutchouc avec rainures antidÃ©rapantes pour une adhÃ©rence optimale par temps humide:|:Semelle intercalaire en EVA offrant confort et soutien toute la journÃ©e:|:NÃ©oprÃ¨ne 5Â mm:|:CouleurÂ : noir:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour hommes"	;
+;	1870105  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢, 12Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Boucle Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 30Â cm (12Â po):|:Choix de tailles pour hommes"	;
+;	1870100  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢, 12Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Boucle Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 30Â cm (12Â po):|:Choix de tailles pour hommes"	;
+;	1870102  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢, 12Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Boucle Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 30Â cm (12Â po):|:Choix de tailles pour hommes"	;
+;	1870103  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢, 12Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Boucle Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 30Â cm (12Â po):|:Choix de tailles pour hommes"	;
+;	1870104  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢, 12Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Boucle Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 30Â cm (12Â po):|:Choix de tailles pour hommes"	;
+;	1870101  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢, 12Â po, homme	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Boucle Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:HauteurÂ : 30Â cm (12Â po):|:Choix de tailles pour hommes"	;
+;	1870151  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Floral, 14Â po, dame	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Floral offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Prise Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:Motif floral:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour dames"	;
+;	1870154  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Floral, 14Â po, dame	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Floral offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Prise Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:Motif floral:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour dames"	;
+;	1870153  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Floral, 14Â po, dame	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Floral offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Prise Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:Motif floral:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour dames"	;
+;	1870152  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Floral, 14Â po, dame	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Floral offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Prise Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:Motif floral:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour dames"	;
+;	1870155  	;	Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Floral, 14Â po, dame	;	"Bottes en nÃ©oprÃ¨ne Woodsâ„¢ Floral offrant une protection impermÃ©able intÃ©grale contre les Ã©lÃ©ments:|:Semelle Ã  crampons dotÃ©e de rainures antidÃ©rapantes pour une adhÃ©rence supÃ©rieure:|:Semelle intÃ©rieure amovible confortable toute la journÃ©e:|:Prise Ã  l'arriÃ¨re permettant de mettre et de retirer la botte plus facilement:|:NÃ©oprÃ¨ne 3,5Â mm:|:Motif floral:|:HauteurÂ : 35,5Â cm (14Â po):|:Choix de tailles pour dames"	;
+;	0765402  	;	Baril et harnais Woodsâ„¢	;	"Baril et harnais Woodsâ„¢ dotÃ©s d'un couvercle Ã  visser Ã©tanche et d'uneÂ pince de scellage pour protÃ©ger la nourriture et la garder au sec:|:Ne laisse pas Ã©chapper les odeurs:|:Baril enÂ polyÃ©thylÃ¨ne robuste avec prises moulÃ©es:|:Ceinture rembourrÃ©e aux hanches, bretelles et coussin rembourrÃ© pour le dos et le soutien lombaire:|:Courroies de stabilisation au sternum et latÃ©rales pour plus de confort:|:Choix de formats"	;
+;	0765401  	;	Baril et harnais Woodsâ„¢	;	"Baril et harnais Woodsâ„¢ dotÃ©s d'un couvercle Ã  visser Ã©tanche et d'uneÂ pince de scellage pour protÃ©ger la nourriture et la garder au sec:|:Ne laisse pas Ã©chapper les odeurs:|:Baril enÂ polyÃ©thylÃ¨ne robuste avec prises moulÃ©es:|:Ceinture rembourrÃ©e aux hanches, bretelles et coussin rembourrÃ© pour le dos et le soutien lombaire:|:Courroies de stabilisation au sternum et latÃ©rales pour plus de confort:|:Choix de formats"	;
+;	0765406  	;	Sac de sport Woodsâ„¢ Maritime	;	"Sac de sport Woodsâ„¢ Maritime impermÃ©able pour protÃ©ger les Ã©quipements nautiques tels que les cordes et les gilets de sauvetage:|:En tissu de PVC et deÂ polyester durable:|:Sangles latÃ©rales de compression pour fixer facilement les parapluies et les bouteilles d'eau:|:PoignÃ©e avec sangle rembourrÃ©e et boucles rembourrÃ©es aux extrÃ©mitÃ©s pour un transport confortable:|:Fermetures Ã  glissiÃ¨re en U robustes pour un accÃ¨s facile:|:Fond moulÃ© renforcÃ© et rembourrÃ©:|:Bretelles amovibles:|:Choix de formats"	;
+;	0765405  	;	Sac de sport Woodsâ„¢ Maritime	;	"Sac de sport Woodsâ„¢ Maritime impermÃ©able pour protÃ©ger les Ã©quipements nautiques tels que les cordes et les gilets de sauvetage:|:En tissu de PVC et deÂ polyester durable:|:Sangles latÃ©rales de compression pour fixer facilement les parapluies et les bouteilles d'eau:|:PoignÃ©e avec sangle rembourrÃ©e et boucles rembourrÃ©es aux extrÃ©mitÃ©s pour un transport confortable:|:Fermetures Ã  glissiÃ¨re en U robustes pour un accÃ¨s facile:|:Fond moulÃ© renforcÃ© et rembourrÃ©:|:Bretelles amovibles:|:Choix de formats"	;
+;	0765594  	;	Sac Ã  compressions lÃ©ger Woodsâ„¢, noir	;	"Sac Ã  compression lÃ©ger Woodsâ„¢ de type Ã  capuchon qui aide Ã  rÃ©duire l'espace nÃ©cessaire pour ranger les Ã©quipements dans le sac Ã  dos:|:Sangle durable et systÃ¨me Ã  boucles facilitant la compression du sac:|:EnÂ polyester Oxford durable:|:ComprendÂ : sac Ã  compression de type capuchon, 4 sangles et tendeurs coulissants:|:CouleurÂ : noir:|:Choix de tailles"	;
+;	0765593  	;	Sac Ã  compressions lÃ©ger Woodsâ„¢, noir	;	"Sac Ã  compression lÃ©ger Woodsâ„¢ de type Ã  capuchon qui aide Ã  rÃ©duire l'espace nÃ©cessaire pour ranger les Ã©quipements dans le sac Ã  dos:|:Sangle durable et systÃ¨me Ã  boucles facilitant la compression du sac:|:EnÂ polyester Oxford durable:|:ComprendÂ : sac Ã  compression de type capuchon, 4 sangles et tendeurs coulissants:|:CouleurÂ : noir:|:Choix de tailles"	;
+;	0765762  	;	Sac Ã©tanche ultra-lÃ©ger Woodsâ„¢	;	"Sac Ã©tanche ultra-lÃ©ger Woodsâ„¢ dotÃ© d'une enveloppe en nylon durable, d'une doublure Ã©tanche et de coutures scellÃ©es Ã  chaud:|:Rabat Ã©tanche et boucle Ã  dÃ©gagement rapide pour un accÃ¨s facile au sac:|:Fond rond offrant une capacitÃ© optimale:|:CapacitÃ©sÂ : petit 8 L (2Â gallons) ou grand 20 L (5Â gallons):|:Choix de tailles"	;
+;	0765761  	;	Sac Ã©tanche ultra-lÃ©ger Woodsâ„¢	;	"Sac Ã©tanche ultra-lÃ©ger Woodsâ„¢ dotÃ© d'une enveloppe en nylon durable, d'une doublure Ã©tanche et de coutures scellÃ©es Ã  chaud:|:Rabat Ã©tanche et boucle Ã  dÃ©gagement rapide pour un accÃ¨s facile au sac:|:Fond rond offrant une capacitÃ© optimale:|:CapacitÃ©sÂ : petit 8 L (2Â gallons) ou grand 20 L (5Â gallons):|:Choix de tailles"	;
+#;	2992131  	;	Ensemble de camping Coleman, enfants	;	"Ensemble de camping Coleman pour les jeunes campeurs:|:Pour l'intÃ©rieur ou l'extÃ©rieur:|:Comprend : une tente de 2 personnes pour jeunes, un sac de couchage de jeune Ã  bourrage de polyester 2 lb, une lanterne de 44 lumens avec une autonomie de 16 heures:|:Double-toit Ã  motifs amusant, facile Ã  monter:|:Sac compris:|:Choix de couleurs:|:Offert en exclusivitÃ© chez Canadian Tire"	;
+#;	2992132  	;	Ensemble de camping Coleman, enfants	;	"Ensemble de camping Coleman pour les jeunes campeurs:|:Pour l'intÃ©rieur ou l'extÃ©rieur:|:Comprend : une tente de 2 personnes pour jeunes, un sac de couchage de jeune Ã  bourrage de polyester 2 lb, une lanterne de 44 lumens avec une autonomie de 16 heures:|:Double-toit Ã  motifs amusant, facile Ã  monter:|:Sac compris:|:Choix de couleurs:|:Offert en exclusivitÃ© chez Canadian Tire"	;
