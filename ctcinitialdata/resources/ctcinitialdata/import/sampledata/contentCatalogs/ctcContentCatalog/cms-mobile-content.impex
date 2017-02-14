@@ -22,7 +22,7 @@ $jarResourceCms=jar:com.ctc.initialdata.constants.CtcInitialDataConstants&/ctcin
 
 # CMS Site Settings
 UPDATE CMSSite;uid[unique=true];defaultPreviewCategory(code, $productCV);defaultPreviewProduct(code, $productCV)
-;ctcsite;caps;300441142
+;ctc;caps;300441142
 
 # Site Logo Component
 INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;urlLink

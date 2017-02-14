@@ -30,7 +30,7 @@
 							</c:otherwise>
 						
 						</c:choose>
-	                    <div class="variantName">${productMatrix[0].parentVariantCategory.name}</div>
+	                   <div class="variantName">${productMatrix[0].parentVariantCategory.name}</div>
 						<c:choose>
 							<c:when test="${productMatrix[0].parentVariantCategory.hasImage}">
 							<ul class="variantList">

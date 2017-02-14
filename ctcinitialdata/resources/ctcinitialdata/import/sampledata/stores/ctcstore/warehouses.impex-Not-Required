@@ -14,7 +14,7 @@
 #
 #% impex.setLocale( Locale.ENGLISH );
 
-$storeUid=ctc-store
+$storeUid=ctc
 
 INSERT_UPDATE BaseStore2WarehouseRel;source(uid)[unique=true];target(code)[unique=true]
 ;$storeUid;ctc_warehouse_s

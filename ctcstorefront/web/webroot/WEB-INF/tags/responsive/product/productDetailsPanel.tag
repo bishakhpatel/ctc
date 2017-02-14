@@ -30,7 +30,7 @@
 							<product:productPricePanel product="${product}" />
 						</ycommerce:testId>
 
-						<div class="description">${product.name}</div>
+						<%-- <div class="description">${product.name}</div> --%>
 					</div>
 				</div>
 

@@ -108,6 +108,11 @@
 				   }
 				}).resize();
 				
+				$(document).ready(function(){
+					
+					$(".footer__nav--container:eq(1)").hide()
+				})
+				
 				 
 		</script>
 		

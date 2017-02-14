@@ -15,7 +15,7 @@
 $contentCatalog=ctcContentCatalog
 $catalogVersion=catalogversion(catalog(id[default=$contentCatalog]),version[default='Staged'])[unique=true,default=$contentCatalog:Staged]
 $media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
-$siteResource=jar:de.hybris.ctc.initialdata.constants.CtcInitialDataConstants&/ctcinitialdata/import/sampledata/stores/ctc-store
+$siteResource=jar:com.ctc.initialdata.constants.CtcInitialDataConstants&/ctcinitialdata/import/sampledata/stores/ctc
 $medias=medias(code, $catalogVersion)
 
 # Create medias

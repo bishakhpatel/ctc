@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Feb 6, 2017 5:01:18 PM                      ---
+ * --- Generated at Feb 13, 2017 9:42:27 AM                     ---
  * ----------------------------------------------------------------
  */
 package com.ctc.core.constants;

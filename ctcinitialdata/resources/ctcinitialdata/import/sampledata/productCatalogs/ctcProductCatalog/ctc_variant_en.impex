@@ -5,112 +5,408 @@ $baseProduct=baseProduct(code, catalogVersion(catalog(id[default='$productCatalo
 $approved=approvalstatus(code)[default='approved']
 
 
-INSERT_UPDATE ApparelStyleVariantProduct;$approved;$catalogVersion;$baseProduct;name[lang=$lang];code[unique=true]
-;;;0765556P;"4\/ (10 cm) core centre: 25 W x 78\/ L (63.5 x 198 cm)";0765558
-;;;0765556P;"3\/ (7.6 cm) core centre: 25 W x 78\/ L (63.5 x 198 cm)";0765557
-;;;0765556P;"2\/ (5 cm) core centre: 25 W x 78\/ L (63.5 x 198 cm)";0765556
+INSERT_UPDATE ApparelStyleVariantProduct;code[unique=true];$catalogVersion;$baseProduct;unit(code);swatchColors(code);supercategories(code,$catalogVersion);varianttype(code);$approved
+;	0765556P_S_37212	;;	0765556P	;	pieces;;	37212	;ApparelSizeVariantProduct
+;	1870246P_S_37250	;;	1870246P	;	pieces;;	37250	;ApparelSizeVariantProduct
+;	1870240P_S_37250	;;	1870240P	;	pieces;;	37250	;ApparelSizeVariantProduct
+;	1870252P_S_37250	;;	1870252P	;	pieces;;	37250	;ApparelSizeVariantProduct
+;	1870275P_S_37250	;;	1870275P	;	pieces;;	37250	;ApparelSizeVariantProduct
+;	1870494P_S_37252	;;	1870494P	;	pieces;;	37252	;ApparelSizeVariantProduct
+;	1870474P_S_37252	;;	1870474P	;	pieces;;	37252	;ApparelSizeVariantProduct
+;	1870478P_S_37252	;;	1870478P	;	pieces;;	37252	;ApparelSizeVariantProduct
+;	1870470P_S_37252	;;	1870470P	;	pieces;;	37252	;ApparelSizeVariantProduct
+;	1870490P_S_37252	;;	1870490P	;	pieces;;	37252	;ApparelSizeVariantProduct
+;	1870498P_S_37252	;;	1870498P	;	pieces;;	37252	;ApparelSizeVariantProduct
+;	0762139P_S_37220	;;	0762139P	;	pieces;;	37220	;ApparelSizeVariantProduct
+;	0762122P_S_37232	;;	0762122P	;	pieces;;	37232	;ApparelSizeVariantProduct
+;	0771640P_S_37274	;;	0771640P	;	pieces;;	37274	;ApparelSizeVariantProduct
+;	0771650P_S_37274	;;	0771650P	;	pieces;;	37274	;ApparelSizeVariantProduct
+;	0771645P_S_37274	;;	0771645P	;	pieces;;	37274	;ApparelSizeVariantProduct
+;	1870166P_S_37250	;;	1870166P	;	pieces;;	37250	;ApparelSizeVariantProduct
+;	1870156P_S_37250	;;	1870156P	;	pieces;;	37250	;ApparelSizeVariantProduct
+;	1870151P_S_37250	;;	1870151P	;	pieces;;	37250	;ApparelSizeVariantProduct
+;	1870100P_S_37250	;;	1870100P	;	pieces;;	37250	;ApparelSizeVariantProduct
+;	1870161P_S_37250	;;	1870161P	;	pieces;;	37250	;ApparelSizeVariantProduct
+;	0765401P_S_37226	;;	0765401P	;	pieces;;	37226	;ApparelSizeVariantProduct
+;	0765405P_S_37238	;;	0765405P	;	pieces;;	37238	;ApparelSizeVariantProduct
+;	0765593P_S_37238	;;	0765593P	;	pieces;;	37238	;ApparelSizeVariantProduct
+;	0765761P_S_37238	;;	0765761P	;	pieces;;	37238	;ApparelSizeVariantProduct
+#;	2992131P_S_37200	;;	2992131P	;	pieces;;	37200	;ApparelSizeVariantProduct
 
-;;;1870246P;"Size 9";1870247
-;;;1870246P;"Size 8";1870246
-;;;1870246P;"Size 12";1870250
-;;;1870246P;"Size 13";1870251
-;;;1870246P;"Size 11";1870249
-;;;1870246P;"Size 10";1870248
-;;;1870240P;"Size 8";1870240
-;;;1870240P;"Size 13";1870245
-;;;1870240P;"Size 9";1870241
-;;;1870240P;"Size 11";1870243
-;;;1870240P;"Size 10";1870242
-;;;1870240P;"Size 12";1870244
-;;;1870252P;"Size 9";1870253
-;;;1870252P;"Size 12";1870256
-;;;1870252P;"Size 8";1870252
-;;;1870252P;"Size 11";1870255
-;;;1870252P;"Size 10";1870254
-;;;1870275P;"Size 7";1870276
-;;;1870275P;"Size 8";1870277
-;;;1870275P;"Size 10";1870279
-;;;1870275P;"Size 9";1870278
-;;;1870275P;"Size 6";1870275
-;;;1870494P;"X-Large";1870497
-;;;1870494P;"Medium";1870495
-;;;1870494P;"Small";1870494
-;;;1870494P;"Large";1870496
-;;;1870474P;"Medium";1870474
-;;;1870474P;"X-Large";1870476
-;;;1870474P;"XX-Large";1870477
-;;;1870474P;"Large";1870475
-;;;1870478P;"Medium";1870478
-;;;1870478P;"X-Large";1870480
-;;;1870478P;"XX-Large";1870481
-;;;1870478P;"Large";1870479
-;;;1870470P;"X-Large";1870472
-;;;1870470P;"XX-Large";1870473
-;;;1870470P;"Large";1870471
-;;;1870470P;"Medium";1870470
-;;;1870490P;"Medium";1870491
-;;;1870490P;"Large";1870492
-;;;1870490P;"Small";1870490
-;;;1870490P;"X-Large";1870493
-;;;1870498P;"Medium";1870499
-;;;1870498P;"X-Large";1870501
-;;;1870498P;"Small";1870498
-;;;1870498P;"Large";1870500
-;;;0762139P;"9.46 L";0762141
-;;;0762139P;"4 L";0762140
-;;;0762139P;"1 L";0762139
-;;;0762122P;"Pomegranate";0762122
-;;;0762122P;"Nectarine";0762123
-;;;0762122P;"Cool Water";0762124
-;;;0771640P;"Size 12";0771644
-;;;0771640P;"Size 8";0771640
-;;;0771640P;"Size 11";0771643
-;;;0771640P;"Size 9";0771641
-;;;0771640P;"Size 10";0771642
-;;;0771650P;"Size 8";0771650
-;;;0771650P;"Size 11";0771653
-;;;0771650P;"Size 12";0771654
-;;;0771650P;"Size 9";0771651
-;;;0771650P;"Size 10";0771652
-;;;0771645P;"Size 9";0771646
-;;;0771645P;"Size 10";0771647
-;;;0771645P;"Size 8";0771645
-;;;0771645P;"Size 12";0771649
-;;;0771645P;"Size 11";0771648
-;;;1870166P;"Size 7";1870166
-;;;1870166P;"Size 12";1870171
-;;;1870166P;"Size 9";1870168
-;;;1870166P;"Size 8";1870167
-;;;1870166P;"Size 11";1870170
-;;;1870166P;"Size 10";1870169
-;;;1870156P;"Size 10";1870160
-;;;1870156P;"Size 7";1870157
-;;;1870156P;"Size 9";1870159
-;;;1870156P;"Size 8";1870158
-;;;1870156P;"Size 6";1870156
-;;;1870151P;"Size 6";1870151
-;;;1870151P;"Size 9";1870154
-;;;1870151P;"Size 8";1870153
-;;;1870151P;"Size 7";1870152
-;;;1870151P;"Size 10";1870155
-;;;1870100P;"Size 12";1870105
-;;;1870100P;"Size 7";1870100
-;;;1870100P;"Size 9";1870102
-;;;1870100P;"Size 10";1870103
-;;;1870100P;"Size 11";1870104
-;;;1870100P;"Size 8";1870101
-;;;1870161P;"Size 9";1870162
-;;;1870161P;"Size 12";1870165
-;;;1870161P;"Size 11";1870164
-;;;1870161P;"Size 8";1870161
-;;;1870161P;"Size 10";1870163
-;;;0765401P;"60 L - 25-3\/4 L x 15-3\/4\/ W (65.5 x 40 cm)";0765402
-;;;0765401P;"30 L - 22 L x 13-3\/4\/ W (55.5 x 35 cm)";0765401
-;;;0765405P;"Large - 28-1\/2 L x 16 W x 12-1\/2\/ H (72 x 41 x 32 cm)";0765406
-;;;0765405P;"Medium- 21 L x 13-1\/2 W x 10\/ H (53 x 34 x 25 cm)";0765405
-;;;0765593P;"Large: 9-1\/2 D x 18\/ H (24.1 x 45.7 cm)";0765594
-;;;0765593P;"Medium: 9 D x 15\/ H (22.9 x 38.1 cm)";0765593
-;;;0765761P;"Large: 10 D x 21\/ H (25 x 23 cm)";0765762
-;;;0765761P;"Small: 6-1\/2 D x 18\/ H (16.5 x 46 cm)";0765761
-;;;2992131P;"Blue";2992131
-;;;2992131P;"Pink";2992132
+
+
+
+
+INSERT_UPDATE ApparelSizeVariantProduct;code[unique=true];$catalogVersion;$baseProduct;ean;unit(code);swatchColors(code);supercategories(code,$catalogVersion);;$approved;
+;	0765558	;;	0765556P_S_37212	;;	pieces	;;	37212
+;	0765557	;;	0765556P_S_37212	;;	pieces	;;	37212
+;	0765556	;;	0765556P_S_37212	;;	pieces	;;	37212
+;	1870247	;;	1870246P_S_37250	;;	pieces	;;	37250
+;	1870246	;;	1870246P_S_37250	;;	pieces	;;	37250
+;	1870250	;;	1870246P_S_37250	;;	pieces	;;	37250
+;	1870251	;;	1870246P_S_37250	;;	pieces	;;	37250
+;	1870249	;;	1870246P_S_37250	;;	pieces	;;	37250
+;	1870248	;;	1870246P_S_37250	;;	pieces	;;	37250
+;	1870240	;;	1870240P_S_37250	;;	pieces	;;	37250
+;	1870245	;;	1870240P_S_37250	;;	pieces	;;	37250
+;	1870241	;;	1870240P_S_37250	;;	pieces	;;	37250
+;	1870243	;;	1870240P_S_37250	;;	pieces	;;	37250
+;	1870242	;;	1870240P_S_37250	;;	pieces	;;	37250
+;	1870244	;;	1870240P_S_37250	;;	pieces	;;	37250
+;	1870253	;;	1870252P_S_37250	;;	pieces	;;	37250
+;	1870256	;;	1870252P_S_37250	;;	pieces	;;	37250
+;	1870252	;;	1870252P_S_37250	;;	pieces	;;	37250
+;	1870255	;;	1870252P_S_37250	;;	pieces	;;	37250
+;	1870254	;;	1870252P_S_37250	;;	pieces	;;	37250
+;	1870276	;;	1870275P_S_37250	;;	pieces	;;	37250
+;	1870277	;;	1870275P_S_37250	;;	pieces	;;	37250
+;	1870279	;;	1870275P_S_37250	;;	pieces	;;	37250
+;	1870278	;;	1870275P_S_37250	;;	pieces	;;	37250
+;	1870275	;;	1870275P_S_37250	;;	pieces	;;	37250
+;	1870497	;;	1870494P_S_37252	;;	pieces	;;	37252
+;	1870495	;;	1870494P_S_37252	;;	pieces	;;	37252
+;	1870494	;;	1870494P_S_37252	;;	pieces	;;	37252
+;	1870496	;;	1870494P_S_37252	;;	pieces	;;	37252
+;	1870474	;;	1870474P_S_37252	;;	pieces	;;	37252
+;	1870476	;;	1870474P_S_37252	;;	pieces	;;	37252
+;	1870477	;;	1870474P_S_37252	;;	pieces	;;	37252
+;	1870475	;;	1870474P_S_37252	;;	pieces	;;	37252
+;	1870478	;;	1870478P_S_37252	;;	pieces	;;	37252
+;	1870480	;;	1870478P_S_37252	;;	pieces	;;	37252
+;	1870481	;;	1870478P_S_37252	;;	pieces	;;	37252
+;	1870479	;;	1870478P_S_37252	;;	pieces	;;	37252
+;	1870472	;;	1870470P_S_37252	;;	pieces	;;	37252
+;	1870473	;;	1870470P_S_37252	;;	pieces	;;	37252
+;	1870471	;;	1870470P_S_37252	;;	pieces	;;	37252
+;	1870470	;;	1870470P_S_37252	;;	pieces	;;	37252
+;	1870491	;;	1870490P_S_37252	;;	pieces	;;	37252
+;	1870492	;;	1870490P_S_37252	;;	pieces	;;	37252
+;	1870490	;;	1870490P_S_37252	;;	pieces	;;	37252
+;	1870493	;;	1870490P_S_37252	;;	pieces	;;	37252
+;	1870499	;;	1870498P_S_37252	;;	pieces	;;	37252
+;	1870501	;;	1870498P_S_37252	;;	pieces	;;	37252
+;	1870498	;;	1870498P_S_37252	;;	pieces	;;	37252
+;	1870500	;;	1870498P_S_37252	;;	pieces	;;	37252
+;	0762141	;;	0762139P_S_37220	;;	pieces	;;	37220
+;	0762140	;;	0762139P_S_37220	;;	pieces	;;	37220
+;	0762139	;;	0762139P_S_37220	;;	pieces	;;	37220
+;	0762122	;;	0762122P_S_37232	;;	pieces	;;	37232
+;	0762123	;;	0762122P_S_37232	;;	pieces	;;	37232
+;	0762124	;;	0762122P_S_37232	;;	pieces	;;	37232
+;	0771644	;;	0771640P_S_37274	;;	pieces	;;	37274
+;	0771640	;;	0771640P_S_37274	;;	pieces	;;	37274
+;	0771643	;;	0771640P_S_37274	;;	pieces	;;	37274
+;	0771641	;;	0771640P_S_37274	;;	pieces	;;	37274
+;	0771642	;;	0771640P_S_37274	;;	pieces	;;	37274
+;	0771650	;;	0771650P_S_37274	;;	pieces	;;	37274
+;	0771653	;;	0771650P_S_37274	;;	pieces	;;	37274
+;	0771654	;;	0771650P_S_37274	;;	pieces	;;	37274
+;	0771651	;;	0771650P_S_37274	;;	pieces	;;	37274
+;	0771652	;;	0771650P_S_37274	;;	pieces	;;	37274
+;	0771646	;;	0771645P_S_37274	;;	pieces	;;	37274
+;	0771647	;;	0771645P_S_37274	;;	pieces	;;	37274
+;	0771645	;;	0771645P_S_37274	;;	pieces	;;	37274
+;	0771649	;;	0771645P_S_37274	;;	pieces	;;	37274
+;	0771648	;;	0771645P_S_37274	;;	pieces	;;	37274
+;	1870166	;;	1870166P_S_37250	;;	pieces	;;	37250
+;	1870171	;;	1870166P_S_37250	;;	pieces	;;	37250
+;	1870168	;;	1870166P_S_37250	;;	pieces	;;	37250
+;	1870167	;;	1870166P_S_37250	;;	pieces	;;	37250
+;	1870170	;;	1870166P_S_37250	;;	pieces	;;	37250
+;	1870169	;;	1870166P_S_37250	;;	pieces	;;	37250
+;	1870160	;;	1870156P_S_37250	;;	pieces	;;	37250
+;	1870157	;;	1870156P_S_37250	;;	pieces	;;	37250
+;	1870159	;;	1870156P_S_37250	;;	pieces	;;	37250
+;	1870158	;;	1870156P_S_37250	;;	pieces	;;	37250
+;	1870156	;;	1870156P_S_37250	;;	pieces	;;	37250
+;	1870151	;;	1870151P_S_37250	;;	pieces	;;	37250
+;	1870154	;;	1870151P_S_37250	;;	pieces	;;	37250
+;	1870153	;;	1870151P_S_37250	;;	pieces	;;	37250
+;	1870152	;;	1870151P_S_37250	;;	pieces	;;	37250
+;	1870155	;;	1870151P_S_37250	;;	pieces	;;	37250
+;	1870105	;;	1870100P_S_37250	;;	pieces	;;	37250
+;	1870100	;;	1870100P_S_37250	;;	pieces	;;	37250
+;	1870102	;;	1870100P_S_37250	;;	pieces	;;	37250
+;	1870103	;;	1870100P_S_37250	;;	pieces	;;	37250
+;	1870104	;;	1870100P_S_37250	;;	pieces	;;	37250
+;	1870101	;;	1870100P_S_37250	;;	pieces	;;	37250
+;	1870162	;;	1870161P_S_37250	;;	pieces	;;	37250
+;	1870165	;;	1870161P_S_37250	;;	pieces	;;	37250
+;	1870164	;;	1870161P_S_37250	;;	pieces	;;	37250
+;	1870161	;;	1870161P_S_37250	;;	pieces	;;	37250
+;	1870163	;;	1870161P_S_37250	;;	pieces	;;	37250
+;	0765402	;;	0765401P_S_37226	;;	pieces	;;	37226
+;	0765401	;;	0765401P_S_37226	;;	pieces	;;	37226
+;	0765406	;;	0765405P_S_37238	;;	pieces	;;	37238
+;	0765405	;;	0765405P_S_37238	;;	pieces	;;	37238
+;	0765594	;;	0765593P_S_37238	;;	pieces	;;	37238
+;	0765593	;;	0765593P_S_37238	;;	pieces	;;	37238
+;	0765762	;;	0765761P_S_37238	;;	pieces	;;	37238
+;	0765761	;;	0765761P_S_37238	;;	pieces	;;	37238
+#;	2992131	;;	2992131P_S_37200	;;	pieces	;;	37200
+#;	2992132	;;	2992131P_S_37200	;;	pieces	;;	37200
+
+
+UPDATE Product;$catalogVersion;ApparelSizeVariantProduct.size[lang=$lang];code[unique=true]
+;;"4\/ (10 cm) core centre: 25 W x 78\/ L (63.5 x 198 cm)";0765558
+;;"3\/ (7.6 cm) core centre: 25 W x 78\/ L (63.5 x 198 cm)";0765557
+;;"2\/ (5 cm) core centre: 25 W x 78\/ L (63.5 x 198 cm)";0765556
+;;"Size 9";1870247
+;;"Size 8";1870246
+;;"Size 12";1870250
+;;"Size 13";1870251
+;;"Size 11";1870249
+;;"Size 10";1870248
+;;"Size 8";1870240
+;;"Size 13";1870245
+;;"Size 9";1870241
+;;"Size 11";1870243
+;;"Size 10";1870242
+;;"Size 12";1870244
+
+;;"Size 9";1870253
+;;"Size 12";1870256
+;;"Size 8";1870252
+;;"Size 11";1870255
+;;"Size 10";1870254
+;;"Size 7";1870276
+;;"Size 8";1870277
+;;"Size 10";1870279
+;;"Size 9";1870278
+;;"Size 6";1870275
+
+;;"X-Large";1870497
+;;"Medium";1870495
+;;"Small";1870494
+;;"Large";1870496
+
+;;"Medium";1870474
+;;"X-Large";1870476
+;;"XX-Large";1870477
+;;"Large";1870475
+
+;;"Medium";1870478
+;;"X-Large";1870480
+;;"XX-Large";1870481
+;;"Large";1870479
+
+;;"X-Large";1870472
+;;"XX-Large";1870473
+;;"Large";1870471
+;;"Medium";1870470
+
+;;"Medium";1870491
+;;"Large";1870492
+;;"Small";1870490
+;;"X-Large";1870493
+
+;;"Medium";1870499
+;;"X-Large";1870501
+;;"Small";1870498
+;;"Large";1870500
+
+;;"9.46 L";0762141
+;;"4 L";0762140
+;;"1 L";0762139
+
+;;"Pomegranate";0762122
+;;"Nectarine";0762123
+;;"Cool Water";0762124
+
+;;"Size 12";0771644
+;;"Size 8";0771640
+;;"Size 11";0771643
+;;"Size 9";0771641
+;;"Size 10";0771642
+
+;;"Size 8";0771650
+;;"Size 11";0771653
+;;"Size 12";0771654
+;;"Size 9";0771651
+;;"Size 10";0771652
+
+;;"Size 9";0771646
+;;"Size 10";0771647
+;;"Size 8";0771645
+;;"Size 12";0771649
+;;"Size 11";0771648
+
+;;"Size 7";1870166
+;;"Size 12";1870171
+;;"Size 9";1870168
+;;"Size 8";1870167
+;;"Size 11";1870170
+;;"Size 10";1870169
+
+;;"Size 10";1870160
+;;"Size 7";1870157
+;;"Size 9";1870159
+;;"Size 8";1870158
+;;"Size 6";1870156
+
+;;"Size 6";1870151
+;;"Size 9";1870154
+;;"Size 8";1870153
+;;"Size 7";1870152
+;;"Size 10";1870155
+
+;;"Size 12";1870105
+;;"Size 7";1870100
+;;"Size 9";1870102
+;;"Size 10";1870103
+;;"Size 11";1870104
+;;"Size 8";1870101
+
+;;"Size 9";1870162
+;;"Size 12";1870165
+;;"Size 11";1870164
+;;"Size 8";1870161
+;;"Size 10";1870163
+
+;;"60 L - 25-3\/4 L x 15-3\/4\/ W (65.5 x 40 cm)";0765402
+;;"30 L - 22 L x 13-3\/4\/ W (55.5 x 35 cm)";0765401
+;;"Large - 28-1\/2 L x 16 W x 12-1\/2\/ H (72 x 41 x 32 cm)";0765406
+;;"Medium- 21 L x 13-1\/2 W x 10\/ H (53 x 34 x 25 cm)";0765405
+;;"Large: 9-1\/2 D x 18\/ H (24.1 x 45.7 cm)";0765594
+;;"Medium: 9 D x 15\/ H (22.9 x 38.1 cm)";0765593
+;;"Large: 10 D x 21\/ H (25 x 23 cm)";0765762
+;;"Small: 6-1\/2 D x 18\/ H (16.5 x 46 cm)";0765761
+#;;"Blue";2992131
+#;;"Pink";2992132
+
+$lang=en
+$productCatalog=ctcProductCatalog
+$catalogVersion=catalogVersion(catalog(id[default='ctcProductCatalog']),version[default='Staged'])[unique=true,default='ctcProductCatalog:Staged']
+$baseProduct=baseProduct(code, catalogVersion(catalog(id[default='$productCatalog']),version[default='Staged']))
+$approved=approvalstatus(code)[default='approved']
+
+
+UPDATE Product;code[unique=true];name[lang=$lang];summary[lang=$lang];$catalogVersion
+
+;0765558	;	Woodsâ„¢  Self-Inflating Mattress	;	"Woodsâ„¢  Self-Inflating Mattress feature a lightweight and easy-to-carry design is perfect for travel:|:MicroBanÂ® technology works continuously to help prevent the growth of stains and odours from bacteria, mould and mildew:|:Durable, rip-stop polyester surface helps prevent tears and minimizes damage:|:Foam core centre for ultimate comfort on hard and uneven ground:|:Water-resistant surface provides protection from cold, wet surfaces:|:Easy to pack away, just roll-up to deflate:|:Storage bag makes packing easy:|:Ideal for one user:|:Available in a variety of sizes"
+;0765557	;	Woodsâ„¢  Self-Inflating Mattress	;	"Woodsâ„¢  Self-Inflating Mattress feature a lightweight and easy-to-carry design is perfect for travel:|:MicroBanÂ® technology works continuously to help prevent the growth of stains and odours from bacteria, mould and mildew:|:Durable, rip-stop polyester surface helps prevent tears and minimizes damage:|:Foam core centre for ultimate comfort on hard and uneven ground:|:Water-resistant surface provides protection from cold, wet surfaces:|:Easy to pack away, just roll-up to deflate:|:Storage bag makes packing easy:|:Ideal for one user:|:Available in a variety of sizes"
+;0765556	;	Woodsâ„¢  Self-Inflating Mattress	;	"Woodsâ„¢  Self-Inflating Mattress feature a lightweight and easy-to-carry design is perfect for travel:|:MicroBanÂ® technology works continuously to help prevent the growth of stains and odours from bacteria, mould and mildew:|:Durable, rip-stop polyester surface helps prevent tears and minimizes damage:|:Foam core centre for ultimate comfort on hard and uneven ground:|:Water-resistant surface provides protection from cold, wet surfaces:|:Easy to pack away, just roll-up to deflate:|:Storage bag makes packing easy:|:Ideal for one user:|:Available in a variety of sizes"
+				
+;1870247	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+;1870246	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+;1870250	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+;1870251	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+;1870249	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+;1870248	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+				
+;1870240	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Charcoal/Grey/Blue, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: charcoal/grey/blue:|:Available in a variety of men's sizes"
+;1870245	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Charcoal/Grey/Blue, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: charcoal/grey/blue:|:Available in a variety of men's sizes"
+;1870241	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Charcoal/Grey/Blue, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: charcoal/grey/blue:|:Available in a variety of men's sizes"
+;1870243	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Charcoal/Grey/Blue, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: charcoal/grey/blue:|:Available in a variety of men's sizes"
+;1870242	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Charcoal/Grey/Blue, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: charcoal/grey/blue:|:Available in a variety of men's sizes"
+;1870244	;	Woodsâ„¢  Michener WP Mid Hiking Boots, Charcoal/Grey/Blue, Men's	;	"Woodsâ„¢  Michener WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: charcoal/grey/blue:|:Available in a variety of men's sizes"
+				
+;1870253	;	Woodsâ„¢  Low Cut WP Rundle Hiker Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Low Cut WP Rundle Hiker Boots are made from waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+;1870256	;	Woodsâ„¢  Low Cut WP Rundle Hiker Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Low Cut WP Rundle Hiker Boots are made from waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+;1870252	;	Woodsâ„¢  Low Cut WP Rundle Hiker Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Low Cut WP Rundle Hiker Boots are made from waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+;1870255	;	Woodsâ„¢  Low Cut WP Rundle Hiker Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Low Cut WP Rundle Hiker Boots are made from waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+;1870254	;	Woodsâ„¢  Low Cut WP Rundle Hiker Boots, Taupe/Gold, Men's	;	"Woodsâ„¢  Low Cut WP Rundle Hiker Boots are made from waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:Rust-proof metal hardware:|:5 mm Hi-Tec memory foam footbed:|:Colour: taupe/gold:|:Available in a variety of men's sizes"
+;1870276	;	Woodsâ„¢  Meru Peak WP Mid Hiking Boots, Women's	;	"Woodsâ„¢  Meru Peak WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:5 mm Hi-Tec memory foam footbed:|:Available in a variety of women's sizes"
+;1870277	;	Woodsâ„¢  Meru Peak WP Mid Hiking Boots, Women's	;	"Woodsâ„¢  Meru Peak WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:5 mm Hi-Tec memory foam footbed:|:Available in a variety of women's sizes"
+;1870279	;	Woodsâ„¢  Meru Peak WP Mid Hiking Boots, Women's	;	"Woodsâ„¢  Meru Peak WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:5 mm Hi-Tec memory foam footbed:|:Available in a variety of women's sizes"
+;1870278	;	Woodsâ„¢  Meru Peak WP Mid Hiking Boots, Women's	;	"Woodsâ„¢  Meru Peak WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:5 mm Hi-Tec memory foam footbed:|:Available in a variety of women's sizes"
+;1870275	;	Woodsâ„¢  Meru Peak WP Mid Hiking Boots, Women's	;	"Woodsâ„¢  Meru Peak WP Mid Hiking Boots are made from a waterproof suede and feature a mesh upper with a breathable membrane for excellent durability, protection and comfort:|:Multi-directional traction rubber outsole for improved grip:|:Compression moulded EVA midsole absorbs impact and reduces strain:|:Ghillie lacing system and gusseted tongue keep debris out and provide a snug fit:|:Dri-Tec waterproof membrane keeps feet dry:|:5 mm Hi-Tec memory foam footbed:|:Available in a variety of women's sizes"
+				
+;1870497	;	Woodsâ„¢  Marble Jacket, Aqua, Women's	;	"Woodsâ„¢  Marble Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: ceramic:|:Available in a variety of women's sizes"
+;1870495	;	Woodsâ„¢  Marble Jacket, Aqua, Women's	;	"Woodsâ„¢  Marble Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: ceramic:|:Available in a variety of women's sizes"
+;1870494	;	Woodsâ„¢  Marble Jacket, Aqua, Women's	;	"Woodsâ„¢  Marble Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: ceramic:|:Available in a variety of women's sizes"
+;1870496	;	Woodsâ„¢  Marble Jacket, Aqua, Women's	;	"Woodsâ„¢  Marble Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: ceramic:|:Available in a variety of women's sizes"
+				
+;1870474	;	Woodsâ„¢  Gritstone Jacket, Green, Men's	;	"Woodsâ„¢  Gritstone Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: green:|:Available in a variety of men's sizes"
+;1870476	;	Woodsâ„¢  Gritstone Jacket, Green, Men's	;	"Woodsâ„¢  Gritstone Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: green:|:Available in a variety of men's sizes"
+;1870477	;	Woodsâ„¢  Gritstone Jacket, Green, Men's	;	"Woodsâ„¢  Gritstone Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: green:|:Available in a variety of men's sizes"
+;1870475	;	Woodsâ„¢  Gritstone Jacket, Green, Men's	;	"Woodsâ„¢  Gritstone Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: green:|:Available in a variety of men's sizes"
+				
+;1870478	;	Woodsâ„¢  Oolite Rain Pants, Black, Men's	;	"Woodsâ„¢  Oolite Rain Pants are made from a waterproof and breathable fabric:|:Boot gaiters protect against water, snow and dirt:|:Critically taped seams:|:Added features: articulated knees, adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of men's sizes"
+;1870480	;	Woodsâ„¢  Oolite Rain Pants, Black, Men's	;	"Woodsâ„¢  Oolite Rain Pants are made from a waterproof and breathable fabric:|:Boot gaiters protect against water, snow and dirt:|:Critically taped seams:|:Added features: articulated knees, adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of men's sizes"
+;1870481	;	Woodsâ„¢  Oolite Rain Pants, Black, Men's	;	"Woodsâ„¢  Oolite Rain Pants are made from a waterproof and breathable fabric:|:Boot gaiters protect against water, snow and dirt:|:Critically taped seams:|:Added features: articulated knees, adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of men's sizes"
+;1870479	;	Woodsâ„¢  Oolite Rain Pants, Black, Men's	;	"Woodsâ„¢  Oolite Rain Pants are made from a waterproof and breathable fabric:|:Boot gaiters protect against water, snow and dirt:|:Critically taped seams:|:Added features: articulated knees, adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of men's sizes"
+				
+;1870472	;	Woodsâ„¢  Gritstone Jacket, Black, Men's	;	"Woodsâ„¢  Gritstone Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of men's sizes"
+;1870473	;	Woodsâ„¢  Gritstone Jacket, Black, Men's	;	"Woodsâ„¢  Gritstone Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of men's sizes"
+;1870471	;	Woodsâ„¢  Gritstone Jacket, Black, Men's	;	"Woodsâ„¢  Gritstone Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of men's sizes"
+;1870470	;	Woodsâ„¢  Gritstone Jacket, Black, Men's	;	"Woodsâ„¢  Gritstone Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of men's sizes"
+				
+;1870491	;	Woodsâ„¢  Marble Jacket, Black, Women's	;	"Woodsâ„¢  Marble Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of women's sizes"
+;1870492	;	Woodsâ„¢  Marble Jacket, Black, Women's	;	"Woodsâ„¢  Marble Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of women's sizes"
+;1870490	;	Woodsâ„¢  Marble Jacket, Black, Women's	;	"Woodsâ„¢  Marble Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of women's sizes"
+;1870493	;	Woodsâ„¢  Marble Jacket, Black, Women's	;	"Woodsâ„¢  Marble Jacket is made from a waterproof and breathable fabric:|:Underarm ventilation provides added breathability:|:Critically taped seams:|:Added features: adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of women's sizes"
+				
+;1870499	;	Woodsâ„¢  Breccia Rain Pants, Black, Women's	;	"Woodsâ„¢  Breccia Rain Pants are made from a waterproof and breathable fabric:|:Boot gaiters protect against water, snow and dirt:|:Critically taped seams:|:Added features: articulated knees, adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of women's sizes"
+;1870501	;	Woodsâ„¢  Breccia Rain Pants, Black, Women's	;	"Woodsâ„¢  Breccia Rain Pants are made from a waterproof and breathable fabric:|:Boot gaiters protect against water, snow and dirt:|:Critically taped seams:|:Added features: articulated knees, adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of women's sizes"
+;1870498	;	Woodsâ„¢  Breccia Rain Pants, Black, Women's	;	"Woodsâ„¢  Breccia Rain Pants are made from a waterproof and breathable fabric:|:Boot gaiters protect against water, snow and dirt:|:Critically taped seams:|:Added features: articulated knees, adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of women's sizes"
+;1870500	;	Woodsâ„¢  Breccia Rain Pants, Black, Women's	;	"Woodsâ„¢  Breccia Rain Pants are made from a waterproof and breathable fabric:|:Boot gaiters protect against water, snow and dirt:|:Critically taped seams:|:Added features: articulated knees, adjustable waist, reflective prints, packable design:|:Colour: black:|:Available in a variety of women's sizes"
+				
+;0762141	;	Woodsâ„¢  Clear Kerosene	;	"Woodsâ„¢  Clear Kerosene is triple-filtered for purity, and burns with little smoke or scent:|:For use in wick-feeding lamps, catalytic stoves and kerosene heaters:|:Low sulphur:|:Available in a variety of sizes"
+;0762140	;	Woodsâ„¢  Clear Kerosene	;	"Woodsâ„¢  Clear Kerosene is triple-filtered for purity, and burns with little smoke or scent:|:For use in wick-feeding lamps, catalytic stoves and kerosene heaters:|:Low sulphur:|:Available in a variety of sizes"
+;0762139	;	Woodsâ„¢  Clear Kerosene	;	"Woodsâ„¢  Clear Kerosene is triple-filtered for purity, and burns with little smoke or scent:|:For use in wick-feeding lamps, catalytic stoves and kerosene heaters:|:Low sulphur:|:Available in a variety of sizes"
+				
+;0762122	;	Woodsâ„¢  Scented Lamp Oil, 710-mL	;	"Woodsâ„¢  Scented Lamp Oil is a paraffin based oil that produces a bright flame that burns without smoke:|:Provides pleasant aroma while it burns:|:For use in wick-feeding lamps or lamp candles:|:Size: 710 mL:|:Available in a variety of scents"
+;0762123	;	Woodsâ„¢  Scented Lamp Oil, 710-mL	;	"Woodsâ„¢  Scented Lamp Oil is a paraffin based oil that produces a bright flame that burns without smoke:|:Provides pleasant aroma while it burns:|:For use in wick-feeding lamps or lamp candles:|:Size: 710 mL:|:Available in a variety of scents"
+;0762124	;	Woodsâ„¢  Scented Lamp Oil, 710-mL	;	"Woodsâ„¢  Scented Lamp Oil is a paraffin based oil that produces a bright flame that burns without smoke:|:Provides pleasant aroma while it burns:|:For use in wick-feeding lamps or lamp candles:|:Size: 710 mL:|:Available in a variety of scents"
+				
+;0771644	;	Woodsâ„¢  Camouflage Chest Waders	;	"Woodsâ„¢  Camouflage Chest Waders are made from 100% waterproof triple-layer laminate with fully a breathable membrane for added comfort:|:Taped waterproof seams for additional leak protection:|:Padded knee supports and reinforced seat for added durability:|:Neoprene-lined rubber boots with cleated soles and 200 g of thermal insulation:|:Adjustable waist belt for protection against flooding:|:Front mesh pockets hold accessories and keep hands warm:|:Colour: camouflage:|:Available in a variety of sizes"
+;0771640	;	Woodsâ„¢  Camouflage Chest Waders	;	"Woodsâ„¢  Camouflage Chest Waders are made from 100% waterproof triple-layer laminate with fully a breathable membrane for added comfort:|:Taped waterproof seams for additional leak protection:|:Padded knee supports and reinforced seat for added durability:|:Neoprene-lined rubber boots with cleated soles and 200 g of thermal insulation:|:Adjustable waist belt for protection against flooding:|:Front mesh pockets hold accessories and keep hands warm:|:Colour: camouflage:|:Available in a variety of sizes"
+;0771643	;	Woodsâ„¢  Camouflage Chest Waders	;	"Woodsâ„¢  Camouflage Chest Waders are made from 100% waterproof triple-layer laminate with fully a breathable membrane for added comfort:|:Taped waterproof seams for additional leak protection:|:Padded knee supports and reinforced seat for added durability:|:Neoprene-lined rubber boots with cleated soles and 200 g of thermal insulation:|:Adjustable waist belt for protection against flooding:|:Front mesh pockets hold accessories and keep hands warm:|:Colour: camouflage:|:Available in a variety of sizes"
+;0771641	;	Woodsâ„¢  Camouflage Chest Waders	;	"Woodsâ„¢  Camouflage Chest Waders are made from 100% waterproof triple-layer laminate with fully a breathable membrane for added comfort:|:Taped waterproof seams for additional leak protection:|:Padded knee supports and reinforced seat for added durability:|:Neoprene-lined rubber boots with cleated soles and 200 g of thermal insulation:|:Adjustable waist belt for protection against flooding:|:Front mesh pockets hold accessories and keep hands warm:|:Colour: camouflage:|:Available in a variety of sizes"
+;0771642	;	Woodsâ„¢  Camouflage Chest Waders	;	"Woodsâ„¢  Camouflage Chest Waders are made from 100% waterproof triple-layer laminate with fully a breathable membrane for added comfort:|:Taped waterproof seams for additional leak protection:|:Padded knee supports and reinforced seat for added durability:|:Neoprene-lined rubber boots with cleated soles and 200 g of thermal insulation:|:Adjustable waist belt for protection against flooding:|:Front mesh pockets hold accessories and keep hands warm:|:Colour: camouflage:|:Available in a variety of sizes"
+	;		;	
+;0771650	;	Woodsâ„¢  Neoprene Chest Waders	;	"Woodsâ„¢  Neoprene Chest Waders feature rubber boots with 200 g of thermal insulation for providing extra warmth in cold water:|:Front hand-warmer pocket and internal chest pocket for added convenience:|:High back design provides a comfortable fit:|:Welded and taped waterproof seams for additional leak protection:|:4.5 mm neoprene upper body for superior dryness and warmth:|:Available in a variety of sizes"
+;0771653	;	Woodsâ„¢  Neoprene Chest Waders	;	"Woodsâ„¢  Neoprene Chest Waders feature rubber boots with 200 g of thermal insulation for providing extra warmth in cold water:|:Front hand-warmer pocket and internal chest pocket for added convenience:|:High back design provides a comfortable fit:|:Welded and taped waterproof seams for additional leak protection:|:4.5 mm neoprene upper body for superior dryness and warmth:|:Available in a variety of sizes"
+;0771654	;	Woodsâ„¢  Neoprene Chest Waders	;	"Woodsâ„¢  Neoprene Chest Waders feature rubber boots with 200 g of thermal insulation for providing extra warmth in cold water:|:Front hand-warmer pocket and internal chest pocket for added convenience:|:High back design provides a comfortable fit:|:Welded and taped waterproof seams for additional leak protection:|:4.5 mm neoprene upper body for superior dryness and warmth:|:Available in a variety of sizes"
+;0771651	;	Woodsâ„¢  Neoprene Chest Waders	;	"Woodsâ„¢  Neoprene Chest Waders feature rubber boots with 200 g of thermal insulation for providing extra warmth in cold water:|:Front hand-warmer pocket and internal chest pocket for added convenience:|:High back design provides a comfortable fit:|:Welded and taped waterproof seams for additional leak protection:|:4.5 mm neoprene upper body for superior dryness and warmth:|:Available in a variety of sizes"
+;0771652	;	Woodsâ„¢  Neoprene Chest Waders	;	"Woodsâ„¢  Neoprene Chest Waders feature rubber boots with 200 g of thermal insulation for providing extra warmth in cold water:|:Front hand-warmer pocket and internal chest pocket for added convenience:|:High back design provides a comfortable fit:|:Welded and taped waterproof seams for additional leak protection:|:4.5 mm neoprene upper body for superior dryness and warmth:|:Available in a variety of sizes"
+				
+;0771646	;	Woodsâ„¢  Camouflage Neoprene Chest Waders	;	"Woodsâ„¢  Camouflage Neoprene Chest Waders feature rubber boots with 400 g of thermal insulation for providing excellent warmth in cold water:|:Front hand-warmer pocket and magnetic accessory pocket for added convenience:|:High-back design provides a comfortable fit:|:Welded and taped waterproof seams for additional leak protection:|:4.5 mm neoprene upper body for superior dryness and warmth:|:Colour: camouflage:|:Available in a variety of sizes"
+;0771647	;	Woodsâ„¢  Camouflage Neoprene Chest Waders	;	"Woodsâ„¢  Camouflage Neoprene Chest Waders feature rubber boots with 400 g of thermal insulation for providing excellent warmth in cold water:|:Front hand-warmer pocket and magnetic accessory pocket for added convenience:|:High-back design provides a comfortable fit:|:Welded and taped waterproof seams for additional leak protection:|:4.5 mm neoprene upper body for superior dryness and warmth:|:Colour: camouflage:|:Available in a variety of sizes"
+;0771645	;	Woodsâ„¢  Camouflage Neoprene Chest Waders	;	"Woodsâ„¢  Camouflage Neoprene Chest Waders feature rubber boots with 400 g of thermal insulation for providing excellent warmth in cold water:|:Front hand-warmer pocket and magnetic accessory pocket for added convenience:|:High-back design provides a comfortable fit:|:Welded and taped waterproof seams for additional leak protection:|:4.5 mm neoprene upper body for superior dryness and warmth:|:Colour: camouflage:|:Available in a variety of sizes"
+;0771649	;	Woodsâ„¢  Camouflage Neoprene Chest Waders	;	"Woodsâ„¢  Camouflage Neoprene Chest Waders feature rubber boots with 400 g of thermal insulation for providing excellent warmth in cold water:|:Front hand-warmer pocket and magnetic accessory pocket for added convenience:|:High-back design provides a comfortable fit:|:Welded and taped waterproof seams for additional leak protection:|:4.5 mm neoprene upper body for superior dryness and warmth:|:Colour: camouflage:|:Available in a variety of sizes"
+;0771648	;	Woodsâ„¢  Camouflage Neoprene Chest Waders	;	"Woodsâ„¢  Camouflage Neoprene Chest Waders feature rubber boots with 400 g of thermal insulation for providing excellent warmth in cold water:|:Front hand-warmer pocket and magnetic accessory pocket for added convenience:|:High-back design provides a comfortable fit:|:Welded and taped waterproof seams for additional leak protection:|:4.5 mm neoprene upper body for superior dryness and warmth:|:Colour: camouflage:|:Available in a variety of sizes"
+	;		;	
+;1870166	;	Woodsâ„¢  Rancher Boots, Green, Men's	;	"Woodsâ„¢  Rancher Boots provide 100% waterproof TPE (Thermo Plastic Elastomers):|:Durable utility boot with excellent grip:|:Lightweight construction:|:Oil and acid resistant material:|:Colour: green:|:Available in a variety of men's sizes"
+;1870171	;	Woodsâ„¢  Rancher Boots, Green, Men's	;	"Woodsâ„¢  Rancher Boots provide 100% waterproof TPE (Thermo Plastic Elastomers):|:Durable utility boot with excellent grip:|:Lightweight construction:|:Oil and acid resistant material:|:Colour: green:|:Available in a variety of men's sizes"
+;1870168	;	Woodsâ„¢  Rancher Boots, Green, Men's	;	"Woodsâ„¢  Rancher Boots provide 100% waterproof TPE (Thermo Plastic Elastomers):|:Durable utility boot with excellent grip:|:Lightweight construction:|:Oil and acid resistant material:|:Colour: green:|:Available in a variety of men's sizes"
+;1870167	;	Woodsâ„¢  Rancher Boots, Green, Men's	;	"Woodsâ„¢  Rancher Boots provide 100% waterproof TPE (Thermo Plastic Elastomers):|:Durable utility boot with excellent grip:|:Lightweight construction:|:Oil and acid resistant material:|:Colour: green:|:Available in a variety of men's sizes"
+;1870170	;	Woodsâ„¢  Rancher Boots, Green, Men's	;	"Woodsâ„¢  Rancher Boots provide 100% waterproof TPE (Thermo Plastic Elastomers):|:Durable utility boot with excellent grip:|:Lightweight construction:|:Oil and acid resistant material:|:Colour: green:|:Available in a variety of men's sizes"
+;1870169	;	Woodsâ„¢  Rancher Boots, Green, Men's	;	"Woodsâ„¢  Rancher Boots provide 100% waterproof TPE (Thermo Plastic Elastomers):|:Durable utility boot with excellent grip:|:Lightweight construction:|:Oil and acid resistant material:|:Colour: green:|:Available in a variety of men's sizes"
+				
+;1870160	;	Woodsâ„¢  Neoprene Gloss Boots, 14-in, Women's	;	"Woodsâ„¢  Neoprene Gloss Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Side pull-on handles for easy on/off:|:3.5 mm neoprene:|:Height: 14"" (35.5 cm):|:Available in a variety of women's sizes"
+;1870157	;	Woodsâ„¢  Neoprene Gloss Boots, 14-in, Women's	;	"Woodsâ„¢  Neoprene Gloss Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Side pull-on handles for easy on/off:|:3.5 mm neoprene:|:Height: 14"" (35.5 cm):|:Available in a variety of women's sizes"
+;1870159	;	Woodsâ„¢  Neoprene Gloss Boots, 14-in, Women's	;	"Woodsâ„¢  Neoprene Gloss Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Side pull-on handles for easy on/off:|:3.5 mm neoprene:|:Height: 14"" (35.5 cm):|:Available in a variety of women's sizes"
+;1870158	;	Woodsâ„¢  Neoprene Gloss Boots, 14-in, Women's	;	"Woodsâ„¢  Neoprene Gloss Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Side pull-on handles for easy on/off:|:3.5 mm neoprene:|:Height: 14"" (35.5 cm):|:Available in a variety of women's sizes"
+;1870156	;	Woodsâ„¢  Neoprene Gloss Boots, 14-in, Women's	;	"Woodsâ„¢  Neoprene Gloss Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Side pull-on handles for easy on/off:|:3.5 mm neoprene:|:Height: 14"" (35.5 cm):|:Available in a variety of women's sizes"
+				
+;1870151	;	Woodsâ„¢  Neoprene Floral Boots, 14-in, Women's	;	"Woodsâ„¢  Neoprene Floral Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Rear pull-on handle for easy on/off:|:3.5 mm neoprene:|:Floral design:|:Height: 14"" (35.5 cm):|:Available in a variety of women's sizes"
+;1870154	;	Woodsâ„¢  Neoprene Floral Boots, 14-in, Women's	;	"Woodsâ„¢  Neoprene Floral Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Rear pull-on handle for easy on/off:|:3.5 mm neoprene:|:Floral design:|:Height: 14"" (35.5 cm):|:Available in a variety of women's sizes"
+;1870153	;	Woodsâ„¢  Neoprene Floral Boots, 14-in, Women's	;	"Woodsâ„¢  Neoprene Floral Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Rear pull-on handle for easy on/off:|:3.5 mm neoprene:|:Floral design:|:Height: 14"" (35.5 cm):|:Available in a variety of women's sizes"
+;1870152	;	Woodsâ„¢  Neoprene Floral Boots, 14-in, Women's	;	"Woodsâ„¢  Neoprene Floral Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Rear pull-on handle for easy on/off:|:3.5 mm neoprene:|:Floral design:|:Height: 14"" (35.5 cm):|:Available in a variety of women's sizes"
+;1870155	;	Woodsâ„¢  Neoprene Floral Boots, 14-in, Women's	;	"Woodsâ„¢  Neoprene Floral Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Rear pull-on handle for easy on/off:|:3.5 mm neoprene:|:Floral design:|:Height: 14"" (35.5 cm):|:Available in a variety of women's sizes"
+				
+;1870105	;	Woodsâ„¢  Neoprene Boots, 12-in, Men's	;	"Woodsâ„¢ Neoprene Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Pull-on back loop for easy on/off:|:3.5 mm neoprene:|:Height: 12&quot; (30 cm):|:Available in a variety of men's sizes"
+;1870100	;	Woodsâ„¢  Neoprene Boots, 12-in, Men's	;	"Woodsâ„¢ Neoprene Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Pull-on back loop for easy on/off:|:3.5 mm neoprene:|:Height: 12&quot; (30 cm):|:Available in a variety of men's sizes"
+;1870102	;	Woodsâ„¢  Neoprene Boots, 12-in, Men's	;	"Woodsâ„¢ Neoprene Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Pull-on back loop for easy on/off:|:3.5 mm neoprene:|:Height: 12&quot; (30 cm):|:Available in a variety of men's sizes"
+;1870103	;	Woodsâ„¢  Neoprene Boots, 12-in, Men's	;	"Woodsâ„¢ Neoprene Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Pull-on back loop for easy on/off:|:3.5 mm neoprene:|:Height: 12&quot; (30 cm):|:Available in a variety of men's sizes"
+;1870104	;	Woodsâ„¢  Neoprene Boots, 12-in, Men's	;	"Woodsâ„¢ Neoprene Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Pull-on back loop for easy on/off:|:3.5 mm neoprene:|:Height: 12&quot; (30 cm):|:Available in a variety of men's sizes"
+;1870101	;	Woodsâ„¢  Neoprene Boots, 12-in, Men's	;	"Woodsâ„¢ Neoprene Boots provide 100% waterproof protection against the elements:|:Cleated calendar outsole with anti-slip treads for superior traction:|:Removable insole provides all-day comfort:|:Pull-on back loop for easy on/off:|:3.5 mm neoprene:|:Height: 12&quot; (30 cm):|:Available in a variety of men's sizes"
+				
+;1870162	;	Woodsâ„¢  Homestead Neoprene Boots, 14-in, Men's	;	"Woodsâ„¢  Homestead Neoprene Boots provide 100% waterproof protection against the elements:|:Insulated for added warmth and comfort:|:Steel shank provides solid support and protects against punctures:|:Traction rubber outsole with anti-slip treads for optimal grip in wet conditions:|:EVA midsole for all day comfort and support:|:5 mm neoprene:|:Colour: black:|:Height: 14"" (35.5 cm):|:Available in a variety of men's sizes"
+;1870165	;	Woodsâ„¢  Homestead Neoprene Boots, 14-in, Men's	;	"Woodsâ„¢  Homestead Neoprene Boots provide 100% waterproof protection against the elements:|:Insulated for added warmth and comfort:|:Steel shank provides solid support and protects against punctures:|:Traction rubber outsole with anti-slip treads for optimal grip in wet conditions:|:EVA midsole for all day comfort and support:|:5 mm neoprene:|:Colour: black:|:Height: 14"" (35.5 cm):|:Available in a variety of men's sizes"
+;1870164	;	Woodsâ„¢  Homestead Neoprene Boots, 14-in, Men's	;	"Woodsâ„¢  Homestead Neoprene Boots provide 100% waterproof protection against the elements:|:Insulated for added warmth and comfort:|:Steel shank provides solid support and protects against punctures:|:Traction rubber outsole with anti-slip treads for optimal grip in wet conditions:|:EVA midsole for all day comfort and support:|:5 mm neoprene:|:Colour: black:|:Height: 14"" (35.5 cm):|:Available in a variety of men's sizes"
+;1870161	;	Woodsâ„¢  Homestead Neoprene Boots, 14-in, Men's	;	"Woodsâ„¢  Homestead Neoprene Boots provide 100% waterproof protection against the elements:|:Insulated for added warmth and comfort:|:Steel shank provides solid support and protects against punctures:|:Traction rubber outsole with anti-slip treads for optimal grip in wet conditions:|:EVA midsole for all day comfort and support:|:5 mm neoprene:|:Colour: black:|:Height: 14"" (35.5 cm):|:Available in a variety of men's sizes"
+;1870163	;	Woodsâ„¢  Homestead Neoprene Boots, 14-in, Men's	;	"Woodsâ„¢  Homestead Neoprene Boots provide 100% waterproof protection against the elements:|:Insulated for added warmth and comfort:|:Steel shank provides solid support and protects against punctures:|:Traction rubber outsole with anti-slip treads for optimal grip in wet conditions:|:EVA midsole for all day comfort and support:|:5 mm neoprene:|:Colour: black:|:Height: 14"" (35.5 cm):|:Available in a variety of men's sizes"
+				
+;0765402	;	Woodsâ„¢  Barrel and Harness	;	"Woodsâ„¢  Barrel and Harness features a water-tight screw top and clamp seal to keep food safe and dry:|:Keeps odours inside:|:Heavy-grade polyethylene barrel with moulded grips:|:Padded hip belt, shoulder straps, lumbar and back pad:|:Side stabilizer straps and sternum strap for added comfort:|:Available in a variety of sizes"
+;0765401	;	Woodsâ„¢  Barrel and Harness	;	"Woodsâ„¢  Barrel and Harness features a water-tight screw top and clamp seal to keep food safe and dry:|:Keeps odours inside:|:Heavy-grade polyethylene barrel with moulded grips:|:Padded hip belt, shoulder straps, lumbar and back pad:|:Side stabilizer straps and sternum strap for added comfort:|:Available in a variety of sizes"
+;0765406	;	Woodsâ„¢  Maritime Duffle Bag	;	"Woodsâ„¢  Maritime Duffle Bag is water-repellent and provides protection of your boating supplies such as ropes and life jackets:|:Made from a durable PVC/polyester fabric:|:Side compression straps for easy attachment of umbrellas and water bottles:|:Handle with padded strap holder and padded end grab loops for comfortable carrying:|:Heavy duty U-zippers allow easy access:|:Moulded, padded reinforced bottom:|:Detachable shoulder carry strap:|:Available in a variety of sizes"
+;0765405	;	Woodsâ„¢  Maritime Duffle Bag	;	"Woodsâ„¢  Maritime Duffle Bag is water-repellent and provides protection of your boating supplies such as ropes and life jackets:|:Made from a durable PVC/polyester fabric:|:Side compression straps for easy attachment of umbrellas and water bottles:|:Handle with padded strap holder and padded end grab loops for comfortable carrying:|:Heavy duty U-zippers allow easy access:|:Moulded, padded reinforced bottom:|:Detachable shoulder carry strap:|:Available in a variety of sizes"
+;0765594	;	Woodsâ„¢  Lightweight Compression Stuff Sack, Black	;	"Woodsâ„¢  Lightweight Compression Stuff Sack is a cap-style compression sack that helps to reduce the room needed to pack apparel in backpacks:|:Features a durable webbing strap and the buckle assembly makes it easy to compress:|:Made from long-lasting Oxford polyester:|:Includes: cap-style compression sack, 4 webbing straps and slider tighteners:|:Colour: black:|:Available in a variety of sizes"
+;0765593	;	Woodsâ„¢  Lightweight Compression Stuff Sack, Black	;	"Woodsâ„¢  Lightweight Compression Stuff Sack is a cap-style compression sack that helps to reduce the room needed to pack apparel in backpacks:|:Features a durable webbing strap and the buckle assembly makes it easy to compress:|:Made from long-lasting Oxford polyester:|:Includes: cap-style compression sack, 4 webbing straps and slider tighteners:|:Colour: black:|:Available in a variety of sizes"
+;0765762	;	Woodsâ„¢  Ultra-Light Dry Sack	;	"Woodsâ„¢  Ultra-Light Dry Sack features a durable nylon outer, waterproof lining and hot air taped seams:|:Watertight roll top flap with quick release buckle for easy access:|:Round base provides greater capacity:|:Capacity: small- 8 L (2 gal) or large- 20 L (5 gal):|:Available in a variety of sizes"
+;0765761	;	Woodsâ„¢  Ultra-Light Dry Sack	;	"Woodsâ„¢  Ultra-Light Dry Sack features a durable nylon outer, waterproof lining and hot air taped seams:|:Watertight roll top flap with quick release buckle for easy access:|:Round base provides greater capacity:|:Capacity: small- 8 L (2 gal) or large- 20 L (5 gal):|:Available in a variety of sizes"
+#;2992131	;	Coleman Sleepover â€˜Nâ€™ Camp Kit	;	"Coleman Sleepover â€˜Nâ€™ Camp Kit is great for the beginner camper:|:For outdoor and indoor use:|:Kit includes: 2 person youth tent, youth sleeping bag with 2 lb polyester fill, youth lantern with 44 lumens and 16 hours of runtime:|:Fun rainfly design and easy set-up:|:Carry bag to hold gear included:|:Available in a variety of colours:|:Exclusive at Canadian Tire"
+#;2992132	;	Coleman Sleepover â€˜Nâ€™ Camp Kit	;	"Coleman Sleepover â€˜Nâ€™ Camp Kit is great for the beginner camper:|:For outdoor and indoor use:|:Kit includes: 2 person youth tent, youth sleeping bag with 2 lb polyester fill, youth lantern with 44 lumens and 16 hours of runtime:|:Fun rainfly design and easy set-up:|:Carry bag to hold gear included:|:Available in a variety of colours:|:Exclusive at Canadian Tire"

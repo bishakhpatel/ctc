@@ -2,7 +2,7 @@
 # ImpEx for CTC CA Site CMS Content 
 # 
 $contentCatalog=ctcContentCatalog 
-$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged] 
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Online])[default=$contentCatalog:Online] 
 
 REMOVE ContentSlot;$contentCV[unique=true];uid[unique=true];
 ;;Section2ASlot-ContactUs;

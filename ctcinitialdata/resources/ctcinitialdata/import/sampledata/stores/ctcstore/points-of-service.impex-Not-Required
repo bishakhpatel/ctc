@@ -12,7 +12,7 @@
 # ImpEx for Apparel UK Stores
 #% impex.setLocale( Locale.GERMAN ); 
 
-$storeUid=ctc-store
+$storeUid=ctc
 $contentCatalog=ctcContentCatalog
 $catalogVersion=catalogversion(catalog(id[default=$contentCatalog]),version[default='Staged'])[unique=true,default=$contentCatalog:Staged]
 $storeImage=storeImage(qualifier, $catalogVersion)

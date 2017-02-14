@@ -10,7 +10,7 @@
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
 # ImpEx for Importing Product prices into CTC store
-#% impex.setLocale( Locale.GERMAN ); 
+#% impex.setLocale( Locale.EN ); 
 
 # Insert Product prices
 
@@ -369,3 +369,114 @@ INSERT_UPDATE PriceRow;productId[unique=true];unit(code[unique=true,default=piec
 ;0765787P;;USD;39.99;1;1;false
 ;2992131P;;USD;89.99;1;1;false
 ;2992131P;;USD;89.99;1;1;false
+
+
+INSERT_UPDATE PriceRow;productId[unique=true];unit(code[unique=true,default=pieces]);currency(isocode)[unique=true];price;minqtd;unitFactor;net
+
+;0765558;;USD;65.99;1;1;false
+;0765557;;USD;65.99;1;1;false
+;0765556;;USD;65.99;1;1;false
+;1870247;;USD;89.99;1;1;false
+;1870246;;USD;89.99;1;1;false
+;1870250;;USD;89.99;1;1;false
+;1870251;;USD;89.99;1;1;false
+;1870249;;USD;89.99;1;1;false
+;1870248;;USD;89.99;1;1;false
+;1870240;;USD;89.99;1;1;false
+;1870245;;USD;89.99;1;1;false
+;1870241;;USD;89.99;1;1;false
+;1870243;;USD;89.99;1;1;false
+;1870242;;USD;89.99;1;1;false
+;1870244;;USD;89.99;1;1;false
+;1870253;;USD;69.99;1;1;false
+;1870256;;USD;69.99;1;1;false
+;1870252;;USD;69.99;1;1;false
+;1870255;;USD;69.99;1;1;false
+;1870254;;USD;69.99;1;1;false
+;1870276;;USD;89.99;1;1;false
+;1870277;;USD;89.99;1;1;false
+;1870279;;USD;89.99;1;1;false
+;1870278;;USD;89.99;1;1;false
+;1870275;;USD;89.99;1;1;false
+;1870497;;USD;69.99;1;1;false
+;1870495;;USD;69.99;1;1;false
+;1870494;;USD;69.99;1;1;false
+;1870496;;USD;69.99;1;1;false
+;1870474;;USD;69.99;1;1;false
+;1870476;;USD;69.99;1;1;false
+;1870477;;USD;69.99;1;1;false
+;1870475;;USD;69.99;1;1;false
+;1870478;;USD;49.99;1;1;false
+;1870480;;USD;49.99;1;1;false
+;1870481;;USD;49.99;1;1;false
+;1870479;;USD;49.99;1;1;false
+;1870472;;USD;69.99;1;1;false
+;1870473;;USD;69.99;1;1;false
+;1870471;;USD;69.99;1;1;false
+;1870470;;USD;69.99;1;1;false
+;1870491;;USD;69.99;1;1;false
+;1870492;;USD;69.99;1;1;false
+;1870490;;USD;69.99;1;1;false
+;1870493;;USD;69.99;1;1;false
+;1870499;;USD;49.99;1;1;false
+;1870501;;USD;49.99;1;1;false
+;1870498;;USD;49.99;1;1;false
+;1870500;;USD;49.99;1;1;false
+;0762141;;USD;7.49 ;1;1;false
+;0762140;;USD;7.49 ;1;1;false
+;0762139;;USD;7.49 ;1;1;false
+;0762122;;USD;7.49 ;1;1;false
+;0762123;;USD;7.49 ;1;1;false
+;0762124;;USD;7.49 ;1;1;false
+;0771644;;USD;199.99;1;1;false
+;0771640;;USD;199.99;1;1;false
+;0771643;;USD;199.99;1;1;false
+;0771641;;USD;199.99;1;1;false
+;0771642;;USD;199.99;1;1;false
+;0771650;;USD;169.99;1;1;false
+;0771653;;USD;169.99;1;1;false
+;0771654;;USD;169.99;1;1;false
+;0771651;;USD;169.99;1;1;false
+;0771652;;USD;169.99;1;1;false
+;0771646;;USD;189.99;1;1;false
+;0771647;;USD;189.99;1;1;false
+;0771645;;USD;189.99;1;1;false
+;0771649;;USD;189.99;1;1;false
+;0771648;;USD;189.99;1;1;false
+;1870166;;USD;44.99;1;1;false
+;1870171;;USD;44.99;1;1;false
+;1870168;;USD;44.99;1;1;false
+;1870167;;USD;44.99;1;1;false
+;1870170;;USD;44.99;1;1;false
+;1870169;;USD;44.99;1;1;false
+;1870160;;USD;59.99;1;1;false
+;1870157;;USD;59.99;1;1;false
+;1870159;;USD;59.99;1;1;false
+;1870158;;USD;59.99;1;1;false
+;1870156;;USD;59.99;1;1;false
+;1870151;;USD;59.99;1;1;false
+;1870154;;USD;59.99;1;1;false
+;1870153;;USD;59.99;1;1;false
+;1870152;;USD;59.99;1;1;false
+;1870155;;USD;59.99;1;1;false
+;1870105;;USD;59.99;1;1;false
+;1870100;;USD;59.99;1;1;false
+;1870102;;USD;59.99;1;1;false
+;1870103;;USD;59.99;1;1;false
+;1870104;;USD;59.99;1;1;false
+;1870101;;USD;59.99;1;1;false
+;1870162;;USD;119.99;1;1;false
+;1870165;;USD;119.99;1;1;false
+;1870164;;USD;119.99;1;1;false
+;1870161;;USD;119.99;1;1;false
+;1870163;;USD;119.99;1;1;false
+;0765402;;USD;109.99;1;1;false
+;0765401;;USD;109.99;1;1;false
+;0765406;;USD;39.99;1;1;false
+;0765405;;USD;39.99;1;1;false
+;0765594;;USD;19.99;1;1;false
+;0765593;;USD;19.99;1;1;false
+;0765762;;USD;9.99;1;1;false
+;0765761;;USD;9.99;1;1;false
+#;2992131;;USD;89.99;1;1;false
+#;2992132;;USD;89.99;1;1;false
