@@ -6,6 +6,37 @@ $approved=approvalstatus(code)[default='approved']
 
 INSERT_UPDATE ApparelStyleVariantProduct;$approved;$catalogVersion;$baseProduct;name[lang=$lang];code[unique=true]
 
+INSERT_UPDATE ApparelStyleVariantProduct;code[unique=true];$catalogVersion;$baseProduct;unit(code);swatchColors(code);supercategories(code,$catalogVersion);varianttype(code);$approved
+;0765556P_S_37213	;0765556P	;pieces;;	37213	;ApparelSizeVariantProduct
+;1870275P_S_37251	;1870275P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870252P_S_37251	;1870252P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870246P_S_37251	;1870246P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870240P_S_37251	;1870240P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870470P_S_37253	;1870470P	;pieces;;	37253	;ApparelSizeVariantProduct
+;1870474P_S_37253	;1870474P	;pieces;;	37253	;ApparelSizeVariantProduct
+;1870498P_S_37253	;1870498P	;pieces;;	37253	;ApparelSizeVariantProduct
+;1870478P_S_37253	;1870478P	;pieces;;	37253	;ApparelSizeVariantProduct
+;1870494P_S_37253	;1870494P	;pieces;;	37253	;ApparelSizeVariantProduct
+;1870490P_S_37253	;1870490P	;pieces;;	37253	;ApparelSizeVariantProduct
+;0762139P_S_37221	;0762139P	;pieces;;	37221	;ApparelSizeVariantProduct
+;0762122P_S_37233	;0762122P	;pieces;;	37233	;ApparelSizeVariantProduct
+;0771640P_S_37275	;0771640P	;pieces;;	37275	;ApparelSizeVariantProduct
+;0771645P_S_37275	;0771645P	;pieces;;	37275	;ApparelSizeVariantProduct
+;0771650P_S_37275	;0771650P	;pieces;;	37275	;ApparelSizeVariantProduct
+;1870166P_S_37251	;1870166P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870156P_S_37251	;1870156P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870161P_S_37251	;1870161P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870100P_S_37251	;1870100P	;pieces;;	37251	;ApparelSizeVariantProduct
+;1870151P_S_37251	;1870151P	;pieces;;	37251	;ApparelSizeVariantProduct
+;0765401P_S_37227	;0765401P	;pieces;;	37227	;ApparelSizeVariantProduct
+;0765405P_S_37239	;0765405P	;pieces;;	37239	;ApparelSizeVariantProduct
+;0765593P_S_37239	;0765593P	;pieces;;	37239	;ApparelSizeVariantProduct
+;0765761P_S_37239	;0765761P	;pieces;;	37239	;ApparelSizeVariantProduct
+;2992131P_S_37201	;2992131P	;pieces;;	37201	;ApparelSizeVariantProduct
+
+INSERT_UPDATE ApparelSizeVariantProduct;code[unique=true];$catalogVersion;$baseProduct;ean;unit(code);swatchColors(code);supercategories(code,$catalogVersion);;$approved;
+;	0765558	;;	0765556P_S_37212	;;	pieces	;;	37212
+
 ;;;0765556P;"Centre de 10\u00a0cm (4\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765558
 ;;;0765556P;"Centre de 7,6\u00a0cm (3\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765557  
 ;;;0765556P;"Centre de 5\u00a0cm (2\u00a0po)\u00a0: 63,5\u00a0cm la.\u00a0x\u00a0198\u00a0cm L (25\u00a0x\u00a078\u00a0po)";0765556  
