@@ -9,7 +9,7 @@
 <spring:htmlEscape defaultHtmlEscape="true" />
 
 
-<h1 class="cart-headline border">
+<%-- <h1 class="cart-headline border">
 	<spring:theme code="text.cart"/>
     <c:if test="${not empty cartData.code}">
         <span class="cart-id-label">
@@ -35,7 +35,7 @@
             </span>
         </c:if>
 	</sec:authorize>
-</h1>
+</h1> --%>
 
 
 <c:if test="${not empty cartData.entries}">
@@ -43,7 +43,7 @@
     <c:url value="${continueUrl}" var="continueShoppingUrl" scope="session"/>
     <c:set var="showTax" value="false"/>
 	
-    <div class="js-cart-top-totals cart-top-totals">
+    <%-- <div class="js-cart-top-totals cart-top-totals">
         <c:choose>
             <c:when test="${fn:length(cartData.entries) > 1}">
                 <spring:theme code="basket.page.totals.total.items" arguments="${fn:length(cartData.entries)}"/>
@@ -64,9 +64,9 @@
                 </c:choose>
             </span>
         </ycommerce:testId>
-    </div>
+    </div> --%>
 
-    <div class="row">
+   <%--  <div class="row">
         <div class="col-xs-12 col-md-7 col-lg-6 pull-right cart-actions--print">
             <div class="cart-actions">
                 <div class="row">
@@ -88,10 +88,10 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
+    </div> --%>
+    <%-- <div class="row">
         <cart:exportCart/>
-    </div>
+    </div> --%>
 
     <cart:cartItems cartData="${cartData}"/>
 

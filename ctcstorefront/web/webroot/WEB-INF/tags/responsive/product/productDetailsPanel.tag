@@ -5,9 +5,9 @@
 <%@ taglib prefix="product" tagdir="/WEB-INF/tags/responsive/product"%>
 
 
-<div class="product-details page-title">
+<div class="product-details page-title visible-xs">
 	<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}">
-		<div class="name">${product.name} <span class="sku">ID</span><span class="code">${product.code}</span></div>
+		<div class="name">${product.name}</div>
 	</ycommerce:testId>
 	<product:productReviewSummary product="${product}" showLinks="true"/>
 
@@ -21,16 +21,24 @@
 	<div class="col-sm-6 col-lg-8">
 		<div class="product-main-info">
 			<div class="row">
-				<div class="col-lg-6">
+				<div class="product-details col-lg-12 page-title hidden-xs">
+					<ycommerce:testId code="productDetails_productNamePrice_label_${product.code}">
+						<div class="name">${product.name}</div>
+					</ycommerce:testId>
+					<product:productReviewSummary product="${product}" showLinks="true"/>
+				
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 price-det">
 					<div class="product-details">
-						<product:productPromotionSection product="${product}"/>
+						<%-- <product:productPromotionSection product="${product}"/> --%>
 
 						<ycommerce:testId
 								code="productDetails_productNamePrice_label_${product.code}">
 							<product:productPricePanel product="${product}" />
 						</ycommerce:testId>
 
-						<%-- <div class="description">${product.name}</div> --%>
 					</div>
 				</div>
 

@@ -10215,7 +10215,7 @@ fieldset[disabled] .btn-primary.active {
 .breadcrumb-section {
   padding-left: 30px;
   padding-right: 30px;
-  padding-left: 0px;
+  padding-left: 1px;
 }
 @media (max-width: 1028px) {
   .breadcrumb-section {
@@ -12852,7 +12852,7 @@ a.product__listing .product__listing--promo:hover {
   }
 }
 .item__list__cart {
-  margin-top: 15px;
+  margin-top: 8px;
   margin-bottom: 10px;
 }
 @media (min-width: 1028px) {

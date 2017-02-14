@@ -11,7 +11,7 @@
 	<cart:cartValidation/>
 	<cart:cartPickupValidation/>
 
-	<div class="cart-top-bar">
+	<%-- <div class="cart-top-bar">
         <div class="text-right">
             <a href="" class="help js-cart-help" data-help="<spring:theme code="text.help" />"><spring:theme code="text.help" text="Help" />
                 <span class="glyphicon glyphicon-info-sign"></span>
@@ -23,7 +23,7 @@
                 </div>
             </div>
 		</div>
-	</div>
+	</div> --%>
 
 	<div>
 		<div>
