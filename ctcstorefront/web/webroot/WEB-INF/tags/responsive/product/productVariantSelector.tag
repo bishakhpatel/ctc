@@ -16,7 +16,7 @@
         <c:set var="levels" value="${fn:length(product.categories)}"/>
         <c:set var="selectedIndex" value="0"/>
 
-        <div class="variant-section">Bishakh Responsive
+        <div class="variant-section">
             <div class="variant-selector">
                 <c:forEach begin="1" end="${levels}" varStatus="loop">
                     <c:set var="i" value="0"/>
