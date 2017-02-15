@@ -20,6 +20,7 @@ $lang=en
 
 # Create Categories
 INSERT_UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];description[lang=$lang]
+;category;;Category;category
 ;37204;;Sleeping Bags;sleeping-bags
 ;37206;;Air Beds, Cots & Pads/Mats;air-beds-cots-pads-mats
 ;37208;;Air Beds;air-beds
@@ -60,6 +61,7 @@ INSERT_UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];descri
 
 # Create Categories
 INSERT_UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];description[lang=$lang]
+;category;;Category;category
 ;37205;;Sacs de couchage;sacs-de-couchage
 ;37207;;Lits pneumatiques, de camp et matelas;lits-pneumatiques-cots-et-matelas-tapis
 ;37209;;Lits pneumatiques;lits-pneumatiques
@@ -96,9 +98,3 @@ INSERT_UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];descri
 ;37271;;Insectifuges;insectifuges
 ;37273;;PÃªche et accessoires;peche-et-accessoires
 ;37275;;Cuissardes;cuissardes
-
-
-
- 
-
-
