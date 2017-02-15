@@ -44,8 +44,10 @@
 	<nav class="menu menu__products">
 	    <!-- <header class="menu__products__header" data-products-menu-title="">Products</header> -->
 	    	<ul class="menu__products__items">
-<c:forEach items="${component.navigationNode.children}" var="childLevel1">
+<c:forEach items="${component.navigationNode.children}" var="childLevel1" varStatus="countMenu">
+<c:if test="${countMenu.index == 0 }">
 <li class="menu__products__item hidden-xs hidden-sm"><div class="primary-header">${childLevel1.title }</div></li>
+</c:if>
 <c:if test="${not empty childLevel1.children}">
 	<c:choose>
 		<c:when test="${hasSubChild}">
