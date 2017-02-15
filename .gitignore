@@ -1,0 +1,148 @@
+# generated python execution files #
+*.pyc
+
+# generated folders and files #
+*.class
+*.number
+#hmc.xsd
+items.xsd
+extensioninfo.xsd
+beans.xsd
+platformhome.properties
+#*hmc.jar
+touch_impexgen
+/*/user-build.xml
+/*/build.xml
+#user-build.xml
+/README
+#Old PMD file, ruleset.xml used instead
+.ruleset
+
+.sonar/
+cobertura.ser
+cobertura/
+
+
+#build-tools/*
+
+/*/ruleset.xml
+/*/*/ruleset.xml
+/*/*/.ruleset
+*testclasses.xml
+/*/*/build.xml
+
+ctcstorefront/web/webroot/cockpit/*
+ctcstorefront/web/webroot/cmscockpit/*
+
+
+#Ignore merged original copies
+*.orig
+*.iml
+*.eml
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+hybris-*.zip
+
+# Eclipse settings #
+.settings/
+
+# IntelliJ files #
+.idea/
+idea/
+*.iml
+*.eml
+.DS_Store
+
+# Merge Files #
+*.BASE
+*.LOCAL
+*.REMOTE
+
+RemoteSystemsTempFiles/
+.metadata
+.prefs
+.springBeans
+
+#Robot Framework #
+##################
+__init__.txt
+
+################
+# Hybris Files #
+################
+
+# Folders #
+#hybris/bin/platform/
+
+
+
+# Code review #
+.reviewboardrc
+
+user-build.xml
+
+configoverview/configs
+configoverview/data.json
+
+
+/html/untitled.sublime-workspace
+configoverview/configs
+configoverview/data.json
+# Review file
+.reviewboardrc
+/html/nbproject/private/
+/html/mergetestpage/nbproject/private/
+
+#ctcstorefront/web/webroot/_uidockers-sitemap-*.xml.gz
+
+#ctcstorefront/web/webroot/dockers-sitemap-*.xml.gz
+#ctcstorefront/web/webroot/dockers-sitemap.xml
+#ctcstorefront/web/webroot/levis-sitemap-*.xml.gz
+#ctcstorefront/web/webroot/levis-sitemap.xml
+
+#ctcfacades/resources/ctcfacades/ctcfacades-testclasses.xml
+
+
+#ctcstorefront/web/webroot/cscockpit/images/*
+#ctcstorefront/web/webroot/cscockpit/templates/*
+#ctcstorefront/web/webroot/cscockpit/cscockpitCSA.zul
+#ctcstorefront/web/webroot/cscockpit/loginDialog.zul
+#ctcstorefront/web/webroot/cscockpit/css/*.css
+
+
+# Automatically generated/minified CSS
+
+ctcstorefront/web/webroot/_ui/responsive/theme-alpha/css/style.css
+ctcstorefront/web/webroot/_ui/responsive/theme-lambda/css/style.css
+
+
+# Automatically generated/minified JavaScript
+ctcstorefront/web/webroot/_ui/shared/js/*.min.js
+!ctcstorefront/web/webroot/_ui/shared/js/flowplayer.min.js
+!ctcstorefront/web/webroot/_ui/shared/js/jquery-1.5.1.min.js
+!ctcstorefront/web/webroot/_ui/shared/js/jquery-ui.min.js
+!ctcstorefront/web/webroot/_ui/shared/js/jquery.bgiframe.min.js
+!ctcstorefront/web/webroot/_ui/shared/js/jquery.bt.min.js
+!ctcstorefront/web/webroot/_ui/shared/js/jquery.lightbox-0.5.min.js
+!ctcstorefront/web/webroot/_ui/shared/js/jquery.pstrength-min.1.2.js
+!ctcstorefront/web/webroot/_ui/shared/js/jquery.scrollTo-1.4.2-min.js
+!ctcstorefront/web/webroot/_ui/shared/js/jquery.tmpl.min.js
+!ctcstorefront/web/webroot/_ui/shared/js/jquery.ui.stars.min.js
+!ctcstorefront/web/webroot/_ui/shared/js/plugins.min.js
+!ctcstorefront/web/webroot/_ui/shared/js/require.min.js
+
+# Concatenated but unminified JavaScript (javaScript.useMinified=false for Debug)
+
+
+#test automation
+
