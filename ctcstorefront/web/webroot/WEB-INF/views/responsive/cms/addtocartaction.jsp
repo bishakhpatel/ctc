@@ -50,7 +50,6 @@
 
 <c:if test="${empty showAddToCart ? true : showAddToCart}">
 	<c:set var="buttonType">button</c:set>
-	Stock Level Code:: ${product.stock.stockLevelStatus.code}
 	<c:if test="${product.purchasable and product.stock.stockLevelStatus.code ne 'outOfStock' }">
 		<c:set var="buttonType">submit</c:set>
 	</c:if>
