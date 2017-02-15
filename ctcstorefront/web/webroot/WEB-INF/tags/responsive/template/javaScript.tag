@@ -96,8 +96,8 @@
 				  function(){$(this).addClass('active')}, 
 				  function(){$(this).removeClass('active')}
 				);
-				$(document).on('click','.menu__products__item',function(){
-					$(this).toggleClass('second-active');
+				$(document).on('click','.menu__products__item a',function(){
+					$(this).parent('li').toggleClass('second-active');
 				})
 		})		
 				$(window).on("resize", function () {

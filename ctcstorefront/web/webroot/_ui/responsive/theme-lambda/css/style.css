@@ -9163,6 +9163,7 @@ ul.nav__links::after {
 @media screen and (max-width: 1028px) {
   .header {
     height: 65px;
+    margin-bottom: 0;
   }
 }
 .header input[type=checkbox] {
@@ -10312,6 +10313,11 @@ fieldset[disabled] .btn-primary.active {
   padding: 0 4px !important;
   color: #005841 !important;
   font-size: 17px;
+}
+@media screen and (max-width: 1028px) {
+  .breadcrumb-section {
+    margin-top: 42px;
+  }
 }
 .image-gallery__image {
   cursor: pointer;
