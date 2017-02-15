@@ -548,7 +548,7 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;pa
 # the following order of children is the display order on the site
 INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;parent(uid, $contentCV);&nodeRef;children(uid,$contentCV)
 #;ApparelUKCategoryNavNode;;Categories;ApparelUKNavNode;ApparelUKCategoryNavNode;BrandsNavNode,StreetwearNavigationNode,SnowNavigationNode,AccessoriesNavigationNode,StreetwearYouthNavNode
-;CTCCategoryNavNode;;Categories;CTCNavNode;CTCCategoryNavNode;ProductsNavNode
+;CTCCategoryNavNode;;Categories;CTCNavNode;CTCCategoryNavNode;ProductsNavNode,InspirationNavNode,WoodLegacyNavNode,WhereToBuyNavNode,ContactUsHeaderNavNode
 
 
 ## level 3. children of Category Nav ##
@@ -559,6 +559,10 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&n
 #;AccessoriesNavigationNode;;Accessories Menu;AccessoriesNavigationNode;AccessoriesMenNavNodeMenu,AccessoriesWomenNavNodeMenu
 #;StreetwearYouthNavNode;;Youth Menu;StreetwearYouthNavNode;StreetwearYouthBoardshortsNavNode,StreetwearYouthTShirtNavNode
 ;ProductsNavNode;;All Products;ProductsNavNode;SleepingBagsNavNode,BedsCotsNavNode,StovesCookingAccNavNode,LightingAccNavNode,BackPacksNDayPacksNavNode,ChairsNTablesNavNode,FootwearNApparelNavNode,SheltersNCanopiesScreenhousesNavNode,KnivesToolsAccNavNode, SunscreenNBugRepellentsNavNode, FishingNAccessoriesNavNode
+;InspirationNavNode;;Inspiration;InspirationNavNode;
+;WoodLegacyNavNode;;Wood Legacy;WoodLegacyNavNode;
+;WhereToBuyNavNode;;Where To Buy;WhereToBuyNavNode;
+;ContactUsHeaderNavNode;;Contact Us;ContactUsHeaderNavNode;
 
 ## entries of the above navigation nodes ##
 INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;navigationNode(&nodeRef);item(CMSLinkComponent.uid,CMSLinkComponent.$contentCV);
@@ -568,6 +572,10 @@ INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;n
 #;AccessoriesNavigationNodeEntry;;Accessories Navigation Node Entry;AccessoriesNavigationNode;AccessoriesLink;
 #;StreetwearYouthNavNodeEntry;;StreetwearYouth Navigation Node Entry;StreetwearYouthNavNode;YouthLink;
 ;ProductsNavNodeEntry;;Products Navigation Node Entry;ProductsNavNode;ProductsLink
+;InspirationNavNodeEntry;;Inspiration Navigation Node Entry;InspirationNavNode;InspirationLink
+;WoodLegacyNavNodeEntry;;Wood Legacy Navigation Node Entry;WoodLegacyNavNode;WoodLegacyLink
+;WhereToBuyNavNodeEntry;;Where to Buy Navigation Node Entry;WhereToBuyNavNode;WhereToBuyLink
+;ContactUsHeaderNavNodeEntry;;Contact Us Navigation Node Entry;ContactUsHeaderNavNode;ContactUsHeaderLink
 
 ## level 5. children of above (level 4) nodes ##
 INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&nodeRef;children(uid,$contentCV);links(&linkRef);
@@ -644,6 +652,13 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 ;;BugRepellentsLink;Insect Repellents;#;37270;;BugRepellentsLink
 ;;FishingNAccessoriesLink;Fishing & Accessories;#;37272;;FishingNAccessoriesLink
 ;;WadersLink;Waders;#;37274;;WadersLink
+
+
+INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;target(code)[default='sameWindow'];&linkRef
+;;InspirationLink;Inspiration;"/ctcDefault";;InspirationLink
+;;WoodLegacyLink;Wood Legacy;"/ctcDefault";;WoodLegacyLink
+;;WhereToBuyLink;Where to Buy;"/ctcDefault";;WhereToBuyLink
+;;ContactUsHeaderLink;Contact us;"/contactus";;ContactUsHeaderLink
 
 ## entries of the above navigation nodes ##
 INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;navigationNode(&nodeRef);item(CMSLinkComponent.uid,CMSLinkComponent.$contentCV);
@@ -722,6 +737,10 @@ INSERT_UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[l
 ;;BugRepellentsNavNode;"Insect Repellents"
 ;;FishingNAccessoriesNavNode;"Fishing & Accessories"
 ;;WadersNavNode;"Waders"
+;;InspirationNavNode;"Inspiration"
+;;WoodLegacyNavNode;"Wood Legacy"
+;;WhereToBuyNavNode;"Where To Buy"
+;;ContactUsHeaderNavNode;"Contact Us"
 
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=en]
 ;;ProductsLink;"Products"
@@ -760,6 +779,10 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName
 ;;BugRepellentsLink;"Insect Repellents"
 ;;FishingNAccessoriesLink;"Fishing & Accessories"
 ;;WadersLink;"Waders"
+;;InspirationLink;"Inspiration"
+;;WoodLegacyLink;"Wood Legacy"
+;;WhereToBuyLink;"Where To Buy"
+;;ContactUsHeaderLink;"Contact Us"
 ###### Navigation Component Refactor End ######
 
 

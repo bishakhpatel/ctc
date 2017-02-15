@@ -19,19 +19,26 @@
                         <input type="checkbox" id="main-menu-checkbox">
                         
                         <label for="main-menu-checkbox" onclick=""></label>
+                        <c:set var="totalChildren" value="${fn:length(component.navigationNode.children)}"/>
                         <ul class="nav menu" id="products-menu-trigger">
-                        <c:forEach items="${component.navigationNode.children}" var="childLevel1">
-                        	<li class="item" id="first-menu">
+                        <c:forEach items="${component.navigationNode.children}" var="childLevel1" varStatus="count">
+                           <c:choose>
+                           <c:when test="${count.index == 0}">
+                           		<li class="item" id="first-menu">
+                           </c:when>
+                         	<c:when test="${count.index == totalChildren-1}">
+                           		<li class="item last-item">
+                           </c:when>
+                           <c:otherwise>
+                           		<li class="item">
+                           </c:otherwise>
+                           </c:choose>
                         		<c:forEach items="${childLevel1.entries}" var="childlink1">
 									<cms:component component="${childlink1.item}" evaluateRestriction="true" element="" class="menu__item menu_main__item" />
 								</c:forEach>
                         	</li>
                         </c:forEach>
 
-<li class="item"><a href="en/inspiration.html" class="menu__item menu_main__item">Inspiration</a></li>
-<li class="item"><a href="en/woods-legacy.html" class="menu__item menu_main__item">Wood Legacy</a></li>
-<li class="item"><a href="en/where-to-buy.html" class="menu__item menu_main__item">Where to buy</a></li>
-<li class="item last-item"><a href="en/contactus.html" class="menu__item menu_main__item">Contact Us</a></li>
 </ul>
 <div class="menu__holder" id="products-menu">
 	<nav class="menu menu__products">
