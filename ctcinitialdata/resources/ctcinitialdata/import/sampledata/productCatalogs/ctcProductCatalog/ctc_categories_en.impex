@@ -58,9 +58,6 @@ INSERT_UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];descri
 ;37274;;Waders;waders
 
 
-# Language
-$lang=fr
-
 # Create Categories
 INSERT_UPDATE Category;code[unique=true];$catalogVersion;name[lang=$lang];description[lang=$lang]
 ;37205;;Sacs de couchage;sacs-de-couchage
