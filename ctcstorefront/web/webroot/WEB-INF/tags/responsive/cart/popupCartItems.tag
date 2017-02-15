@@ -21,12 +21,12 @@
 			<div class="qty"><span><spring:theme code="popup.cart.quantity.added"/></span>&nbsp;${quantity}</div>
 			<c:forEach items="${product.baseOptions}" var="baseOptions">
 				<c:forEach items="${baseOptions.selected.variantOptionQualifiers}" var="baseOptionQualifier">
-					<c:if test="${baseOptionQualifier.qualifier eq 'style' and not empty baseOptionQualifier.image.url}">
-						<div class="itemColor">
-							<span class="label"><spring:theme code="product.variants.colour"/></span>
-							<img src="${baseOptionQualifier.image.url}"  alt="${baseOptionQualifier.value}" title="${baseOptionQualifier.value}"/>
-						</div>
-					</c:if>
+<%-- 					<c:if test="${baseOptionQualifier.qualifier eq 'style' and not empty baseOptionQualifier.image.url}"> --%>
+<!-- 						<div class="itemColor"> -->
+<%-- 							<span class="label"><spring:theme code="product.variants.colour"/></span> --%>
+<%-- 							<img src="${baseOptionQualifier.image.url}"  alt="${baseOptionQualifier.value}" title="${baseOptionQualifier.value}"/> --%>
+<!-- 						</div> -->
+<%-- 					</c:if> --%>
 					<c:if test="${baseOptionQualifier.qualifier eq 'size'}">
 						<div class="itemSize">
 							<span class="label"><spring:theme code="product.variants.size"/></span>

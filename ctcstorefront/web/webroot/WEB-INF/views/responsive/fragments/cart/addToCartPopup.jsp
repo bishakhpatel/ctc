@@ -80,13 +80,13 @@
 
             <ycommerce:testId code="checkoutLinkInPopup">
                 <a href="${cartUrl}" class="btn btn-primary btn-block add-to-cart-button">
-                    <spring:theme code="checkout.checkout" />
+                    <spring:theme code="cart.popup.checkout"/>
                 </a>
             </ycommerce:testId>
 
 
             <a href="" class="btn btn-default btn-block js-mini-cart-close-button">
-                <spring:theme code="cart.page.continue"/>
+                <spring:theme text="Continue Shopping" code="cart.page.continue"/>
             </a>
 		</div>
 	</ycommerce:testId>

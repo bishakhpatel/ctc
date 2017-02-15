@@ -95,8 +95,8 @@
 
     <cart:cartItems cartData="${cartData}"/>
 
-    <div class="row">
-        <cart:exportCart/>
-    </div>
+<!--     <div class="row"> -->
+<%--         <cart:exportCart/> --%>
+<!--     </div> -->
 </c:if>
 <cart:ajaxCartTopTotalSection/>

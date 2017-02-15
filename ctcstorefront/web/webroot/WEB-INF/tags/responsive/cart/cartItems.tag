@@ -72,10 +72,12 @@
                     <c:forEach items="${entry.product.baseOptions}" var="option">
                         <c:if test="${not empty option.selected and option.selected.url eq entry.product.url}">
                             <c:forEach items="${option.selected.variantOptionQualifiers}" var="selectedOption">
+                            <c:if test="${selectedOption.qualifier ne 'style' }">
                                 <div>
                                     <strong>${selectedOption.name}:</strong>
                                     <span>${selectedOption.value}</span>
                                 </div>
+                             </c:if>
                                 <c:set var="entryStock" value="${option.selected.stock.stockLevelStatus.code}"/>
                             </c:forEach>
                         </c:if>

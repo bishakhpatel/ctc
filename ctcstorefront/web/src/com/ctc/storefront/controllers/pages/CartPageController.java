@@ -40,7 +40,6 @@ import de.hybris.platform.commercefacades.voucher.exceptions.VoucherOperationExc
 import de.hybris.platform.commerceservices.order.CommerceCartModificationException;
 import de.hybris.platform.commerceservices.order.CommerceSaveCartException;
 import de.hybris.platform.enumeration.EnumerationService;
-import com.ctc.storefront.controllers.ControllerConstants;
 
 import java.io.IOException;
 import java.io.StringWriter;
@@ -68,6 +67,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.ctc.storefront.controllers.ControllerConstants;
+
 
 /**
  * Controller for cart page
@@ -80,6 +81,7 @@ public class CartPageController extends AbstractCartPageController
 	public static final String ERROR_MSG_TYPE = "errorMsg";
 	public static final String SUCCESSFUL_MODIFICATION_CODE = "success";
 	public static final String VOUCHER_FORM = "voucherForm";
+	public static final String CHECKOUT_BUTTON_URL = "cart.checkoutbutton.url";
 
 	private static final String REDIRECT_CART_URL = REDIRECT_PREFIX + "/cart";
 
@@ -163,9 +165,10 @@ public class CartPageController extends AbstractCartPageController
 			@RequestParam(value = "readOnly", required = false, defaultValue = "false") final String readOnly, final Model model)
 	{
 
-		final ProductData productData = productFacade.getProductForCodeAndOptions(productCode, Arrays.asList(ProductOption.BASIC,
-				ProductOption.CATEGORIES, ProductOption.VARIANT_MATRIX_BASE, ProductOption.VARIANT_MATRIX_PRICE,
-				ProductOption.VARIANT_MATRIX_MEDIA, ProductOption.VARIANT_MATRIX_STOCK, ProductOption.VARIANT_MATRIX_URL));
+		final ProductData productData = productFacade.getProductForCodeAndOptions(productCode,
+				Arrays.asList(ProductOption.BASIC, ProductOption.CATEGORIES, ProductOption.VARIANT_MATRIX_BASE,
+						ProductOption.VARIANT_MATRIX_PRICE, ProductOption.VARIANT_MATRIX_MEDIA, ProductOption.VARIANT_MATRIX_STOCK,
+						ProductOption.VARIANT_MATRIX_URL));
 
 		model.addAttribute("product", productData);
 		model.addAttribute("readOnly", "true".equalsIgnoreCase(readOnly));
@@ -266,7 +269,8 @@ public class CartPageController extends AbstractCartPageController
 		{
 			model.addAttribute(VOUCHER_FORM, new VoucherForm());
 		}
-
+		/* Add attribute for checkout redirection to Home page */
+		model.addAttribute("ctcCheckoutUrl", getSiteConfigService().getString(CHECKOUT_BUTTON_URL, "/ctcstorefront/en"));
 		model.addAttribute(WebConstants.BREADCRUMBS_KEY, resourceBreadcrumbBuilder.getBreadcrumbs("breadcrumb.cart"));
 		model.addAttribute("pageType", PageType.CART.name());
 	}
@@ -294,19 +298,16 @@ public class CartPageController extends AbstractCartPageController
 			// Less than successful
 			GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.ERROR_MESSAGES_HOLDER,
 					"basket.page.message.update.reducedNumberOfItemsAdded.lowStock", new Object[]
-					{ cartModification.getEntry().getProduct().getName(), cartModification.getQuantity(), form.getQuantity(),
-							request.getRequestURL().append(cartModification.getEntry().getProduct().getUrl()) });
+			{ cartModification.getEntry().getProduct().getName(), cartModification.getQuantity(), form.getQuantity(),
+					request.getRequestURL().append(cartModification.getEntry().getProduct().getUrl()) });
 		}
 		else
 		{
 			// No more stock available
-			GlobalMessages.addFlashMessage(
-					redirectModel,
-					GlobalMessages.ERROR_MESSAGES_HOLDER,
-					"basket.page.message.update.reducedNumberOfItemsAdded.noStock",
-					new Object[]
-					{ cartModification.getEntry().getProduct().getName(),
-							request.getRequestURL().append(cartModification.getEntry().getProduct().getUrl()) });
+			GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.ERROR_MESSAGES_HOLDER,
+					"basket.page.message.update.reducedNumberOfItemsAdded.noStock", new Object[]
+			{ cartModification.getEntry().getProduct().getName(),
+					request.getRequestURL().append(cartModification.getEntry().getProduct().getUrl()) });
 		}
 	}
 
@@ -335,8 +336,8 @@ public class CartPageController extends AbstractCartPageController
 		{
 			try
 			{
-				final CartModificationData cartModification = getCartFacade().updateCartEntry(
-						getOrderEntryData(form.getQuantity(), productCode, entryNumber));
+				final CartModificationData cartModification = getCartFacade()
+						.updateCartEntry(getOrderEntryData(form.getQuantity(), productCode, entryNumber));
 				if (cartModification.getStatusCode().equals(SUCCESSFUL_MODIFICATION_CODE))
 				{
 					GlobalMessages.addMessage(model, GlobalMessages.CONF_MESSAGES_HOLDER, cartModification.getStatusMessage(), null);
@@ -391,14 +392,14 @@ public class CartPageController extends AbstractCartPageController
 				final CommerceSaveCartResultData saveCartData = saveCartFacade.saveCart(commerceSaveCartParameterData);
 				GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.CONF_MESSAGES_HOLDER, "basket.save.cart.on.success",
 						new Object[]
-						{ saveCartData.getSavedCartData().getName() });
+				{ saveCartData.getSavedCartData().getName() });
 			}
 			catch (final CommerceSaveCartException csce)
 			{
 				LOG.error(csce.getMessage(), csce);
 				GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.ERROR_MESSAGES_HOLDER, "basket.save.cart.on.error",
 						new Object[]
-						{ form.getName() });
+				{ form.getName() });
 			}
 		}
 		return REDIRECT_CART_URL;
@@ -415,8 +416,8 @@ public class CartPageController extends AbstractCartPageController
 			{
 				final List<String> headers = new ArrayList<String>();
 				headers.add(getMessageSource().getMessage("basket.export.cart.item.sku", null, getI18nService().getCurrentLocale()));
-				headers.add(getMessageSource().getMessage("basket.export.cart.item.quantity", null,
-						getI18nService().getCurrentLocale()));
+				headers.add(
+						getMessageSource().getMessage("basket.export.cart.item.quantity", null, getI18nService().getCurrentLocale()));
 				headers.add(getMessageSource().getMessage("basket.export.cart.item.name", null, getI18nService().getCurrentLocale()));
 				headers
 						.add(getMessageSource().getMessage("basket.export.cart.item.price", null, getI18nService().getCurrentLocale()));
@@ -455,7 +456,7 @@ public class CartPageController extends AbstractCartPageController
 				voucherFacade.applyVoucher(form.getVoucherCode());
 				redirectAttributes.addFlashAttribute("successMsg",
 						getMessageSource().getMessage("text.voucher.apply.applied.success", new Object[]
-						{ form.getVoucherCode() }, getI18nService().getCurrentLocale()));
+				{ form.getVoucherCode() }, getI18nService().getCurrentLocale()));
 			}
 		}
 		catch (final VoucherOperationException e)
@@ -484,7 +485,7 @@ public class CartPageController extends AbstractCartPageController
 		{
 			GlobalMessages.addFlashMessage(redirectModel, GlobalMessages.ERROR_MESSAGES_HOLDER, "text.voucher.release.error",
 					new Object[]
-					{ form.getVoucherCode() });
+			{ form.getVoucherCode() });
 			if (LOG.isDebugEnabled())
 			{
 				LOG.debug(e.getMessage(), e);

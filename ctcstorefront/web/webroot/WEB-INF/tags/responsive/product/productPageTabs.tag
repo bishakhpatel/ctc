@@ -5,7 +5,7 @@
 
 <div class="tabs js-tabs tabs-responsive">
 	<div class="tabhead">
-		<a href=""><spring:theme code="product.product.details" /></a> <span
+		<a href=""><spring:theme code="product.product.features" /></a> <span
 			class="glyphicon"></span>
 	</div>
 	<div class="tabbody">

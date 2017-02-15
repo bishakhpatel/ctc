@@ -35,13 +35,13 @@
         <div class="cart-actions">
             <div class="row">
                 <div class="col-sm-3 col-md-4 pull-right">
-                    <button class="btn btn-primary btn-block btn--continue-checkout js-continue-checkout-button"  data-checkout-url="${checkoutUrl}"><spring:theme code="checkout.checkout"/></button>
+                    <button class="btn btn-primary btn-block btn--continue-checkout js-continue-checkout-button"  data-checkout-url="${ctcCheckoutUrl}"><spring:theme code="proceed.checkout"/></button>
                 </div>
-
+ 
                 <div class="col-sm-5 pull-right">
                     <button class="btn btn-default btn-block btn--continue-shopping js-continue-shopping-button" data-continue-shopping-url="${continueShoppingUrl}"><spring:theme text="Continue Shopping" code="cart.page.continue"/></button>
                 </div>
-                <cart:saveCart/>
+<%--                 <cart:saveCart/> --%>
             </div>
         </div>
     </div>
