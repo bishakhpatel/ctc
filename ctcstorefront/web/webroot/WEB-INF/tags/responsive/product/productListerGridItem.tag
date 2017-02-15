@@ -20,16 +20,18 @@
 		<div class="details">
 
 			<ycommerce:testId code="product_productName">
-				<a class="name" href="${productUrl}">
-					<c:choose>
-						<c:when test="${fn:length(product.name) > 30}">
-							${fn:substring(product.name, 0, 30)}...	
-						</c:when>
-						<c:otherwise>
-							${product.name}
-						</c:otherwise>	
-					</c:choose>
-				</a>
+				<div class="product-name">
+					<a class="name" href="${productUrl}">
+						<c:choose>
+							<c:when test="${fn:length(product.name) > 30}">
+								${fn:substring(product.name, 0, 30)}...	
+							</c:when>
+							<c:otherwise>
+								${product.name}
+							</c:otherwise>	
+						</c:choose>
+					</a>
+				</div>
 			</ycommerce:testId>
 		
 			<c:if test="${not empty product.potentialPromotions}">
@@ -41,8 +43,8 @@
 			</c:if>
 			
 			<ycommerce:testId code="product_productPrice">
-			<div>
-				<div>
+			<div class="grid-price-holder">
+				<div class="price-suggest">
 				<spring:theme code="suggested.price"/>
 				</div>
 				<div class="price"><product:productListerItemPrice product="${product}"/></div>

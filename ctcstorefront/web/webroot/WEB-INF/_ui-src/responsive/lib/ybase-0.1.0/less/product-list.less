@@ -186,6 +186,10 @@
 		.make-sm-column(4);
 		.make-md-column(4);
 		.make-lg-column(4);
+		
+		&:hover{
+			background:rgba(100,167,11,0.5);
+		}
 
 		padding: @grid-gutter-width;
 		.flex-display(flex);
@@ -211,12 +215,15 @@
 		}
 
 	  }
-
+		
 	  .details {
-		text-align: center;
 		margin: 0 auto;
+		text-transform: uppercase;
 		.flex(1 0 auto);
-
+		margin-bottom: 10px;
+		.product-name{
+			    min-height: 46px;
+		}
 		.name {
 		  margin: 0;
 		  font-weight: 600;
@@ -225,6 +232,7 @@
 		  height: 70px;
 		  overflow: hidden;
 		  color: @headline-color;
+		  text-transform: uppercase;
 		}
 
 		.price {
@@ -253,7 +261,31 @@
 	}
   }
 
-
+.product__grid{
+			.btn-primary{
+				background-color: #969696;
+   				 border-color: #969696;
+			}
+			.product-item:hover .btn-primary{
+				background-color: #64A70B;
+   				 border-color: #64A70B;
+			}
+		}
+.grid-price-holder{
+	display: block;
+    text-align: left;
+    margin-top: 7px;
+    text-transform: uppercase;
+    .price-suggest{
+    	float: left;
+    	vertical-align: top;
+    	margin-top: 3px;
+    }
+    .price{
+    	float: right;
+    	vertical-align: top;
+    }
+}
 
 .search-empty {
   margin-top: 20px;

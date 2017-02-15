@@ -84,10 +84,11 @@
 		<script type="text/javascript" src="${commonResourcePath}/js/_autoload.js"></script>
 		
 		<script type="text/javascript">
+		$(document).ready(function(){
 				$('.menu #first-menu , .menu__holder').hover(function(){
 					$('nav > .menu__holder').toggleClass('active-big');
 				});
-				$('.menu #first-menu a').click(function(){
+				$('.menu #first-menu > a').click(function(){
 					$('#first-menu .menu__holder').toggleClass('active-small');
 				});
 				
@@ -95,12 +96,11 @@
 				  function(){$(this).addClass('active')}, 
 				  function(){$(this).removeClass('active')}
 				);
-				/* $('.facet .facet__name').click(
-				  function(){$(this).toggleClass('active')}
-				); */
-				
+				$(document).on('click','.menu__products__item',function(){
+					$(this).toggleClass('second-active');
+				})
+		})		
 				$(window).on("resize", function () {
-				   console.log($(this).width());
 				   if($(this).width() <= 1028){
 					   if($("#first-menu").find('div.menu__holder').length == 0){
 						   $('#first-menu').append( $('div.menu__holder').clone());
@@ -108,10 +108,9 @@
 				   }
 				}).resize();
 				
-				$(document).ready(function(){
-					
+				/* $(document).ready(function(){
 					$(".footer__nav--container:eq(1)").hide()
-				})
+				}) */
 				
 				 
 		</script>
