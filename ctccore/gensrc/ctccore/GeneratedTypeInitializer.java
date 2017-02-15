@@ -118,6 +118,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 	
 				single_createattr_ApparelProduct_genders();
 			
+				single_createattr_Product_indexSolr();
+			
 				single_createattr_ApparelStyleVariantProduct_style();
 			
 				single_createattr_ApparelStyleVariantProduct_swatchColors();
@@ -140,6 +142,23 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"genders",  
 					null,
 					"GenderList",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_Product_indexSolr() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Product", 
+					"indexSolr",  
+					null,
+					"java.lang.Boolean",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -264,6 +283,18 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				{
 				Map customPropsMap = new HashMap();
 				
+				changeMetaType(
+					"Product",
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_Product_indexSolr();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
 				setItemTypeProperties(
 					"ApparelStyleVariantProduct",
 					false,
@@ -343,6 +374,28 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							setAttributeProperties(
 								"ApparelProduct", 
 								"genders",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Product_indexSolr() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Product", 
+								"indexSolr",
 								false, 
 								null,
 								null,

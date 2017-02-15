@@ -58,7 +58,15 @@
 					</attribute>
 				</attributes>
 			</itemtype>
-
+			<itemtype code="Product" autocreate="false" generate="false">
+				<attributes>
+					<attribute qualifier="indexSolr" type="java.lang.Boolean">
+						<description>Product solr indexing</description>
+						<modifiers/>
+						<persistence type="property"/>
+					</attribute>
+				</attributes>
+			</itemtype>
 			<itemtype code="ApparelStyleVariantProduct" extends="VariantProduct"
 			          autocreate="true" generate="true"
 			          jaloclass="com.ctc.core.jalo.ApparelStyleVariantProduct">

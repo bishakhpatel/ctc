@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Feb 13, 2017 9:42:27 AM                     ---
+ * --- Generated at Feb 15, 2017 12:23:02 PM                    ---
  * ----------------------------------------------------------------
  */
 package com.ctc.core.constants;
@@ -24,7 +24,10 @@ public class GeneratedCtcCoreConstants
 	}
 	public static class Attributes
 	{
-		// no constants defined.
+		public static class Product
+		{
+			public static final String INDEXSOLR = "indexSolr".intern();
+		}
 	}
 	public static class Enumerations
 	{

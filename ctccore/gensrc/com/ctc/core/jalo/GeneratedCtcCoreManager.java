@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Feb 13, 2017 9:42:27 AM                     ---
+ * --- Generated at Feb 15, 2017 12:23:02 PM                    ---
  * ----------------------------------------------------------------
  */
 package com.ctc.core.jalo;
@@ -11,14 +11,17 @@ import com.ctc.core.jalo.ApparelProduct;
 import com.ctc.core.jalo.ApparelSizeVariantProduct;
 import com.ctc.core.jalo.ApparelStyleVariantProduct;
 import com.ctc.core.jalo.ElectronicsColorVariantProduct;
+import de.hybris.platform.jalo.GenericItem;
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.JaloBusinessException;
 import de.hybris.platform.jalo.JaloSystemException;
 import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.extension.Extension;
+import de.hybris.platform.jalo.product.Product;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,6 +35,9 @@ public abstract class GeneratedCtcCoreManager extends Extension
 	static
 	{
 		final Map<String, Map<String, AttributeMode>> ttmp = new HashMap();
+		Map<String, AttributeMode> tmp = new HashMap<String, AttributeMode>();
+		tmp.put("indexSolr", AttributeMode.INITIAL);
+		ttmp.put("de.hybris.platform.jalo.product.Product", Collections.unmodifiableMap(tmp));
 		DEFAULT_INITIAL_ATTRIBUTES = ttmp;
 	}
 	@Override
@@ -154,6 +160,79 @@ public abstract class GeneratedCtcCoreManager extends Extension
 	public String getName()
 	{
 		return CtcCoreConstants.EXTENSIONNAME;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.indexSolr</code> attribute.
+	 * @return the indexSolr - Product solr indexing
+	 */
+	public Boolean isIndexSolr(final SessionContext ctx, final Product item)
+	{
+		return (Boolean)item.getProperty( ctx, CtcCoreConstants.Attributes.Product.INDEXSOLR);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.indexSolr</code> attribute.
+	 * @return the indexSolr - Product solr indexing
+	 */
+	public Boolean isIndexSolr(final Product item)
+	{
+		return isIndexSolr( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.indexSolr</code> attribute. 
+	 * @return the indexSolr - Product solr indexing
+	 */
+	public boolean isIndexSolrAsPrimitive(final SessionContext ctx, final Product item)
+	{
+		Boolean value = isIndexSolr( ctx,item );
+		return value != null ? value.booleanValue() : false;
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Product.indexSolr</code> attribute. 
+	 * @return the indexSolr - Product solr indexing
+	 */
+	public boolean isIndexSolrAsPrimitive(final Product item)
+	{
+		return isIndexSolrAsPrimitive( getSession().getSessionContext(), item );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.indexSolr</code> attribute. 
+	 * @param value the indexSolr - Product solr indexing
+	 */
+	public void setIndexSolr(final SessionContext ctx, final Product item, final Boolean value)
+	{
+		item.setProperty(ctx, CtcCoreConstants.Attributes.Product.INDEXSOLR,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.indexSolr</code> attribute. 
+	 * @param value the indexSolr - Product solr indexing
+	 */
+	public void setIndexSolr(final Product item, final Boolean value)
+	{
+		setIndexSolr( getSession().getSessionContext(), item, value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.indexSolr</code> attribute. 
+	 * @param value the indexSolr - Product solr indexing
+	 */
+	public void setIndexSolr(final SessionContext ctx, final Product item, final boolean value)
+	{
+		setIndexSolr( ctx, item, Boolean.valueOf( value ) );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Product.indexSolr</code> attribute. 
+	 * @param value the indexSolr - Product solr indexing
+	 */
+	public void setIndexSolr(final Product item, final boolean value)
+	{
+		setIndexSolr( getSession().getSessionContext(), item, value );
 	}
 	
 }

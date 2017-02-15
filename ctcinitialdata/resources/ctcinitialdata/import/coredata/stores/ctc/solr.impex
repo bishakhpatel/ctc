@@ -43,7 +43,7 @@ INSERT_UPDATE SolrIndexConfig;name[unique=true];batchSize;numberOfThreads;indexM
 
 # Create the faceted search configuration
 INSERT_UPDATE SolrSearchConfig;description[unique=true];pageSize
-;$searchConfigName;20
+;$searchConfigName;15
 
 #
 # Setup the indexed types, their properties, and the update queries
@@ -158,7 +158,7 @@ SELECT DISTINCT tbl.pk, tbl.code FROM (
 			{{
 				SELECT DISTINCT {sl:productCode} FROM {StockLevel AS sl} WHERE {sl:modifiedtime} >= ?lastIndexTime
 			}}
-		)
+		) AND {p:indexSolr}= true
 	}}
 ) tbl ORDER BY tbl.code
 ";anonymous
