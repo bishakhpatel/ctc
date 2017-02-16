@@ -86,7 +86,9 @@
 		<script type="text/javascript">
 		$(document).ready(function(){
 				$('.menu #first-menu , .menu__holder').hover(function(){
-					$('nav > .menu__holder').toggleClass('active-big');
+					$('nav > .menu__holder').addClass('active-big');
+				},function(){
+					$('nav > .menu__holder').removeClass('active-big');
 				});
 				$('.menu #first-menu > a').click(function(){
 					$('#first-menu .menu__holder').toggleClass('active-small');

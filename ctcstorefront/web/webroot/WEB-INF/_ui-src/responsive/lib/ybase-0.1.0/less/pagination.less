@@ -115,16 +115,16 @@
 		> a,
 		> span {
 			line-height: @pagination-height;
-			width: @pagination-width;
+			width: 16px;
 			padding: 0;
-			font-size: @font-size;
+			font-size: @font-size-small+1;
 			text-align: center;
 		}
 		&.pagination-prev {
 			> a,
 			> span {
 				margin-right: @pagination-width/3;
-				width: @pagination-width + @next-prev-offset;
+				width: 6px;
 				.border-left-radius(0);
 			}
 		}
@@ -133,7 +133,7 @@
 			> a,
 			> span {
 				margin-left: @pagination-width/3;
-				width: @pagination-width + @next-prev-offset;
+				width: 6px;
 				.border-right-radius(0);
 			}
 	  	}

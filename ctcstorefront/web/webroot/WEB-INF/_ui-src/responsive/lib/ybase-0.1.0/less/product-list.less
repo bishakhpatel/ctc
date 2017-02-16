@@ -40,8 +40,8 @@
 .results {
   h1 {
     .page-headline();
-    padding-left: @grid-gutter-width;
-    padding-bottom: 0;
+    padding-left: 0px;
+    padding-bottom: 15px;
     text-transform: uppercase;
     text-transform: uppercase;
     font: 30px HelveticaLTStd-BoldCond,Helvetica,Arial,sans-serif;
@@ -189,6 +189,9 @@
 		
 		&:hover{
 			background:rgba(100,167,11,0.5);
+			.thumb{
+				    border: 1px solid #64A70B;
+			}
 		}
 
 		padding: @grid-gutter-width;
@@ -207,6 +210,7 @@
 		text-align: center;
 		height: 180px;
 		overflow: hidden;
+		border: 1px solid #cecece;
 
 		img {
 		  width: 100%;
@@ -237,6 +241,8 @@
 
 		.price {
 		  font-size: 18px;
+		  color:#1c4824;
+		  font-weight: 600;
 		}
 
 		.promo {
