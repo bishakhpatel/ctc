@@ -88,3 +88,8 @@ $.ajaxPrefilter(function (options, originalOptions, jqXHR)
 		
 	}
 });
+
+function EsSearchPopup(){	
+	window.open("/ctcstorefront/en/elasticsearch/?text="+$("#js-site-search-input").val());
+}
+
