@@ -439,8 +439,8 @@
 	<alias name="ctcSampleDataImportService" alias="sampleDataImportService"/>
 	<bean id="ctcSampleDataImportService" class="com.ctc.core.dataimport.impl.CTCSampleDataImportService" parent="defaultSampleDataImportService"></bean>
 	
-	<alias name="defaultCommerceSearchTextPopulator" alias="commerceSearchTextPopulator" />
-	<bean id="defaultCommerceSearchTextPopulator" class="de.hybris.platform.commerceservices.search.solrfacetsearch.populators.SearchTextPopulator">
+	<alias name="defaultCtcCommerceSearchTextPopulator" alias="commerceSearchTextPopulator" />
+	<bean id="defaultCtcCommerceSearchTextPopulator" class="de.hybris.platform.commerceservices.search.solrfacetsearch.populators.SearchTextPopulator">
 		<property name="freeTextQueryBuilders">
 			<list>
 				<bean class="com.ctc.core.solr.services.impl.DefaultCtcTextQueryBuilder">
