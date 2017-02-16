@@ -10440,15 +10440,16 @@ fieldset[disabled] .btn-primary.active {
   margin-left: 10px;
 }
 .variant-section {
-  margin-bottom: 30px;
+  margin-bottom: 1px;
 }
 .variant-section .variant-selector .variant-name {
   font-size: 13px;
   font-weight: 600;
   color: #929292;
   text-transform: uppercase;
-  margin-top: 15px;
-  margin-bottom: 5px;
+}
+.variant-section .variant-selector .variant-name label {
+  margin-bottom: 8px;
 }
 .variant-section .variant-selector .variant-name .variant-selected {
   font-weight: normal;
@@ -10763,11 +10764,11 @@ fieldset[disabled] .btn-primary.active {
   z-index: 10000;
 }
 .addtocart-component {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 .addtocart-component .stock-wrapper {
   font-size: 13px;
-  margin: 25px 0;
+  margin: 10px 0;
 }
 .addtocart-component .stock-wrapper * {
   float: left;
@@ -10809,9 +10810,6 @@ fieldset[disabled] .btn-primary.active {
   font-weight: bold;
 }
 @media (max-width: 1027px) {
-  .addtocart-component {
-    margin-top: 20px;
-  }
   .addtocart-component .qty-selector .input-group-btn,
   .addtocart-component .qty-selector .btn,
   .addtocart-component .qty-selector .form-control {
@@ -12442,7 +12440,6 @@ a.product__listing .product__listing--promo:hover {
 }
 .pagination-bar.bottom .pagination-toolbar {
   padding-top: 0;
-  border-top: 1px solid #cccccc;
   border-bottom-width: 1px;
 }
 @media (max-width: 1027px) {

@@ -18,13 +18,13 @@
 <div class="addtocart-component">
 		<c:if test="${empty showAddToCart ? true : showAddToCart}">
 		<div class="qty-selector input-group js-qty-selector">
-			<span class="input-group-btn">
+			<%-- <span class="input-group-btn">
 				<button class="btn btn-default js-qty-selector-minus" type="button" <c:if test="${qtyMinus <= 1}"><c:out value="disabled='disabled'"/></c:if> ><span class="glyphicon glyphicon-minus" aria-hidden="true" ></span></button>
-			</span>
+			</span> --%>
 				<input type="text" maxlength="3" class="form-control js-qty-selector-input" size="1" value="${qtyMinus}" data-max="${maxQty}" data-min="1" name="pdpAddtoCartInput"  id="pdpAddtoCartInput" />
-			<span class="input-group-btn">
+			<!-- <span class="input-group-btn">
 				<button class="btn btn-default js-qty-selector-plus" type="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
-			</span>
+			</span> -->
 		</div>
 		</c:if>
 		<c:if test="${product.stock.stockLevel gt 0}">
