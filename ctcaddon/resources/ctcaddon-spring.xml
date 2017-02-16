@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ [y] hybris Platform
+
+ Copyright (c) 2000-2016 SAP SE or an SAP affiliate company.
+ All rights reserved.
+
+ This software is the confidential and proprietary information of SAP
+ ("Confidential Information"). You shall not disclose such Confidential
+ Information and shall use it only in accordance with the terms of the
+ license agreement you entered into with SAP.
+-->
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+           
+    <context:annotation-config/> 
+
+	<bean id="ctcaddonCoreDataImportedEventListener" parent="abstractCoreDataImportedEventListener">
+		<property name="supportedChannels">
+			<list value-type="de.hybris.platform.commerceservices.enums.SiteChannel">
+				<value>B2C</value>
+				<!--
+								<value>B2B</value>
+				-->
+			</list>
+		</property>
+		<property name="addonExtensionMetadata">
+			<bean class="de.hybris.platform.addonsupport.data.AddonExtensionMetadata">
+				<property name="suffixChannel" value="false"/>
+				<property name="baseExtensionName" value="ctcaddon"/>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="ctcaddonSampleDataEventListener" parent="abstractGenericAddOnSampleDataEventListener"  >
+		<property name="extensionName" value="ctcaddon" />
+	</bean>
+
+<!-- 	ES SEARCH  RELATED-->
+
+	<bean id="esSearchRestService" class="com.ctc.elasticsearch.service.impl.ESSearchRestServiceImpl">
+		<property name="restTemplate" ref="esRestTemplate"/>
+		<property name="solrIndexService" ref="solrIndexService"/>
+		<property name="solrSearchProviderFactory" ref="solrSearchProviderFactory"/>
+		<property name="facetSearchContextFactory" ref="facetSearchContextFactory"/>
+		<property name="fieldNameTranslator" ref="fieldNameTranslator"/>
+	</bean>
+	
+	<bean id="esCommerceProductSearchService" class="com.ctc.service.ESProductSearchService">
+		<property name="searchQueryPageableConverter" ref="commerceSearchQueryPageableConverter" />
+		<property name="esSearchRestService" ref="esSearchRestService" />
+		<property name="searchResponseConverter" ref="esSearchResponseConverter" />
+	</bean>	
+	
+	<bean id="esProductSearchFacade"
+			parent ="defaultSolrProductSearchFacade">
+		<property name="productSearchService" ref="esCommerceProductSearchService"/>
+		<property name="productCategorySearchPageConverter" ref="esProductCategorySearchPageConverter"/>
+	</bean>
+
+	<bean id="esProductCategorySearchPageConverter" parent="abstractPopulatingConverter">
+		<property name="targetClass"
+					 value="de.hybris.platform.commerceservices.search.facetdata.ProductCategorySearchPageData"/>
+		<property name="populators">
+			<list>
+				<ref bean="esProductCategorySearchPagePopulator"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="esProductCategorySearchPagePopulator"
+			class="com.ctc.elasticsearch.populators.ProductCategorySearchPagePopulator">
+		<property name="searchResultProductConverter" ref="commerceSearchResultProductConverter"/>
+	</bean>
+	
+	<bean id="esSearchResponseResultsPopulator" class="com.ctc.elasticsearch.populators.SearchResponseResultsPopulator">
+		<property name="searchStateConverter" ref="esSearchStateConverter"/>
+		<property name="esResultConverter" ref="esResultValueDataConverter"/>
+	</bean>
+	
+	<bean id="esSearchResponsePaginationPopulator" class="com.ctc.elasticsearch.populators.SearchResponsePaginationPopulator"/>
+	<bean id="esSearchResponseFreeTextSearchPopulator" class="com.ctc.elasticsearch.populators.SearchResponseFreeTextSearchPopulator"/>
+	<bean id="esSearchResponseConverter" parent="abstractPopulatingConverter">
+		<property name="targetClass" value="de.hybris.platform.commerceservices.search.facetdata.ProductCategorySearchPageData" />
+		<property name="populators">
+			<list>
+				<ref bean="esSearchResponseResultsPopulator"/>
+				<ref bean="esSearchResponsePaginationPopulator"/>
+				<ref bean="esSearchResponseFreeTextSearchPopulator"/>
+			</list>
+		</property>	
+	</bean>
+	
+
+	<bean id="esResultValueDataConverter" parent="abstractPopulatingConverter">
+		<property name="targetClass"
+					 value="java.util.ArrayList"/>
+		<property name="populators">
+			<list>
+				<ref bean="esResultValueDataPopulator"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="esResultValueDataPopulator" class="com.ctc.elasticsearch.populators.ESResultValueDataPopulator"/>
+	
+	<bean id="esSearchStateConverter" parent="abstractPopulatingConverter">
+		<property name="targetClass" value="de.hybris.platform.commercefacades.search.data.SearchStateData"/>
+		<property name="populators">
+			<list>
+				<ref bean="esSearchStatePopulator"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="esSearchStatePopulator"	parent="defaultSolrSearchStatePopulator">
+		<property name="searchPath" value="/elasticsearch"/>
+	</bean>
+
+    <bean id="esRestTemplate" class="org.springframework.web.client.RestTemplate"/>
+       
+	<!-- END -->
+
+
+</beans>
