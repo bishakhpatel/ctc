@@ -103,8 +103,9 @@ public class CTCSampleDataImportService extends SampleDataImportService
 		getSetupImpexService().importImpexFile(
 				String.format("/%s/import/sampledata/productCatalogs/%sProductCatalog/ctc-products-media.impex", extensionName,
 						productCatalogName), false);
+
 		getSetupImpexService().importImpexFile(
-				String.format("/%s/import/sampledata/productCatalogs/%sProductCatalog/ctc_index-product-solr.impex", extensionName,
+				String.format("/%s/import/sampledata/productCatalogs/%sProductCatalog/ctc-promotionrules.impex", extensionName,
 						productCatalogName), false);
 
 	}
