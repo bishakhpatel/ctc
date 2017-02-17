@@ -25,6 +25,12 @@
 	.form-group {
 		margin: 0;
 		margin-top: 10px;
+		display:inline-block;
+		width:40%;
+	}
+	.sort-by-label{
+		display:inline-block;
+		font-size: 14px;
 	}
 
 	.pagination-bar-results {
@@ -37,6 +43,7 @@
 		.pagination-toolbar {
 			padding-top: 0;
 			border-bottom-width: 1px;
+			margin-top: 20px;
 		}
 	}
 }
@@ -48,17 +55,29 @@
 			padding-left: 0;
 			padding-right: 0;
 		}
+		.sort-by-label{
+			font-size: 12px;
+		}
 	}
 }
 
 @media (max-width: @screen-xs-max) {
 	.sort-refine-bar {
 		.form-group {
+		display:block !important;
+		width:auto !important;
 			select {
 				width: 100%;
 			}
 		}
 
+	}
+	.sort-by-label{
+		font-size: 14px !important;
+	    text-align: center;
+	    margin-top: 8px;
+	    font-weight: bold;
+	    display: block !important;
 	}
 	.pagination-bar {
 		.pagination,
@@ -74,6 +93,9 @@
 	.pagination-bar {
 		.pagination-toolbar {
 			border-bottom-width: 1px;
+		}
+		.sort-by-label{
+			font-size: 12px;
 		}
 
 		.pagination,

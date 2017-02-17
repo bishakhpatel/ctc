@@ -38,7 +38,10 @@
                 <div class="helper clearfix hidden-md hidden-lg"></div>
                 <div class="sort-refine-bar">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-6">
+                        <div class="col-xs-12 col-sm-5 col-md-6">
+                        	<div class="sort-by-label">
+                        		<spring:theme code="${themeMsgKey}.sortTitle"/>
+                        	</div>
                             <div class="form-group">
                                 <%-- <label class="control-label " for="sortForm${top ? '1' : '2'}">
                                     <spring:theme code="${themeMsgKey}.sortTitle"/>
@@ -86,7 +89,7 @@
                             </div>
                         </div>
 
-                        <div class="col-xs-12 col-sm-6 col-md-6 pagination-wrap">
+                        <div class="col-xs-12 col-sm-5 col-md-6 pagination-wrap">
                             <pagination:pageSelectionPagination searchUrl="${searchUrl}" searchPageData="${searchPageData}"
                                                                 numberPagesShown="${numberPagesShown}"
                                                                 themeMsgKey="${themeMsgKey}"/>
