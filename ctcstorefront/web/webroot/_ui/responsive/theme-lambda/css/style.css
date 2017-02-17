@@ -10853,6 +10853,9 @@ fieldset[disabled] .btn-primary.active {
   float: left;
   margin-right: 10px;
 }
+.add-to-cart .add-to-cart-item .thumb img {
+  width: 65px;
+}
 .add-to-cart .add-to-cart-item .details {
   font-size: 15px;
   margin-left: 75px;
