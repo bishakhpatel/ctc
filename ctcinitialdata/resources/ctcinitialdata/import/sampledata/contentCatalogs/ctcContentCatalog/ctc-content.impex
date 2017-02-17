@@ -27,7 +27,7 @@ $storefrontContextRoot=$config-storefrontContextRoot
 
 # Site Logo Component
 INSERT_UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;urlLink
-;;SiteLogoComponent;Site Logo Component;SiteLogoComponent;"/"
+;;SiteLogoComponent;Site Logo Component;SiteLogoComponent;"http://10.232.199.16:4503/content/WoodsDemo/en.html"
  
  
 # CMS Site Settings 
