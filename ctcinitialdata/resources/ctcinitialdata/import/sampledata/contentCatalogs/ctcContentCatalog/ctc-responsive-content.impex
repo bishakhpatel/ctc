@@ -563,7 +563,7 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&n
 #;SnowNavigationNode;;Snow Menu;SnowNavigationNode;SnowwearMenNavNodeMenu,SnowwearWomenNavNodeMenu,SnowwearYouthNavNodeMenu,SnowKitNavNodeMenu
 #;AccessoriesNavigationNode;;Accessories Menu;AccessoriesNavigationNode;AccessoriesMenNavNodeMenu,AccessoriesWomenNavNodeMenu
 #;StreetwearYouthNavNode;;Youth Menu;StreetwearYouthNavNode;StreetwearYouthBoardshortsNavNode,StreetwearYouthTShirtNavNode
-;ProductsNavNode;;All Products;ProductsNavNode;SleepingBagsNavNode,BedsCotsNavNode,StovesCookingAccNavNode,LightingAccNavNode,BackPacksNDayPacksNavNode,ChairsNTablesNavNode,FootwearNApparelNavNode,SheltersNCanopiesScreenhousesNavNode,KnivesToolsAccNavNode, SunscreenNBugRepellentsNavNode, FishingNAccessoriesNavNode
+;ProductsNavNode;;All Products;ProductsNavNode;SleepingBagsNavNode,BedsCotsNavNode,StovesCookingAccNavNode,LightingAccNavNode,BackPacksNDayPacksNavNode,ChairsNTablesNavNode,FootwearNApparelNavNode,SheltersNCanopiesScreenhousesNavNode,KnivesToolsAccNavNode, SunscreenNBugRepellentsNavNode, FishingNAccessoriesNavNode,TentsNavNode,TentsAccNavNode
 ;InspirationNavNode;;Inspiration;InspirationNavNode;
 ;WoodLegacyNavNode;;Woods Legacy;WoodLegacyNavNode;
 ;WhereToBuyNavNode;;Where To Buy;WhereToBuyNavNode;
@@ -585,6 +585,8 @@ INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;n
 ## level 5. children of above (level 4) nodes ##
 INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&nodeRef;children(uid,$contentCV);links(&linkRef);
 ;SleepingBagsNavNode;;Sleeping Bags;SleepingBagsNavNode;;SleepingBagsLink
+;TentsNavNode;;Tents;TentsNavNode;;TentsLink
+;TentsAccNavNode;;Tents Accessories;TentsAccNavNode;;TentsAccLink
 ;BedsCotsNavNode;;Air Beds, Cots & Pads/Mats;BedsCotsNavNode;AirBedsNavNode,CotsNavNode,PadsNavNode;BedsCotsLink
 ;AirBedsNavNode;;Air Beds;AirBedsNavNode;;AirBedsLink
 ;CotsNavNode;;Cots;CotsNavNode;;CotsLink
@@ -623,6 +625,8 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&n
 
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;category(code, $productCV);target(code)[default='sameWindow'];&linkRef
 ;;ProductsLink;Products Link;#;;;;
+;;TentsLink;Tents Link;#;37200;;TentsLink
+;;TentsAccLink;Tents Accessories Link;#;37202;;TentsAccLink
 ;;SleepingBagsLink;SleepingBagsLink;#;37204;;SleepingBagsLink;
 ;;BedsCotsLink;Air Beds, Cots and Pads Mats;#;37206;;BedsCotsLink;
 ;;AirBedsLink;Air Beds Link;#;37208;;AirBedsLink
@@ -663,7 +667,7 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;target(code)[default='sameWindow'];&linkRef
 ;;InspirationLink;Inspiration;"/inspiration";;InspirationLink
-;;WoodLegacyLink;Woods Legacy;"/woodslegacy";;WoodLegacyLink
+;;WoodLegacyLink;Woods™ Legacy;"/woodslegacy";;WoodLegacyLink
 ;;WhereToBuyLink;Where to Buy;"/wheretobuy";;WhereToBuyLink
 ;;ContactUsHeaderLink;Contact us;"http://10.232.199.16:4503/content/woods-content/en/contactus.html";;ContactUsHeaderLink
 
@@ -671,6 +675,8 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;navigationNode(&nodeRef);item(CMSLinkComponent.uid,CMSLinkComponent.$contentCV);
 ## Brands -- all brands
 ;SleepingBagsNavNodeEntry;;Sleeping Bags Navigation Node Entry;SleepingBagsNavNode;SleepingBagsLink
+;TentsNavNodeEntry;;Tents Navigation Node Entry;TentsNavNode;TentsLink
+;TentsAccNavNodeEntry;;Tents Accessories Navigation Node Entry;TentsAccNavNode;TentsAccLink
 ;BedsCotsNavNodeEntry;;Beds Cots Navigation Node Entry;BedsCotsNavNode;BedsCotsLink
 ;AirBedsNavNodeEntry;;Air Beds Navigation Node Entry;AirBedsNavNode;AirBedsLink
 ;CotsNavNodeEntry;;Cots Navigation Node Entry;CotsNavNode;CotsLink
@@ -711,6 +717,8 @@ INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;n
 INSERT_UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=en]
 ;;ProductsNavNode;"Products"
 ;;SleepingBagsNavNode;"Sleeping Bags"
+;;TentsNavNode;"Tents"
+;;TentsAccNavNode;"Tents Accessories"
 ;;BedsCotsNavNode;"Air Beds, Cots and Pads Mats"
 ;;AirBedsNavNode;"Air Beds"
 ;;CotsNavNode;"Cots"
@@ -747,13 +755,15 @@ INSERT_UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[l
 ;;FishingNAccessoriesNavNode;"Fishing & Accessories"
 ;;WadersNavNode;"Waders"
 ;;InspirationNavNode;"Inspiration"
-;;WoodLegacyNavNode;"Woods Legacy"
+;;WoodLegacyNavNode;"Woods™ Legacy"
 ;;WhereToBuyNavNode;"Where To Buy"
 ;;ContactUsHeaderNavNode;"Contact Us"
 
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=en]
 ;;ProductsLink;"Products"
 ;;SleepingBagsLink;"Sleeping Bags"
+;;TentsLink;"Tents"
+;;TentsAccLink;"Tents Accessories"
 ;;BedsCotsLink;"Air Beds, Cots & Pads/Mats"
 ;;AirBedsLink;"Air Beds"
 ;;CotsLink;"Cots"
@@ -790,7 +800,7 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName
 ;;FishingNAccessoriesLink;"Fishing & Accessories"
 ;;WadersLink;"Waders"
 ;;InspirationLink;"Inspiration"
-;;WoodLegacyLink;"Woods Legacy"
+;;WoodLegacyLink;"Woods™ Legacy"
 ;;WhereToBuyLink;"Where To Buy"
 ;;ContactUsHeaderLink;"Contact Us"
 ###### Navigation Component Refactor End ######

@@ -51,7 +51,7 @@ INSERT_UPDATE SolrSearchConfig;description[unique=true];pageSize
 
 # Declare the indexed type Product
 INSERT_UPDATE SolrIndexedType;identifier[unique=true];type(code);variant;sorts(&sortRefID)
-;$solrIndexedType;Product;false;sortRef1,sortRef2,sortRef3,sortRef4,sortRef5,sortRef6
+;$solrIndexedType;Product;false;sortRef1,sortRef3,sortRef4,sortRef5,sortRef6
 
 INSERT_UPDATE SolrFacetSearchConfig;name[unique=true];description;indexNamePrefix;languages(isocode);currencies(isocode);solrServerConfig(name);solrSearchConfig(description);solrIndexConfig(name);solrIndexedTypes(identifier);enabledLanguageFallbackMechanism;$catalogVersions
 ;$facetSearchConfigName;$facetSearchConfigDescription;$searchIndexNamePrefix;$indexLanguages;$indexCurrencies;$serverConfigName;$searchConfigName;$indexConfigName;$solrIndexedType;true;$productCatalog:Online,$productCatalog:Staged
