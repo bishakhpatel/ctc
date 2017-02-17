@@ -10,7 +10,7 @@
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
 # 
-# ImpEx for Responsive Apparel UK Site CMS Content 
+# ImpEx for Responsive ctc ca Site CMS Content 
 # 
 $contentCatalog=ctcContentCatalog 
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged] 
@@ -46,6 +46,11 @@ INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique
 
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
 ;;Section1Slot-ApparelUKHomepage;true;ApparelUKHompageSplashBannerComponent,AppareUKHompageSaveBannerComponent
+
+# ContentSlotForPage 
+INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='homepage'];contentSlot(uid,$contentCV)[unique=true];;;
+;;Section1-ApparelUKHomepage;Section1;;Section1Slot-ApparelUKHomepage;;;
+
 
 ###  Home page slot 2A  ####
 INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef
@@ -275,42 +280,42 @@ INSERT_UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];name;masterT
 
 ##### End Update the Brands Category Page #####
 
-###### Apparel Snow Category Landing Page ######
+###### Apparel Snow Category Landing Page ###### - DELETE
 
-INSERT_UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);defaultPage;approvalStatus(code)[default='approved'];previewImage(code, $contentCV)
-;;SnowCategoryPage;Snow Category Page;CategoryPageTemplate;false;;;
+#INSERT_UPDATE CategoryPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);defaultPage;approvalStatus(code)[default='approved'];previewImage(code, $contentCV)
+#;;SnowCategoryPage;Snow Category Page;CategoryPageTemplate;false;;;
 
-INSERT_UPDATE CMSCategoryRestriction;$contentCV[unique=true];uid[unique=true];name;categories(code, $productCV);pages(uid, $contentCV)
-;;Snow-LandingPageRestriction;Restriction for Snow;snow;SnowCategoryPage
+#INSERT_UPDATE CMSCategoryRestriction;$contentCV[unique=true];uid[unique=true];name;categories(code, $productCV);pages(uid, $contentCV)
+#;;Snow-LandingPageRestriction;Restriction for Snow;snow;SnowCategoryPage
 
 ##### Section 1 ######
-INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef
-;;ApparelUKSnowSplashBannerComponent;Snow Splash Banner Component;;ApparelUKSnowSplashBannerComponent
-;;ApparelUKSnowAccessoriesBannerComponent;Snow Accessories Banner Component;Categories/Accessories/c/220000;ApparelUKSnowAccessoriesBannerComponent
+#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef
+#;;ApparelUKSnowSplashBannerComponent;Snow Splash Banner Component;;ApparelUKSnowSplashBannerComponent
+#;;ApparelUKSnowAccessoriesBannerComponent;Snow Accessories Banner Component;Categories/Accessories/c/220000;ApparelUKSnowAccessoriesBannerComponent
 
-INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
-;;Section1Slot-Snow;true;ApparelUKSnowSplashBannerComponent,ApparelUKSnowAccessoriesBannerComponent
+#INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
+#;;Section1Slot-Snow;true;ApparelUKSnowSplashBannerComponent,ApparelUKSnowAccessoriesBannerComponent
 
 ##### Section 2 ######
-INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef
-;;ApparelUKSnowBeanieBannerComponent;Apparel UK Snow Beanie Banner Component;Categories/Accessories/Beanies/The-Life-Beanie/p/300476946;ApparelUKSnowBeanieBannerComponent
-;;ApparelUKSnowKryptonBannerComponent;Apparel UK Snow Krypton Banner Component;Categories/Freeski/Ski-Boots/KyrptonRampage-11-12/p/300467248;ApparelUKSnowKryptonBannerComponent
-;;ApparelUKSnowAndoverJcktBannerComponent;Apparel UK Snow Andover Jacket Banner Component;Categories/Snowwear-men/Snow-Jackets/Andover-Jacket/p/300410966;ApparelUKSnowAndoverJcktBannerComponent
-;;ApparelUKSnowBeaconJcktBannerComponent;Apparel UK Snow Beacon Jacket Banner Component;Categories/Snowwear-men/Snow-Jackets/BeaconJacket/p/300441355;ApparelUKSnowBeaconJcktBannerComponent
-;;ApparelUKSnowTropeBeanieBannerComponent;Apparel UK Snow Trop Beanie Banner Component;Categories/Accessories/Beanies/Trope-Beanie/p/300415713;ApparelUKSnowTropeBeanieBannerComponent
-;;ApparelUKSnowSludgeJcktBannerComponent;Apparel UK Snow Sludge Jacket Banner Component;Categories/Snowwear-youth/Snow-Jackets-youth/Sludge-Jacket-youth/p/300410422;ApparelUKSnowSludgeJcktBannerComponent
+#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;urlLink;&componentRef
+#;;ApparelUKSnowBeanieBannerComponent;Apparel UK Snow Beanie Banner Component;Categories/Accessories/Beanies/The-Life-Beanie/p/300476946;ApparelUKSnowBeanieBannerComponent
+#;;ApparelUKSnowKryptonBannerComponent;Apparel UK Snow Krypton Banner Component;Categories/Freeski/Ski-Boots/KyrptonRampage-11-12/p/300467248;ApparelUKSnowKryptonBannerComponent
+#;;ApparelUKSnowAndoverJcktBannerComponent;Apparel UK Snow Andover Jacket Banner Component;Categories/Snowwear-men/Snow-Jackets/Andover-Jacket/p/300410966;ApparelUKSnowAndoverJcktBannerComponent
+#;;ApparelUKSnowBeaconJcktBannerComponent;Apparel UK Snow Beacon Jacket Banner Component;Categories/Snowwear-men/Snow-Jackets/BeaconJacket/p/300441355;ApparelUKSnowBeaconJcktBannerComponent
+#;;ApparelUKSnowTropeBeanieBannerComponent;Apparel UK Snow Trop Beanie Banner Component;Categories/Accessories/Beanies/Trope-Beanie/p/300415713;ApparelUKSnowTropeBeanieBannerComponent
+#;;ApparelUKSnowSludgeJcktBannerComponent;Apparel UK Snow Sludge Jacket Banner Component;Categories/Snowwear-youth/Snow-Jackets-youth/Sludge-Jacket-youth/p/300410422;ApparelUKSnowSludgeJcktBannerComponent
 
-INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
-;;Section2Slot-Snow;true;ApparelUKSnowBeanieBannerComponent,ApparelUKSnowKryptonBannerComponent,ApparelUKSnowAndoverJcktBannerComponent,ApparelUKSnowBeaconJcktBannerComponent,ApparelUKSnowTropeBeanieBannerComponent,ApparelUKSnowSludgeJcktBannerComponent
+#INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
+#;;Section2Slot-Snow;true;ApparelUKSnowBeanieBannerComponent,ApparelUKSnowKryptonBannerComponent,ApparelUKSnowAndoverJcktBannerComponent,ApparelUKSnowBeaconJcktBannerComponent,ApparelUKSnowTropeBeanieBannerComponent,ApparelUKSnowSludgeJcktBannerComponent
 
 ##### Section 3 #####
-INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
-;;Section3Slot-Snow;true;ApparelUKHompageFreeDelBannerComponent
+#INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];active;cmsComponents(&componentRef)
+#;;Section3Slot-Snow;true;ApparelUKHompageFreeDelBannerComponent
 
-INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='SnowCategoryPage'];contentSlot(uid,$contentCV)[unique=true]
-;;Section1-Snow;Section1;;Section1Slot-Snow
-;;Section2-Snow;Section2;;Section2Slot-Snow
-;;Section3-Snow;Section3;;Section3Slot-Snow
+#INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='SnowCategoryPage'];contentSlot(uid,$contentCV)[unique=true]
+#;;Section1-Snow;Section1;;Section1Slot-Snow
+#;;Section2-Snow;Section2;;Section2Slot-Snow
+#;;Section3-Snow;Section3;;Section3Slot-Snow
 
 ###### End Apparel Snow Category Landing Page ######
 
@@ -388,7 +393,7 @@ INSERT_UPDATE JspIncludeComponent;$contentCV[unique=true];uid[unique=true];name;
 ;;ImportCSVSavedCartComponent;Import CSV as Saved Cart Component;csv/importCSVSavedCartPage.jsp;;ImportCSVSavedCartComponent
 
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];mime;realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];folder(qualifier)[default='images']
-;;importCSVSavedCartPagePreview;text/png;OrderHistoryPage.png;$jarResourceCms/preview-images/apparel_uk/OrderHistoryPage.png
+;;importCSVSavedCartPagePreview;text/png;OrderHistoryPage.png;$jarResourceCms/preview-images/ctc-ca/OrderHistoryPage.png
 
 UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];previewImage(code, $contentCV)
 ;;importCSVSavedCartPage;importCSVSavedCartPagePreview
@@ -415,7 +420,7 @@ INSERT_UPDATE JspIncludeComponent;$contentCV[unique=true];uid[unique=true];name;
 
 # Preview image
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];mime;realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];folder(qualifier)[default='images'];;
-;;savedCartDetailsPagePreview;text/png;SavedCartDetailsPage.png;$jarResourceCms/preview-images/apparel_uk/SavedCartDetailsPage.png;;;
+;;savedCartDetailsPagePreview;text/png;SavedCartDetailsPage.png;$jarResourceCms/preview-images/ctc-ca/SavedCartDetailsPage.png;;;
 
 UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];previewImage(code, $contentCV);;;;;
 ;;savedCartDetailsPage;savedCartDetailsPagePreview;;;;;
@@ -426,7 +431,7 @@ UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];previewImage(code, $
 ######## Account Saved Carts Page Start #######
 
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];mime;realfilename;@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];folder(qualifier)[default='images'];;
-;;savedCartsPagePreview;text/png;SavedCartsPage.png;$jarResourceCms/preview-images/apparel_uk/SavedCartsPage.png;;;
+;;savedCartsPagePreview;text/png;SavedCartsPage.png;$jarResourceCms/preview-images/ctc-ca/SavedCartsPage.png;;;
 
 UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];previewImage(code, $contentCV);;;;;
 ;;saved-carts;savedCartsPagePreview;;;;;
@@ -580,9 +585,10 @@ INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;n
 ## level 5. children of above (level 4) nodes ##
 INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&nodeRef;children(uid,$contentCV);links(&linkRef);
 ;SleepingBagsNavNode;;Sleeping Bags;SleepingBagsNavNode;;SleepingBagsLink
-;BedsCotsNavNode;;Air Beds, Cots & Pads/Mats;BedsCotsNavNode;AirBedsNavNode,CotsNavNode;BedsCotsLink
+;BedsCotsNavNode;;Air Beds, Cots & Pads/Mats;BedsCotsNavNode;AirBedsNavNode,CotsNavNode,PadsNavNode;BedsCotsLink
 ;AirBedsNavNode;;Air Beds;AirBedsNavNode;;AirBedsLink
 ;CotsNavNode;;Cots;CotsNavNode;;CotsLink
+;PadsNavNode;;Pads/Mats;PadsNavNode;;PadsLink
 ;StovesCookingAccNavNode;;Stove & Cooking Accessories;StovesCookingAccNavNode;CookingUtensilsNavNode,PlatesNCupsNavNode,FuelAccNavNode,StovesNavNode,CookwarenavNode,CleanUpNavNode;StovesCookingAccLink
 ;CookingUtensilsNavNode;;Cooking Utensils;CookingUtensilsNavNode;;CookingUtensilsLink
 ;PlatesNCupsNavNode;;Plates, Cups & Bowls;PlatesNCupsNavNode;;PlatesNCupsLink
@@ -616,11 +622,12 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&n
 ;WadersNavNode;;Waders;WadersNavNode;;WadersLink
 
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;category(code, $productCV);target(code)[default='sameWindow'];&linkRef
+;;ProductsLink;Products Link;#;;;;
 ;;SleepingBagsLink;SleepingBagsLink;#;37204;;SleepingBagsLink;
 ;;BedsCotsLink;Air Beds, Cots and Pads Mats;#;37206;;BedsCotsLink;
 ;;AirBedsLink;Air Beds Link;#;37208;;AirBedsLink
 ;;CotsLink;Cots Link;#;37210;;CotsLink
-;;ProductsLink;Products Link;#;;;;
+;;PadsLink;Pads Link;#;37212;;PadsLink
 ;;StovesCookingAccLink;StovesCookingAcc Link;#;37214;;StovesCookingAccLink
 ;;CookingUtensilsLink;CookingUtensils Link;#;37216;;CookingUtensilsLink
 ;;PlatesNCupsLink;PlatesNCups Link;#;37218;;PlatesNCupsLink
@@ -667,6 +674,7 @@ INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;n
 ;BedsCotsNavNodeEntry;;Beds Cots Navigation Node Entry;BedsCotsNavNode;BedsCotsLink
 ;AirBedsNavNodeEntry;;Air Beds Navigation Node Entry;AirBedsNavNode;AirBedsLink
 ;CotsNavNodeEntry;;Cots Navigation Node Entry;CotsNavNode;CotsLink
+;PadsNavNodeEntry;;Pads Navigation Node Entry;PadsNavNode;PadsLink
 ;StovesCookingAccNavNodeEntry;;Stoves Cooking Acc Navigation Node Entry;StovesCookingAccNavNode;StovesCookingAccLink
 ;CookingUtensilsNavNodeEntry;;Cooking Utensils Navigation Node Entry;CookingUtensilsNavNode;CookingUtensilsLink
 ;PlatesNCupsNavNodeEntry;;Plated N Cups Navigation Node Entry;PlatesNCupsNavNode;PlatesNCupsLink
@@ -706,6 +714,7 @@ INSERT_UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[l
 ;;BedsCotsNavNode;"Air Beds, Cots and Pads Mats"
 ;;AirBedsNavNode;"Air Beds"
 ;;CotsNavNode;"Cots"
+;;PadsNavNode;"Pads/Mats"
 ;;StovesCookingAccNavNode;"Stoves & Cooking Accessories"
 ;;CookingUtensilsNavNode;"Cooking Utensils"
 ;;PlatesNCupsNavNode;"Plates, Cups & Bowls"
@@ -748,6 +757,7 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName
 ;;BedsCotsLink;"Air Beds, Cots & Pads/Mats"
 ;;AirBedsLink;"Air Beds"
 ;;CotsLink;"Cots"
+;;PadsLink;"Pads"
 ;;StovesCookingAccLink;"Stoves & Cooking Accessories"
 ;;CookingUtensilsLink;"Cooking Utensils"
 ;;PlatesNCupsLink;"Plates, Cups & Bowls"

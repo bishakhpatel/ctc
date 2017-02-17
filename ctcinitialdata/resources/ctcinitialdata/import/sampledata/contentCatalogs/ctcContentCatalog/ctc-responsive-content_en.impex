@@ -10,7 +10,7 @@
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
 # 
-# ImpEx for Responsive Apparel UK Site CMS Content 
+# ImpEx for Responsive CTC CA Site CMS Content 
 # 
 $contentCatalog=ctcContentCatalog 
 $contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged] 
@@ -179,18 +179,18 @@ INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=d
 ;widescreen;Appa_1400x401_ErrorPage_EN_1400W.svg;$siteResource/images/banners/site/Appa_1400x401_ErrorPage_EN_1400W.svg;Appa_1400x401_ErrorPage_EN_1400W.svg;"Page not found";
 
 INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-;apparel-uk-errorpage-pagenotfound;Appa_480x170_ErrorPage_EN_480W.svg,Appa_770x221_ErrorPage_EN_770W.svg,Appa_960x275_ErrorPage_EN_960W.svg,Appa_1400x401_ErrorPage_EN_1400W.svg
+;ctc-ca-errorpage-pagenotfound;Appa_480x170_ErrorPage_EN_480W.svg,Appa_770x221_ErrorPage_EN_770W.svg,Appa_960x275_ErrorPage_EN_960W.svg,Appa_1400x401_ErrorPage_EN_1400W.svg
 
 INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];name;&componentRef;$mediaContainer
-;;ApparelUKErrorpageBannerComponent;Apparel UK Error Page Banner Component;ApparelUKErrorpageBannerComponent;apparel-uk-errorpage-pagenotfound
+;;CTCCAErrorpageBannerComponent;CTC CA Error Page Banner Component;CTCCAErrorpageBannerComponent;ctc-ca-errorpage-pagenotfound
 
 # Create ContentSlots
 INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef);;;
-;;ApparelUK-MiddleContent-Errorpage;Apparel UK Middle Content Slot for Error Page;true;ApparelUKErrorpageBannerComponent;;;
+;;CTCCA-MiddleContent-Errorpage;CTC CA Middle Content Slot for Error Page;true;CTCCAErrorpageBannerComponent;;;
 
 # Create Content Slots for Page
 INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='notFound'];contentSlot(uid,$contentCV)[unique=true]
-;;ApparelUK-MiddleContent-Errorpage;MiddleContent;;ApparelUK-MiddleContent-Errorpage
+;;CTCCA-MiddleContent-Errorpage;MiddleContent;;CTCCA-MiddleContent-Errorpage
 
 # update linkname
 UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$lang]
@@ -207,98 +207,98 @@ UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName[lang=$
 UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
 ;;MyAccountNavNode;"My Account"
 
-##### Snow Category Page ######
+##### Snow Category Page ###### - DELETE
 
 ##### Section 1
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
-;mobile;Appa_480x320_Category11_EN_01_480W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_480x320_Category11_EN_01_480W.jpg;Appa_480x320_Category11_EN_01_480W.jpg;"Shop All";
-;tablet;Appa_770x350_Category11_EN_01_770W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_770x350_Category11_EN_01_770W.jpg;Appa_480x320_Category11_EN_01_480W.jpg;"Shop All";
-;desktop;Appa_1400x440_Category11_EN_01_1400W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_1400x440_Category11_EN_01_1400W.jpg;Appa_480x320_Category11_EN_01_480W.jpg;"Shop All";
+#INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;mobile;Appa_480x320_Category11_EN_01_480W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_480x320_Category11_EN_01_480W.jpg;Appa_480x320_Category11_EN_01_480W.jpg;"Shop All";
+#;tablet;Appa_770x350_Category11_EN_01_770W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_770x350_Category11_EN_01_770W.jpg;Appa_480x320_Category11_EN_01_480W.jpg;"Shop All";
+#;desktop;Appa_1400x440_Category11_EN_01_1400W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_1400x440_Category11_EN_01_1400W.jpg;Appa_480x320_Category11_EN_01_480W.jpg;"Shop All";
 
-INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-;apparel-uk-snow-splash-en;Appa_480x320_Category11_EN_01_480W.jpg,Appa_770x350_Category11_EN_01_770W.jpg,Appa_1400x440_Category11_EN_01_1400W.jpg
+#INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+#;apparel-uk-snow-splash-en;Appa_480x320_Category11_EN_01_480W.jpg,Appa_770x350_Category11_EN_01_770W.jpg,Appa_1400x440_Category11_EN_01_1400W.jpg
 
-INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-;;ApparelUKSnowSplashBannerComponent;apparel-uk-snow-splash-en
+#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+#;;ApparelUKSnowSplashBannerComponent;apparel-uk-snow-splash-en
 
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
-;mobile;Appa_480x118_Category10_EN_01_480W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_480x118_Category10_EN_01_480W.jpg;Appa_480x118_Category10_EN_01_480W.jpg;"Shop Now";
-;tablet;Appa_770x80_Category10_EN_01_770W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_770x80_Category10_EN_01_770W.jpg;Appa_480x118_Category10_EN_01_480W.jpg;"Shop Now";
-;desktop;Appa_1400x140_Category10_EN_01_1400W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_1400x140_Category10_EN_01_1400W.jpg;Appa_480x118_Category10_EN_01_480W.jpg;"Shop Now";
+#INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;mobile;Appa_480x118_Category10_EN_01_480W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_480x118_Category10_EN_01_480W.jpg;Appa_480x118_Category10_EN_01_480W.jpg;"Shop Now";
+#;tablet;Appa_770x80_Category10_EN_01_770W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_770x80_Category10_EN_01_770W.jpg;Appa_480x118_Category10_EN_01_480W.jpg;"Shop Now";
+#;desktop;Appa_1400x140_Category10_EN_01_1400W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_1400x140_Category10_EN_01_1400W.jpg;Appa_480x118_Category10_EN_01_480W.jpg;"Shop Now";
 
-INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-;apparel-uk-shop-accessories-banner-en;Appa_480x118_Category10_EN_01_480W.jpg,Appa_770x80_Category10_EN_01_770W.jpg,Appa_1400x140_Category10_EN_01_1400W.jpg
+#INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+#;apparel-uk-shop-accessories-banner-en;Appa_480x118_Category10_EN_01_480W.jpg,Appa_770x80_Category10_EN_01_770W.jpg,Appa_1400x140_Category10_EN_01_1400W.jpg
 
-INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-;;ApparelUKSnowAccessoriesBannerComponent;apparel-uk-shop-accessories-banner-en
+#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+#;;ApparelUKSnowAccessoriesBannerComponent;apparel-uk-shop-accessories-banner-en
 
 ##### Section 2
 # Snow Beanie
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
-;tablet;Appa_200x200_Category01_EN_01_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category01_EN_01_200W.jpg;Appa_200x200_Category01_EN_01_200W.jpg;"View";
-;desktop;Appa_350x350_Category01_EN_01_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category01_EN_01_350W.jpg;Appa_200x200_Category01_EN_01_200W.jpg;"View";
+#INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;tablet;Appa_200x200_Category01_EN_01_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category01_EN_01_200W.jpg;Appa_200x200_Category01_EN_01_200W.jpg;"View";
+#;desktop;Appa_350x350_Category01_EN_01_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category01_EN_01_350W.jpg;Appa_200x200_Category01_EN_01_200W.jpg;"View";
 
 
-INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-;apparel-uk-snow-beanie-banner-en;Appa_200x200_Category01_EN_01_200W.jpg,Appa_350x350_Category01_EN_01_350W.jpg
+#INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+#;apparel-uk-snow-beanie-banner-en;Appa_200x200_Category01_EN_01_200W.jpg,Appa_350x350_Category01_EN_01_350W.jpg
 
-INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-;;ApparelUKSnowBeanieBannerComponent;apparel-uk-snow-beanie-banner-en
+#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+#;;ApparelUKSnowBeanieBannerComponent;apparel-uk-snow-beanie-banner-en
 
 # Snow Krypton
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
-;tablet;Appa_200x200_Category04_EN_01_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category04_EN_01_200W.jpg;Appa_200x200_Category04_EN_01_200W.jpg;"View";
-;desktop;Appa_350x350_Category04_EN_01_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category04_EN_01_350W.jpg;Appa_350x350_Category04_EN_01_350W.jpg;"View";
+#INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;tablet;Appa_200x200_Category04_EN_01_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category04_EN_01_200W.jpg;Appa_200x200_Category04_EN_01_200W.jpg;"View";
+#;desktop;Appa_350x350_Category04_EN_01_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category04_EN_01_350W.jpg;Appa_350x350_Category04_EN_01_350W.jpg;"View";
 
-INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-;apparel-uk-snow-krypton-banner-en;Appa_200x200_Category04_EN_01_200W.jpg,Appa_350x350_Category04_EN_01_350W.jpg
+#INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+#;apparel-uk-snow-krypton-banner-en;Appa_200x200_Category04_EN_01_200W.jpg,Appa_350x350_Category04_EN_01_350W.jpg
 
-INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-;;ApparelUKSnowKryptonBannerComponent;apparel-uk-snow-krypton-banner-en
-
-# Snow Andover Jacket
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
-;tablet;Appa_200x200_Category03_EN_01_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category03_EN_01_200W.jpg;Appa_200x200_Category03_EN_01_200W.jpg;"View";
-;desktop;Appa_350x350_Category03_EN_01_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category03_EN_01_350W.jpg;Appa_350x350_Category03_EN_01_350W.jpg;"View";
-
-INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-;apparel-uk-snow-andover-jckt-banner-en;Appa_200x200_Category03_EN_01_200W.jpg,Appa_350x350_Category03_EN_01_350W.jpg
-
-INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-;;ApparelUKSnowAndoverJcktBannerComponent;apparel-uk-snow-andover-jckt-banner-en
+#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+#;;ApparelUKSnowKryptonBannerComponent;apparel-uk-snow-krypton-banner-en
 
 # Snow Andover Jacket
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
-;tablet;Appa_200x200_Category06_EN_01_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category06_EN_01_200W.jpg;Appa_200x200_Category06_EN_01_200W.jpg;"View";
-;desktop;Appa_350x350_Category06_EN_01_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category06_EN_01_350W.jpg;Appa_350x350_Category06_EN_01_350W.jpg;"View";
+#INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;tablet;Appa_200x200_Category03_EN_01_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category03_EN_01_200W.jpg;Appa_200x200_Category03_EN_01_200W.jpg;"View";
+#;desktop;Appa_350x350_Category03_EN_01_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category03_EN_01_350W.jpg;Appa_350x350_Category03_EN_01_350W.jpg;"View";
 
-INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-;apparel-uk-snow-beacon-jckt-banner-en;Appa_200x200_Category06_EN_01_200W.jpg,Appa_350x350_Category06_EN_01_350W.jpg
+#INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+#;apparel-uk-snow-andover-jckt-banner-en;Appa_200x200_Category03_EN_01_200W.jpg,Appa_350x350_Category03_EN_01_350W.jpg
 
-INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-;;ApparelUKSnowBeaconJcktBannerComponent;apparel-uk-snow-beacon-jckt-banner-en
+#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+#;;ApparelUKSnowAndoverJcktBannerComponent;apparel-uk-snow-andover-jckt-banner-en
+
+# Snow Andover Jacket
+#INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;tablet;Appa_200x200_Category06_EN_01_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category06_EN_01_200W.jpg;Appa_200x200_Category06_EN_01_200W.jpg;"View";
+#;desktop;Appa_350x350_Category06_EN_01_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category06_EN_01_350W.jpg;Appa_350x350_Category06_EN_01_350W.jpg;"View";
+
+#INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+#;apparel-uk-snow-beacon-jckt-banner-en;Appa_200x200_Category06_EN_01_200W.jpg,Appa_350x350_Category06_EN_01_350W.jpg
+
+#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+#;;ApparelUKSnowBeaconJcktBannerComponent;apparel-uk-snow-beacon-jckt-banner-en
 
 # Snow Trope Beanie
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
-;tablet;Appa_200x200_Category02_EN_01_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category02_EN_01_200W.jpg;Appa_200x200_Category02_EN_01_200W.jpg;"View";
-;desktop;Appa_350x350_Category02_EN_01_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category02_EN_01_350W.jpg;Appa_350x350_Category02_EN_01_350W.jpg;"View";
+#INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;tablet;Appa_200x200_Category02_EN_01_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category02_EN_01_200W.jpg;Appa_200x200_Category02_EN_01_200W.jpg;"View";
+#;desktop;Appa_350x350_Category02_EN_01_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category02_EN_01_350W.jpg;Appa_350x350_Category02_EN_01_350W.jpg;"View";
 
 INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-;apparel-uk-snow-trope-banner-en;Appa_200x200_Category02_EN_01_200W.jpg,Appa_350x350_Category02_EN_01_350W.jpg
+#;apparel-uk-snow-trope-banner-en;Appa_200x200_Category02_EN_01_200W.jpg,Appa_350x350_Category02_EN_01_350W.jpg
 
 INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-;;ApparelUKSnowTropeBeanieBannerComponent;apparel-uk-snow-trope-banner-en
+#;;ApparelUKSnowTropeBeanieBannerComponent;apparel-uk-snow-trope-banner-en
 
 # Snow Sludge Jacket
-INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
-;tablet;Appa_200x200_Category01_EN_07_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category07_EN_01_200W.jpg;Appa_200x200_Category07_EN_01_200W.jpg;"View";
-;desktop;Appa_350x350_Category01_EN_07_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category07_EN_01_350W.jpg;Appa_350x350_Category07_EN_01_350W.jpg;"View";
+#INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator][forceWrite=true];realfilename;altText;mime[default='image/jpeg'];$contentCV[unique=true];folder(qualifier)[default=images];
+#;tablet;Appa_200x200_Category01_EN_07_200W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_200x200_Category07_EN_01_200W.jpg;Appa_200x200_Category07_EN_01_200W.jpg;"View";
+#;desktop;Appa_350x350_Category01_EN_07_350W.jpg;$siteResource/images/banners/category_banners/responsive/Appa_350x350_Category07_EN_01_350W.jpg;Appa_350x350_Category07_EN_01_350W.jpg;"View";
 
-INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
-;apparel-uk-snow-sludge-jckt-banner-en;Appa_200x200_Category01_EN_07_200W.jpg,Appa_350x350_Category01_EN_07_350W.jpg
+#INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$contentCV[unique=true]
+#;apparel-uk-snow-sludge-jckt-banner-en;Appa_200x200_Category01_EN_07_200W.jpg,Appa_350x350_Category01_EN_07_350W.jpg
 
-INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
-;;ApparelUKSnowSludgeJcktBannerComponent;apparel-uk-snow-sludge-jckt-banner-en
+#INSERT_UPDATE SimpleResponsiveBannerComponent;$contentCV[unique=true];uid[unique=true];$mediaContainer
+#;;ApparelUKSnowSludgeJcktBannerComponent;apparel-uk-snow-sludge-jckt-banner-en
 
 UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];title[lang=$lang]
 ;;importCSVSavedCartPage;"Import Saved Cart"
@@ -315,4 +315,4 @@ UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[la
 
 # CMS Footer Navigation Component
 UPDATE FooterNavigationComponent;$contentCV[unique=true];uid[unique=true];notice[lang=en]
-;;FooterNavigationComponent;"© 2016 hybris software"
+;;FooterNavigationComponent;"© 2017 CTC CA"

@@ -69,7 +69,7 @@ UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[lang=$la
 ;;MobileAllBrandsNavNode;"All Brands"
 ;;MobileAllCategoriesNavNode;"All Categories"
 ;;MobileCTCNavNode;"CTC CA Site"
-;;MobileBackpacksBrandsNavNode;"Backpacks Brands"
+#;;MobileBackpacksBrandsNavNode;"Backpacks Brands"
 ;;MobileBackpacksNavNode;"Backpacks"
 ;;MobileBrandsNavNode;"Brands"
 ;;MobileCapsNavNode;"Caps"
@@ -148,16 +148,16 @@ INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=
 UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
 ;;MobileSunglassesBrandsBanner;MobileSunglassesBrands
 
-# Mobile Apparel Brands Landing Page #
+# Mobile CTC Brands Landing Page # - DELETE
 
 # Media
-INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];&imageRef;folder(qualifier)[default='images'];altText
-;;MobileAllBrands;$siteResource/images/banners/category_banners/300x250_Brand_Logos.jpg;;;;"All Brands"
+#INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];&imageRef;folder(qualifier)[default='images'];altText
+#;;MobileAllBrands;$siteResource/images/banners/category_banners/300x250_Brand_Logos.jpg;;;;"All Brands"
 
-UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
-;;MobileAllBrandsBanner;MobileAllBrands
+#UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
+#;;MobileAllBrandsBanner;MobileAllBrands
 
-# Apparel Search Results Page #
+# CTC Search Results Page #
 
 # Media
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
@@ -169,7 +169,7 @@ UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[l
 UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
 ;;MobileNoSearchResultsParagraphComponent;"<h2>Sorry, we couldn't find any results for your search</h2><p>Suggestions</p><ul>	<li>The search word(s) may be typed incorrectly - please check for misspellings</li>	<li>The search may have been to specific - please broaden it by using fewer keywords</li>	<li>Browse our products by selecting a category from the top-menu home button</li></ul>"
 
-# Apparel Cart Page #
+# CTC Cart Page #
 
 # Media
 INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator];mime[default='image/jpeg'];folder(qualifier)[default='images'];altText
@@ -177,8 +177,8 @@ INSERT_UPDATE Media;$contentCV[unique=true];code[unique=true];@media[translator=
 ;;MobileAppa_788x80_FreeDelivery_EN_01.jpg;$siteResource/images/banners/site/Appa_788x80_FreeDelivery_EN_01.jpg;;;"Order before 6pm for next day delivery";
 
 UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
-;;MobileFreeDeliverySimpleBannerComponent;Appa_788x80_FreeDelivery_EN_01.jpg
-;;MobileHelpWithCheckoutSimpleBannerComponent;Appa_148x148_Help_EN_01.jpg
+;;MobileFreeDeliverySimpleBannerComponent;MobileAppa_788x80_FreeDelivery_EN_01.jpg
+;;MobileHelpWithCheckoutSimpleBannerComponent;MobileAppa_148x148_Help_EN_01.jpg
 
 UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=$lang]
 ;;MobileEmptyCartParagraphComponent;"<h2>Your shopping bag is empty</h2><p>Suggestions</p><ul>	<li>Browse our products by selecting a category from the menu bar</li></ul>"
@@ -219,5 +219,5 @@ UPDATE SimpleBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[l
 
 # Dynamic banner component for Product Grid Page
 UPDATE  DynamicBannerComponent;$contentCV[unique=true];uid[unique=true];$picture[lang=$lang]
-;;MobileDynamicBrandBanner;mobile-apparel-category-banner
+#;;MobileDynamicBrandBanner;mobile-apparel-category-banner
 
