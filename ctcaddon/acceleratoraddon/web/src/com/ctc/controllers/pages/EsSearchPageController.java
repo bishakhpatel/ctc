@@ -8,19 +8,16 @@ import de.hybris.platform.commercefacades.product.data.ProductData;
 import de.hybris.platform.commercefacades.search.ProductSearchFacade;
 import de.hybris.platform.commercefacades.search.data.SearchQueryData;
 import de.hybris.platform.commercefacades.search.data.SearchStateData;
-import de.hybris.platform.commerceservices.search.facetdata.FacetData;
 import de.hybris.platform.commerceservices.search.facetdata.ProductSearchPageData;
 import de.hybris.platform.commerceservices.search.pagedata.PageableData;
 import de.hybris.platform.commerceservices.search.pagedata.SearchPageData;
 import de.hybris.platform.servicelayer.dto.converter.ConversionException;
 
 import java.io.UnsupportedEncodingException;
-import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -213,11 +210,6 @@ public class EsSearchPageController extends AbstractAddOnPageController
 				searchPageData.setCurrentQuery(currentQuery);
 				searchPageData.setFreeTextSearch(XSSEncoder.encodeHTML(searchPageData.getFreeTextSearch()));
 
-				final List<FacetData<SearchStateData>> facets = searchPageData.getFacets();
-				if (CollectionUtils.isNotEmpty(facets))
-				{
-					//					processFacetData(facets);
-				}
 			}
 			catch (final UnsupportedEncodingException e)
 			{
