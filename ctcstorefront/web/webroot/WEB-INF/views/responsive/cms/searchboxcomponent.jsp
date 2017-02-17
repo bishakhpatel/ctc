@@ -15,7 +15,7 @@
            <input type="text" id="js-site-search-input"
 					class="form-control js-site-search-input search__input" name="text" value=""
 					maxlength="100" placeholder="${searchPlaceholder}"
-					data-options='{"autocompleteUrl" : "${autocompleteUrl}","minCharactersBeforeRequest" : "${component.minCharactersBeforeRequest}","waitTimeBeforeRequest" : "${component.waitTimeBeforeRequest}","displayProductImages" : ${component.displayProductImages}}'><input type="submit" value="Search" class="search__button search__button_inactive">
+					data-options='{"autocompleteUrl" : "${autocompleteUrl}","minCharactersBeforeRequest" : "${component.minCharactersBeforeRequest}","waitTimeBeforeRequest" : "${component.waitTimeBeforeRequest}","displayProductImages" : ${component.displayProductImages}}'><input type="submit" value="Search" disabled class="search__button search__button_inactive">
      </form>
      <div style="clear:both"></div>
 

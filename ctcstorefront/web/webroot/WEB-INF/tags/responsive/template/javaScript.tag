@@ -100,6 +100,16 @@
 				);
 				$(document).on('click','.menu__products__item a',function(){
 					$(this).parent('li').toggleClass('second-active');
+				});
+				
+				$(document).on('keyup','#js-site-search-input',function(){
+					if($(this).val().length > 1){
+						$('.search__button').removeClass('search__button_inactive');
+						$('.search__button').removeAttr('disabled');
+					}else{
+						$('.search__button').addClass('search__button_inactive');
+						$('.search__button').attr('disabled','true');
+					}
 				})
 		})		
 				$(window).on("resize", function () {

@@ -9237,7 +9237,7 @@ ul.nav__links::after {
   }
   .menu_main .nav.menu li.last-item {
     position: absolute;
-    right: 57px;
+    right: 62px;
     font-size: 16px;
     top: 37px;
     border-left: 1px solid transparent;
@@ -9441,7 +9441,7 @@ ul.nav__links::after {
 .search__button {
   text-transform: uppercase;
   color: #fff;
-  background-color: #969696;
+  background-color: #64a70b;
   height: 34px;
   text-align: center;
   width: 100px;
@@ -11902,6 +11902,11 @@ fieldset[disabled] .btn-primary.active {
 .results h1.border {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 25px;
+}
+@media screen and (max-width: 1028px) {
+  .results h1 {
+    text-align: center;
+  }
 }
 .product__listing {
   padding-left: 0;
