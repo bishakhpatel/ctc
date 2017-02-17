@@ -9,21 +9,284 @@
 # Information and shall use it only in accordance with the terms of the
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
-#******************************This file is generated - please do not edit it. It will be regenerated after every build.********************************#
 # ImpEx for Importing Products stock levels into Apparel Store
 
 # Macros / Replacement Parameter definitions
+$productCatalog=ctcProductCatalog
+$productCatalogName=CTC Product Catalog
+$catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
+$vendor=apparello
 
-# Language
-$lang=en
-
-
-# Create Vendor for Apparel Store
-UPDATE Vendor;code[unique=true];name[lang=$lang]
- ;apparello;Apparello;
-
+INSERT_UPDATE Vendor;code[unique=true]
+;$vendor
 
 # Create some Warehouses for the Vendor
-UPDATE Warehouse;code[unique=true];name[lang=$lang]
-;ctc_warehouse;CTC Warehouse;
- 
+INSERT_UPDATE Warehouse;code[unique=true];vendor(code)[default='apparello'];default[default='true']
+;ctc_warehouse
+
+
+# Create Stock levels at the Warehouses for Products
+INSERT_UPDATE StockLevel;available[unique=true];warehouse(code)[unique=true];inStockStatus(code);maxPreOrder;maxStockLevelHistoryCount;overSelling;preOrder;productCode[unique=true];reserved
+########### EN Products with no variant stock ############
+##########################################################
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762639P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762104P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762114P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762041P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765309P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765305P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765310P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765224P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765307P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0760756P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0760138P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762102P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765417P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765415P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765416P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765512P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765421P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765509P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765501P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765507P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765510P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765508P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765503P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765502P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765505P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765500P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765504P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765506P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765519P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765788P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765799P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765680P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765688P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765798P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765741P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765687P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765670P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765739P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765748P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765653P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765524P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765527P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765532P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765529P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765530P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765525P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765526P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765528P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765534P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765533P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765531P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765522P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765521P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765520P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765559P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765549P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765546P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765550P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765545P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765548P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765547P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765543P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765542P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765544P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765614P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765702P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0852203P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765769P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765785P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765536P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765537P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765535P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765572P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765577P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765575P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765574P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765552P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765551P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765573P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765576P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765578P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762109P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762858P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765623P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762111P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762107P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765757P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765695P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765696P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765697P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765792P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765683P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765727P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765730P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765728P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765773P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765770P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765771P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765729P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765710P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765776P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765772P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765775P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765619P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765618P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765608P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765707P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765706P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765457P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765419P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765418P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765424P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765425P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765420P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765459P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765423P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765422P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765783P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765782P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765516P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765515P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765514P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765513P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765462P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0597590P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0597588P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0597560P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0597587P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0597091P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0597090P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0597089P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762112P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765400P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765403P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765407P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765404P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765458P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765539P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765540P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765541P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765638P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765672P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765674P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765666P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765735P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765765P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765767P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765658P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765657P	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765787P	;0
+
+
+
+########## EN Products do not have variants #######
+################################################### 
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765558	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765557	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765556	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870247	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870246	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870250	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870251	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870249	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870248	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870240	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870245	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870241	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870243	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870242	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870244	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870253	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870256	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870252	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870255	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870254	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870276	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870277	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870279	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870278	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870275	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870497	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870495	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870494	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870496	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870474	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870476	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870477	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870475	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870478	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870480	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870481	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870479	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870472	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870473	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870471	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870470	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870491	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870492	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870490	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870493	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870499	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870501	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870498	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870500	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762141	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762140	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762139	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762122	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762123	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0762124	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771644	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771640	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771643	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771641	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771642	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771650	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771653	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771654	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771651	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771652	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771646	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771647	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771645	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771649	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0771648	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870166	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870171	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870168	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870167	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870170	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870169	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870160	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870157	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870159	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870158	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870156	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870151	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870154	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870153	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870152	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870155	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870105	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870100	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870102	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870103	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870104	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870101	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870162	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870165	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870164	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870161	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	1870163	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765402	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765401	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765406	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765405	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765594	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765593	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765762	;0
+;1000;ctc_warehouse;forceInStock;0;0;0;0;	0765761	;0
+
