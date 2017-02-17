@@ -70,7 +70,7 @@ public class EsSearchPageController extends AbstractAddOnPageController
 				// nothing to do - the exception is logged in SearchSolrQueryPopulator
 			}
 
-			if (searchPageData.getResults() == null)
+			if (searchPageData != null && searchPageData.getResults() == null)
 			{
 				storeCmsPageInModel(model, getContentPageForLabelOrId(NO_RESULTS_CMS_PAGE_ID));
 			}
