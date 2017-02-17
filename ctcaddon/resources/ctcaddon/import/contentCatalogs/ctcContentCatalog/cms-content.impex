@@ -1,0 +1,18 @@
+$contentCatalog=ctcContentCatalog 
+$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id[default=$contentCatalog]),CatalogVersion.version[default=Staged])[default=$contentCatalog:Staged] 
+$addonExtensionName=ctcaddon
+
+INSERT_UPDATE ContentPage;$contentCV[unique=true];uid[unique=true];name;masterTemplate(uid,$contentCV);label;defaultPage[default='true'];approvalStatus(code)[default='approved'];homepage[default='false'];previewImage(code, $contentCV)
+;;es_search;ES Search Results Page;SearchResultsGridPageTemplate;es_search;
+;;es_searchEmpty;ES Search Results Empty Page;SearchResultsEmptyPageTemplate;es_searchEmpty
+
+INSERT_UPDATE ContentSlot;$contentCV[unique=true];uid[unique=true];name;active;cmsComponents(&componentRef);;;
+;;es_ProductLeftRefinements;Refinements;false;;;;
+;;es_ProductGridSlot;Search Grid;true;esSearchGridComponent;;;
+
+INSERT_UPDATE ContentSlotForPage;$contentCV[unique=true];uid[unique=true];position[unique=true];page(uid,$contentCV)[unique=true][default='es_search'];contentSlot(uid,$contentCV)[unique=true]
+;;es_ProductLeftRefinements-SearchResultsGrid;ProductLeftRefinements;;es_ProductLeftRefinements;
+;;es_ProductGridSlot-ProductGridPage;SearchResultsGridSlot;;es_ProductGridSlot;
+
+INSERT_UPDATE JspIncludeComponent;$contentCV[unique=true];uid[unique=true];name;page;&componentRef
+;;esSearchGridComponent;ES Search Grid Component;/WEB-INF/views/addons/$addonExtensionName/responsive/cms/searchresultsgridcomponent.jsp;esSearchGridComponent

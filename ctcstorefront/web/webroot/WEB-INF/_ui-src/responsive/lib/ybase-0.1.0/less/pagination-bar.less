@@ -8,13 +8,13 @@
 }
 
 .pagination-bar{
-	margin:  (@grid-gutter-width + 10) 0;
+	margin:  0px;
 
 	.pagination-toolbar {
-		padding-bottom: (@grid-gutter-width * 1.5);
+		padding-bottom: 10px;
 		padding-left: 20px;
 	  	padding-right: 30px;
-		border-bottom: 1px solid @border-color-3;
+		border: 1px solid #005841;
 
 	  @media (max-width: @screen-md) {
 		padding-left: 20px;
@@ -24,6 +24,7 @@
 
 	.form-group {
 		margin: 0;
+		margin-top: 10px;
 	}
 
 	.pagination-bar-results {
@@ -34,8 +35,7 @@
 
 	&.bottom {
 		.pagination-toolbar {
-			padding-top: (@grid-gutter-width * 1.5);
-			border-top: 1px solid @border-color-3;
+			padding-top: 0;
 			border-bottom-width: 1px;
 		}
 	}
@@ -78,7 +78,7 @@
 
 		.pagination,
 		button {
-			margin-top: @grid-gutter-width + 5;
+			margin-top: 10px;
 		}
 	}
 }
@@ -94,7 +94,8 @@
 	.pagination-bar {
 		.pagination,
 		button {
-			margin-top: @grid-gutter-width + 4;
+			margin-top: 10px;
+			margin-right: 20px;
 		}
 	}
 }
