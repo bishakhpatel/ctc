@@ -1,0 +1,32 @@
+
+#% impex.setLocale( Locale.ENGLISH );
+
+$defaultPromoGrp=ctcPromoGrp
+#Order threshold promotion
+INSERT_UPDATE PromotionSourceRule;code[unique=true];name;status(code);priority;maxAllowedRuns;stackable[default=false];ruleGroup(code);conditions;actions;website(Identifier)[default=$defaultPromoGrp];excludeFromStorefrontDisplay[default=false]
+;FifteenDollarOffPromo;FifteenDollarOffPromo;UNPUBLISHED;0;1;false;orderPromotionRuleGroup;"[{""definitionId"":""y_cart_total"",""parameters"":{""value"":{""uuid"":""09cbe964-3220-43ea-abb8-ffae16e2e8e2"",""type"":""Map(ItemType(Currency),java.math.BigDecimal)"",""value"":{""USD"":150}},""operator"":{""uuid"":""cb5ada27-9d18-4e4e-a19b-3460c1570a02"",""type"":""Enum(de.hybris.platform.ruledefinitions.AmountOperator)"",""value"":""GREATER_THAN_OR_EQUAL""}},""children"":[]}]";"[{""definitionId"":""y_order_fixed_discount"",""parameters"":{""value"":{""uuid"":""a6dc7e23-624f-4749-b902-e09af5e730c7"",""type"":""Map(ItemType(Currency),java.math.BigDecimal)"",""value"":{""USD"":15}}}}]";;
+
+
+INSERT_UPDATE SingleCodeCoupon;couponId(id)[unique=true];name;maxRedemptionsPerCustomer;maxTotalRedemptions;startDate[dateformat=yyyy-MM-dd];endDate[dateformat=yyyy-MM-dd]
+;20DOLLAROFF;20DOLLAROFF;1;100;2017-02-01;2020-02-01;
+
+#coupon code promotion on order threshold
+INSERT_UPDATE PromotionSourceRule;code[unique=true];name;status(code);priority;maxAllowedRuns;stackable[default=false];ruleGroup(code);conditions;actions;website(Identifier)[default=$defaultPromoGrp];excludeFromStorefrontDisplay[default=false]
+;TwentyDollarOffCouponPromo;TwentyDollarOffCouponPromo;UNPUBLISHED;0;1;false;couponPromotionRuleGroup;"[{""definitionId"":""y_cart_total"",""parameters"":{""value"":{""uuid"":""09cbe964-3220-43ea-abb8-ffae16e2e8e2"",""type"":""Map(ItemType(Currency),java.math.BigDecimal)"",""value"":{""USD"":100}},""operator"":{""uuid"":""cb5ada27-9d18-4e4e-a19b-3460c1570a02"",""type"":""Enum(de.hybris.platform.ruledefinitions.AmountOperator)"",""value"":""GREATER_THAN_OR_EQUAL""}},""children"":[]},{""definitionId"":""y_qualifying_coupons"",""parameters"":{""coupons"":{""uuid"":""46eec92e-cd60-4d78-b502-306d51413ee8"",""type"":""List(ItemType(AbstractCoupon))"",""value"":[""20DOLLAROFF""]}},""children"":[]}]";"[{""definitionId"":""y_order_fixed_discount"",""parameters"":{""value"":{""uuid"":""a6dc7e23-624f-4749-b902-e09af5e730c7"",""type"":""Map(ItemType(Currency),java.math.BigDecimal)"",""value"":{""USD"":20}}}}]";;
+
+#product promotion
+INSERT_UPDATE PromotionSourceRule;code[unique=true];name;status(code);priority;maxAllowedRuns;stackable[default=false];ruleGroup(code);conditions;actions;website(Identifier)[default=$defaultPromoGrp];excludeFromStorefrontDisplay[default=false]
+;ConvoyBackpackProductPromo;ConvoyBackpackProductPromo;UNPUBLISHED;0;1;false;productPromotionRuleGroup;"[{""definitionId"":""y_qualifying_products"",""parameters"":{""products_operator"":{""uuid"":""7c6ba6c3-524b-4ef4-8fff-bfe616cadefa"",""type"":""Enum(de.hybris.platform.ruledefinitions.CollectionOperator)"",""value"":""CONTAINS_ANY""},""quantity"":{""uuid"":""e6ea093d-1da2-4f40-afc4-82df8ecc5c43"",""type"":""java.lang.Integer"",""value"":1},""operator"":{""uuid"":""9e38e066-5b36-4aa0-b5e4-2d609197a81a"",""type"":""Enum(de.hybris.platform.ruledefinitions.AmountOperator)"",""value"":""GREATER_THAN_OR_EQUAL""},""products"":{""uuid"":""29503a81-597f-4db0-82b8-473195d4aeab"",""type"":""List(ItemType(Product))"",""value"":[""0765417P""]}},""children"":[]}]";"[{""definitionId"":""y_order_percentage_discount"",""parameters"":{""value"":{""uuid"":""e11224e0-db7f-4b1d-af3f-4d821dc401aa"",""type"":""java.math.BigDecimal"",""value"":5}}}]";;
+
+
+
+
+
+
+
+
+
+
+
+
+
