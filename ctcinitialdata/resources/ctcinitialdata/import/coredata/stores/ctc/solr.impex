@@ -22,7 +22,7 @@ $facetSearchConfigDescription=CTC CA Solr Index
 $searchIndexNamePrefix=ctc
 $solrIndexedType=ctcProductType
 $indexBaseSite=ctc
-$indexLanguages=en
+$indexLanguages=en,fr
 $indexCurrencies=USD
 
 
