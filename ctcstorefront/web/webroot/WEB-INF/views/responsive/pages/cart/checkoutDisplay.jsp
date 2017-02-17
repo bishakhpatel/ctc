@@ -36,7 +36,7 @@
     <div class="col-xs-12 col-sm-10 col-md-7 col-lg-6 pull-right">
         <div class="cart-actions">
             <div class="row">
-                <div class="col-sm-3 col-md-6 pull-right">
+                <div class="col-sm-5 col-md-6 pull-right">
                     <button class="btn btn-primary btn-block btn--continue-checkout js-continue-checkout-button"  data-checkout-url="${ctcCheckoutUrl}"><spring:theme code="proceed.checkout"/></button>
                 </div>
  
