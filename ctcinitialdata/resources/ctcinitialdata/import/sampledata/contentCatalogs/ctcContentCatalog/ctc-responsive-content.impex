@@ -565,7 +565,7 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&n
 #;StreetwearYouthNavNode;;Youth Menu;StreetwearYouthNavNode;StreetwearYouthBoardshortsNavNode,StreetwearYouthTShirtNavNode
 ;ProductsNavNode;;All Products;ProductsNavNode;SleepingBagsNavNode,BedsCotsNavNode,StovesCookingAccNavNode,LightingAccNavNode,BackPacksNDayPacksNavNode,ChairsNTablesNavNode,FootwearNApparelNavNode,SheltersNCanopiesScreenhousesNavNode,KnivesToolsAccNavNode, SunscreenNBugRepellentsNavNode, FishingNAccessoriesNavNode
 ;InspirationNavNode;;Inspiration;InspirationNavNode;
-;WoodLegacyNavNode;;Wood Legacy;WoodLegacyNavNode;
+;WoodLegacyNavNode;;Woods Legacy;WoodLegacyNavNode;
 ;WhereToBuyNavNode;;Where To Buy;WhereToBuyNavNode;
 ;ContactUsHeaderNavNode;;Contact Us;ContactUsHeaderNavNode;
 
@@ -578,7 +578,7 @@ INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;n
 #;StreetwearYouthNavNodeEntry;;StreetwearYouth Navigation Node Entry;StreetwearYouthNavNode;YouthLink;
 ;ProductsNavNodeEntry;;Products Navigation Node Entry;ProductsNavNode;ProductsLink
 ;InspirationNavNodeEntry;;Inspiration Navigation Node Entry;InspirationNavNode;InspirationLink
-;WoodLegacyNavNodeEntry;;Wood Legacy Navigation Node Entry;WoodLegacyNavNode;WoodLegacyLink
+;WoodLegacyNavNodeEntry;;Woods Legacy Navigation Node Entry;WoodLegacyNavNode;WoodLegacyLink
 ;WhereToBuyNavNodeEntry;;Where to Buy Navigation Node Entry;WhereToBuyNavNode;WhereToBuyLink
 ;ContactUsHeaderNavNodeEntry;;Contact Us Navigation Node Entry;ContactUsHeaderNavNode;ContactUsHeaderLink
 
@@ -662,9 +662,9 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 
 
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;target(code)[default='sameWindow'];&linkRef
-;;InspirationLink;Inspiration;"/ctcDefault";;InspirationLink
-;;WoodLegacyLink;Wood Legacy;"/ctcDefault";;WoodLegacyLink
-;;WhereToBuyLink;Where to Buy;"/ctcDefault";;WhereToBuyLink
+;;InspirationLink;Inspiration;"/inspiration";;InspirationLink
+;;WoodLegacyLink;Woods Legacy;"/woodslegacy";;WoodLegacyLink
+;;WhereToBuyLink;Where to Buy;"/wheretobuy";;WhereToBuyLink
 ;;ContactUsHeaderLink;Contact us;"http://10.232.199.16:4503/content/woods-content/en/contactus.html";;ContactUsHeaderLink
 
 ## entries of the above navigation nodes ##
@@ -747,7 +747,7 @@ INSERT_UPDATE CMSNavigationNode;$contentCV[unique=true];uid[unique=true];title[l
 ;;FishingNAccessoriesNavNode;"Fishing & Accessories"
 ;;WadersNavNode;"Waders"
 ;;InspirationNavNode;"Inspiration"
-;;WoodLegacyNavNode;"Wood Legacy"
+;;WoodLegacyNavNode;"Woods Legacy"
 ;;WhereToBuyNavNode;"Where To Buy"
 ;;ContactUsHeaderNavNode;"Contact Us"
 
@@ -790,7 +790,7 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];linkName
 ;;FishingNAccessoriesLink;"Fishing & Accessories"
 ;;WadersLink;"Waders"
 ;;InspirationLink;"Inspiration"
-;;WoodLegacyLink;"Wood Legacy"
+;;WoodLegacyLink;"Woods Legacy"
 ;;WhereToBuyLink;"Where To Buy"
 ;;ContactUsHeaderLink;"Contact Us"
 ###### Navigation Component Refactor End ######
