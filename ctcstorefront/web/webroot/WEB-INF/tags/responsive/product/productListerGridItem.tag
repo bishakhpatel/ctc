@@ -24,7 +24,7 @@
 					<a class="name" href="${productUrl}">
 						<c:choose>
 							<c:when test="${fn:length(product.name) > 30}">
-								${fn:substring(product.name, 0, 30)}...	
+								${product.name}	
 							</c:when>
 							<c:otherwise>
 								${product.name}
