@@ -10,7 +10,7 @@
 # license agreement you entered into with SAP.
 # -----------------------------------------------------------------------
 # ImpEx for Importing Product prices into CTC store
-#% impex.setLocale( Locale.EN ); 
+#% impex.setLocale( Locale.GERMAN ); 
 
 # Insert Product prices
 
