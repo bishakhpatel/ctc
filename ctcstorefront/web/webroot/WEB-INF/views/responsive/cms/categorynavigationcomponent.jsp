@@ -104,6 +104,6 @@
 									<cms:component component="${component}" element="div"/>
 								</cms:pageSlot>
 								
-								<div class="advance-search hidden-xs hidden-sm"><a href="javascript:EsSearchPopup();">Elastic Search</a></div>
+								<!-- <div class="advance-search hidden-xs hidden-sm"><a href="javascript:EsSearchPopup();">Elastic Search</a></div> -->
 
             </div>

@@ -21,7 +21,12 @@
 		<div class="ctc-mini-cart-container">
 			<div class="ctc-mini-cart">
 				<span class="glyphicon glyphicon-shopping-cart "></span>
-				<div class="cart-bag-count">${totalItems}</div>
+				<c:if test="${totalItems gt 0}">
+					<div class="cart-bag-count">${totalItems}</div>
+				</c:if>
+				<c:if test="${totalItems eq 0}">
+					<div class="cart-bag-count display-none">${totalItems}</div>
+				</c:if>
 			</div>
 		</div>
 		<ycommerce:testId code="miniCart_items_label">
