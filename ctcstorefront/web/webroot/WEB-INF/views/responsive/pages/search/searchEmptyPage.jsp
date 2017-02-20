@@ -11,10 +11,12 @@
 	<cms:pageSlot position="SideContent" var="feature" element="div" class="side-content-slot cms_disp-img_slot searchEmptyPageTop">
 		<cms:component component="${feature}" element="div" class="no-space yComponentWrapper searchEmptyPageTop-component"/>
 	</cms:pageSlot>
-	
+	 <div class="row">
+        <div class="col-xs-12 col-md-9 big-header-plp"><h1><spring:theme code="search.page.searchText" arguments="${searchPageData.freeTextSearch}"/></h1></div>
+    </div>
 	<div class="search-empty">
 		<div class="headline">
-			<spring:theme code="search.no.results" arguments="${searchPageData.freeTextSearch}"/> 
+			<spring:theme code="search.no.results"/> 
 		</div>
 		<a class="btn btn-default  js-shopping-button" href="${homePageUrl}">
 			<spring:theme code="general.continue.shopping" text="Continue Shopping"/>
