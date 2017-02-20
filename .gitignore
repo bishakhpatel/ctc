@@ -146,3 +146,10 @@ ctcstorefront/web/webroot/_ui/shared/js/*.min.js
 
 #test automation
 
+ctcstorefront/web/webroot/_ui/addons/*
+ctcstorefront/web/addonsrc/*
+ctcstorefront/web/webroot/WEB-INF/views/addons/*
+ctcstorefront/web/webroot/WEB-INF/tags/addons/*
+ctcstorefront/web/webroot/WEB-INF/tld/addons/*
+ctcstorefront/web/webroot/WEB-INF/messages/addons/*
+ctcstorefront/web/webroot/WEB-INF/_ui-src/addons/*
