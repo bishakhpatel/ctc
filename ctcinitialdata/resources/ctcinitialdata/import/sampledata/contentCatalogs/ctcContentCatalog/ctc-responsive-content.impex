@@ -563,7 +563,7 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;&n
 #;SnowNavigationNode;;Snow Menu;SnowNavigationNode;SnowwearMenNavNodeMenu,SnowwearWomenNavNodeMenu,SnowwearYouthNavNodeMenu,SnowKitNavNodeMenu
 #;AccessoriesNavigationNode;;Accessories Menu;AccessoriesNavigationNode;AccessoriesMenNavNodeMenu,AccessoriesWomenNavNodeMenu
 #;StreetwearYouthNavNode;;Youth Menu;StreetwearYouthNavNode;StreetwearYouthBoardshortsNavNode,StreetwearYouthTShirtNavNode
-;ProductsNavNode;;All Products;ProductsNavNode;SleepingBagsNavNode,BedsCotsNavNode,StovesCookingAccNavNode,LightingAccNavNode,BackPacksNDayPacksNavNode,ChairsNTablesNavNode,FootwearNApparelNavNode,SheltersNCanopiesScreenhousesNavNode,KnivesToolsAccNavNode, SunscreenNBugRepellentsNavNode, FishingNAccessoriesNavNode,TentsNavNode,TentsAccNavNode
+;ProductsNavNode;;All Products;ProductsNavNode;TentsAccNavNode,TentsNavNode,SleepingBagsNavNode,BedsCotsNavNode,StovesCookingAccNavNode,LightingAccNavNode,BackPacksNDayPacksNavNode,ChairsNTablesNavNode,FootwearNApparelNavNode,SheltersNCanopiesScreenhousesNavNode,KnivesToolsAccNavNode, SunscreenNBugRepellentsNavNode, FishingNAccessoriesNavNode
 ;InspirationNavNode;;Inspiration;InspirationNavNode;
 ;WoodLegacyNavNode;;Woods Legacy;WoodLegacyNavNode;
 ;WhereToBuyNavNode;;Where To Buy;WhereToBuyNavNode;
@@ -669,7 +669,7 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 ;;InspirationLink;Inspiration;"/inspiration";;InspirationLink
 ;;WoodLegacyLink;Woods™ Legacy;"/woodslegacy";;WoodLegacyLink
 ;;WhereToBuyLink;Where to Buy;"/wheretobuy";;WhereToBuyLink
-;;ContactUsHeaderLink;Contact us;"http://10.232.199.16:4503/content/woods-content/en/contactus.html";;ContactUsHeaderLink
+;;ContactUsHeaderLink;Contact us;"http://10.232.199.16:4503/content/WoodsDemo/en/contactus.html";;ContactUsHeaderLink
 
 ## entries of the above navigation nodes ##
 INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;navigationNode(&nodeRef);item(CMSLinkComponent.uid,CMSLinkComponent.$contentCV);
@@ -822,10 +822,10 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;pa
 
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;target(code)[default='sameWindow'];linkName[lang=en]
 ;;FAQPageLink;FAQ Link;"#";newWindow;"FAQ"
-;;ContactUsLink;Contact Us Link;"http://10.232.199.16:4503/content/woods-content/en/contactus.html";newWindow;"Contact Us"
+;;ContactUsLink;Contact Us Link;"http://10.232.199.16:4503/content/WoodsDemo/en/contactus.html";newWindow;"Contact Us"
 ;;SiteMapLink;Site Map Link;"#";newWindow;"Site Map"
 ;;PrivacyLink;Privacy Policy Link;"#";newWindow;"Privacy Policy"
-;;TermsLink;Linked In Link;"http://10.232.199.16:4503/content/woods-content/en/termsandconditions.html";newWindow;"Terms & Conditions"
+;;TermsLink;Linked In Link;"http://10.232.199.16:4503/content/WoodsDemo/en/tc.html";newWindow;"Terms & Conditions"
 ;;FacebookLink;Facebook Link;http://www.facebook.com;newWindow;"Facebook"
 ;;TwitterLink;Twitter Link;http://twitter.com/;newWindow;"Twitter"
 ;;InstagramLink;Instagram Link;http://www.instagram.com;newWindow;"Instagram"
