@@ -10,7 +10,7 @@
 <%@ taglib prefix="format" tagdir="/WEB-INF/tags/shared/format" %>
 
  <c:set var="errorStatus" value="<%= de.hybris.platform.catalog.enums.ProductInfoStatus.valueOf(\"ERROR\") %>" />
-
+	<div class="row"><div class="col-sm-12 col-md-6 big-header-plp"><h1><spring:theme code="cart.heading"/></h1></div></div>
  <ul class="item__list item__list__cart">
     <li class="hidden-xs hidden-sm">
         <ul class="item__list--header">
