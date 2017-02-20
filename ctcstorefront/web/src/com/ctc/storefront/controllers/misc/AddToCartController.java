@@ -24,7 +24,6 @@ import de.hybris.platform.commercefacades.product.ProductOption;
 import de.hybris.platform.commercefacades.product.data.ProductData;
 import de.hybris.platform.commerceservices.order.CommerceCartModificationException;
 import de.hybris.platform.util.Config;
-import com.ctc.storefront.controllers.ControllerConstants;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -48,6 +47,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.ctc.storefront.controllers.ControllerConstants;
+
 
 /**
  * Controller for Add to Cart functionality which is not specific to a certain page.
@@ -60,6 +61,7 @@ public class AddToCartController extends AbstractController
 	private static final String ERROR_MSG_TYPE = "errorMsg";
 	private static final String QUANTITY_INVALID_BINDING_MESSAGE_KEY = "basket.error.quantity.invalid.binding";
 	private static final String SHOWN_PRODUCT_COUNT = "ctcstorefront.storefront.minicart.shownProductCount";
+	private static final String REDIRECT_CART_URL = REDIRECT_PREFIX + "/cart";
 
 	private static final Logger LOG = Logger.getLogger(AddToCartController.class);
 
@@ -73,8 +75,8 @@ public class AddToCartController extends AbstractController
 	private GroupCartModificationListPopulator groupCartModificationListPopulator;
 
 	@RequestMapping(value = "/cart/add", method = RequestMethod.POST, produces = "application/json")
-	public String addToCart(@RequestParam("productCodePost") final String code, final Model model, @Valid final AddToCartForm form,
-			final BindingResult bindingErrors)
+	public String addToCart(@RequestParam("productCodePost") final String code, final Model model,
+			@Valid final AddToCartForm form, final BindingResult bindingErrors)
 	{
 		if (bindingErrors.hasErrors())
 		{
@@ -283,5 +285,48 @@ public class AddToCartController extends AbstractController
 	protected boolean isValidQuantity(final OrderEntryData cartEntry)
 	{
 		return cartEntry.getQuantity() != null && cartEntry.getQuantity().longValue() >= 1L;
+	}
+
+	@RequestMapping(value = "/cart/add", method = RequestMethod.POST, params =
+	{ "buyNow" })
+	public String buyNow(@RequestParam("productCodePost") final String code, final Model model, @Valid final AddToCartForm form,
+			final BindingResult bindingErrors)
+	{
+		if (bindingErrors.hasErrors())
+		{
+			return getViewWithBindingErrorMessages(model, bindingErrors);
+		}
+
+		final long qty = form.getQty();
+
+		if (qty <= 0)
+		{
+			model.addAttribute(ERROR_MSG_TYPE, "basket.error.quantity.invalid");
+			model.addAttribute(QUANTITY_ATTR, Long.valueOf(0L));
+		}
+		else
+		{
+			try
+			{
+				final CartModificationData cartModification = cartFacade.addToCart(code, qty);
+
+				if (cartModification.getQuantityAdded() == 0L)
+				{
+					model.addAttribute(ERROR_MSG_TYPE, "basket.information.quantity.noItemsAdded." + cartModification.getStatusCode());
+				}
+				else if (cartModification.getQuantityAdded() < qty)
+				{
+					model.addAttribute(ERROR_MSG_TYPE,
+							"basket.information.quantity.reducedNumberOfItemsAdded." + cartModification.getStatusCode());
+				}
+			}
+			catch (final CommerceCartModificationException ex)
+			{
+				logDebugException(ex);
+				model.addAttribute(ERROR_MSG_TYPE, "basket.error.occurred");
+				model.addAttribute(QUANTITY_ATTR, Long.valueOf(0L));
+			}
+		}
+		return REDIRECT_CART_URL;
 	}
 }
