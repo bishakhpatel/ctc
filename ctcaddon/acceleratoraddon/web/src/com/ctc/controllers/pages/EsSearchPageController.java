@@ -81,10 +81,12 @@ public class EsSearchPageController extends AbstractAddOnPageController
 			{
 				populateModel(model, searchPageData, ShowMode.Page);
 				storeCmsPageInModel(model, getContentPageForLabelOrId(SEARCH_CMS_PAGE_ID));
+				if(null != searchPageData){
 				model.addAttribute(
 						WebConstants.BREADCRUMBS_KEY,
 						searchBreadcrumbBuilder.getBreadcrumbs(null, encodedSearchText,
 								CollectionUtils.isEmpty(searchPageData.getBreadcrumbs())));
+				}
 			}
 		}
 		else
