@@ -163,8 +163,8 @@ UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[la
 #;;FreeDeliverySimpleBannerComponent;Appa_788x80_FreeDelivery_EN_01.jpg
 #;;HelpWithCheckoutSimpleBannerComponent;Appa_148x148_Help_EN_01.jpg
 
-#UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=en]
-#;;EmptyCartParagraphComponent;"<h2>Your shopping bag is empty</h2><p>Suggestions</p><ul>	<li>Browse our products by selecting a category above</li></ul>"
+UPDATE CMSParagraphComponent;$contentCV[unique=true];uid[unique=true];content[lang=en]
+;;EmptyCartParagraphComponent;"<h2>Your shopping bag is empty</h2><p>Suggestions</p><ul>	<li>Browse our products by selecting a category above</li></ul>"
 #;;HelpParagraphComponent;"<strong>Need Help with your checkout process?</strong> <span>Contact Us or Call phone number.</span>"
 
 

@@ -37,9 +37,16 @@
         <div class="cart-actions">
             <div class="row">
                 <div class="col-sm-5 col-md-6 pull-right">
-                    <button class="btn btn-primary btn-block btn--continue-checkout js-continue-checkout-button"  data-checkout-url="${ctcCheckoutUrl}"><spring:theme code="proceed.checkout"/></button>
-                </div>
- 
+                <c:choose>
+                	<c:when test="${empty cart.entries}">
+                		<button class="btn btn-primary btn-block btn--continue-checkout js-continue-checkout-button" disabled="disabled" data-checkout-url="${ctcCheckoutUrl}"><spring:theme code="proceed.checkout"/></button>
+                	</c:when>
+                	<c:otherwise>
+                		<button class="btn btn-primary btn-block btn--continue-checkout js-continue-checkout-button"  data-checkout-url="${ctcCheckoutUrl}"><spring:theme code="proceed.checkout"/></button>
+                	</c:otherwise>
+                
+                </c:choose>
+               </div>
                 <div class="col-sm-5 pull-right">
                     <button class="btn btn-default btn-block btn--continue-shopping js-continue-shopping-button" data-continue-shopping-url="${continueShoppingUrl}"><spring:theme text="Continue Shopping" code="cart.page.continue"/></button>
                 </div>

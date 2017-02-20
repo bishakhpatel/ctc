@@ -51,6 +51,9 @@
             <cms:pageSlot position="EmptyCartMiddleContent" var="feature">
                 <cms:component component="${feature}" element="div" class="yComponentWrapper content__empty"/>
             </cms:pageSlot>
+            <cms:pageSlot position="BottomContentSlot" var="feature">
+                <cms:component component="${feature}" element="div" class="yComponentWrapper"/>
+            </cms:pageSlot>
 		</c:if>
 	</div>
 </template:page>
