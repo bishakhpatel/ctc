@@ -55,10 +55,10 @@
 				<c:choose>
 					<c:when test="${not empty childLevel2.children}">
 					<li class="menu__products__item">
-						<c:forEach items="${childLevel2.entries}" var="childlevel2link" >
-							<cms:component component="${childlevel2link.item}" evaluateRestriction="true" class="" />
-						</c:forEach>
-							
+<%-- 						<c:forEach items="${childLevel2.entries}" var="childlevel2link" > --%>
+<%-- 							<cms:component component="${childlevel2link.item}" evaluateRestriction="true" class="" /> --%>
+<%-- 						</c:forEach> --%>
+							<a href="javascript:void(0)">${childLevel2.title}</a>
 						<div class="side-arrow">></div>
 						<c:if test="${not empty childLevel2.children }">
 													<ul>
