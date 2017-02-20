@@ -1,6 +1,8 @@
 package com.ctc.controllers.pages;
 
 import de.hybris.platform.acceleratorservices.controllers.page.PageType;
+import de.hybris.platform.acceleratorstorefrontcommons.breadcrumb.impl.SearchBreadcrumbBuilder;
+import de.hybris.platform.acceleratorstorefrontcommons.constants.WebConstants;
 import de.hybris.platform.acceleratorstorefrontcommons.util.XSSFilterUtil;
 import de.hybris.platform.addonsupport.controllers.page.AbstractAddOnPageController;
 import de.hybris.platform.cms2.exceptions.CMSItemNotFoundException;
@@ -18,6 +20,7 @@ import java.io.UnsupportedEncodingException;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -42,6 +45,9 @@ public class EsSearchPageController extends AbstractAddOnPageController
 
 	@Resource(name = "esProductSearchFacade")
 	private ProductSearchFacade<ProductData> productSearchFacade;
+
+	@Resource(name = "searchBreadcrumbBuilder")
+	private SearchBreadcrumbBuilder searchBreadcrumbBuilder;
 
 	@RequestMapping(method = RequestMethod.GET, params = "!q")
 	public String textSearch(@RequestParam(value = "text", defaultValue = "") final String searchText,
@@ -75,6 +81,10 @@ public class EsSearchPageController extends AbstractAddOnPageController
 			{
 				populateModel(model, searchPageData, ShowMode.Page);
 				storeCmsPageInModel(model, getContentPageForLabelOrId(SEARCH_CMS_PAGE_ID));
+				model.addAttribute(
+						WebConstants.BREADCRUMBS_KEY,
+						searchBreadcrumbBuilder.getBreadcrumbs(null, encodedSearchText,
+								CollectionUtils.isEmpty(searchPageData.getBreadcrumbs())));
 			}
 		}
 		else
@@ -111,7 +121,7 @@ public class EsSearchPageController extends AbstractAddOnPageController
 			storeCmsPageInModel(model, getContentPageForLabelOrId(SEARCH_CMS_PAGE_ID));
 		}
 		model.addAttribute("pageType", PageType.PRODUCTSEARCH.name());
-
+		model.addAttribute(WebConstants.BREADCRUMBS_KEY, searchBreadcrumbBuilder.getBreadcrumbs(null, searchPageData));
 
 
 		return getViewForPage(model);
