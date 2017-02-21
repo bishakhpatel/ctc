@@ -73,16 +73,19 @@ public class EsSearchPageController extends AbstractAddOnPageController
 				// nothing to do - the exception is logged in SearchSolrQueryPopulator
 			}
 			model.addAttribute("pageType", PageType.PRODUCTSEARCH.name());
-			if (searchPageData != null && searchPageData.getResults() != null && !searchPageData.getResults().isEmpty())
+			populateModel(model, searchPageData, ShowMode.Page);
+			if (searchPageData != null)
 			{
-				populateModel(model, searchPageData, ShowMode.Page);
-				storeCmsPageInModel(model, getContentPageForLabelOrId(SEARCH_CMS_PAGE_ID));
 				model.addAttribute(
 						WebConstants.BREADCRUMBS_KEY,
 						searchBreadcrumbBuilder.getBreadcrumbs(null, encodedSearchText,
 								CollectionUtils.isEmpty(searchPageData.getBreadcrumbs())));
-				return getViewForPage(model);
 
+				if (searchPageData.getResults() != null && !searchPageData.getResults().isEmpty())
+				{
+					storeCmsPageInModel(model, getContentPageForLabelOrId(SEARCH_CMS_PAGE_ID));
+					return getViewForPage(model);
+				}
 			}
 		}
 
@@ -169,8 +172,11 @@ public class EsSearchPageController extends AbstractAddOnPageController
 
 		model.addAttribute("numberPagesShown", Integer.valueOf(numberPagesShown));
 		model.addAttribute("searchPageData", searchPageData);
-		model.addAttribute("isShowAllAllowed", calculateShowAll(searchPageData, showMode));
-		model.addAttribute("isShowPageAllowed", calculateShowPaged(searchPageData, showMode));
+		if (searchPageData != null && searchPageData.getResults() != null && !searchPageData.getResults().isEmpty())
+		{
+			model.addAttribute("isShowAllAllowed", calculateShowAll(searchPageData, showMode));
+			model.addAttribute("isShowPageAllowed", calculateShowPaged(searchPageData, showMode));
+		}
 	}
 
 	protected Boolean calculateShowAll(final SearchPageData<?> searchPageData, final ShowMode showMode)
