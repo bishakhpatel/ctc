@@ -60,7 +60,9 @@
 				</c:if>
 				<c:choose>
 					<c:when test="${fn:contains(buttonType, 'button')}">
-
+						<button type="${buttonType}" class="btn btn-primary btn-block js-add-to-cart outOfStock" disabled="disabled">
+							<spring:theme code="product.variants.out.of.stock"/>
+						</button>
 					</c:when>
 					<c:otherwise>
 						<ycommerce:testId code="addToCartButton">
@@ -74,7 +76,7 @@
 		</form:form>
 	</div>
 	<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-		<form:form method="post" id="addToCartFormBuyNow" class="" action="${addToCartUrl}">
+		<form:form method="post" id="custombuynowform" class="" action="${addToCartUrl}">
 			<c:if test="${product.purchasable}">
 				<input type="hidden" maxlength="3" size="1" id="qty" name="qty" class="qty js-qty-selector-input" value="1">
 			</c:if>
@@ -87,9 +89,7 @@
 				</c:if>
 				<c:choose>
 					<c:when test="${fn:contains(buttonType, 'button')}">
-						<button type="${buttonType}" class="btn btn-primary btn-block js-add-to-cart btn-icon glyphicon-shopping-cart outOfStock" disabled="disabled">
-							<spring:theme code="product.variants.out.of.stock"/>
-						</button>
+						
 					</c:when>
 					<c:otherwise>
 						<ycommerce:testId code="addToCartButton">

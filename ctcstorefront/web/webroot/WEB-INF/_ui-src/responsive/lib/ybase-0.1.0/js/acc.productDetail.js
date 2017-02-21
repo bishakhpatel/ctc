@@ -78,10 +78,10 @@ ACC.productDetail = {
     updateQtyValue: function (self, value) {
         var input = $(self).parents(".js-qty-selector").find(".js-qty-selector-input");
         var addtocartQty = $(self).parents(".addtocart-component").find("#addToCartForm").find(".js-qty-selector-input");
-        var addtocartQtybuyNow = $(self).parents(".addtocart-component").find("#addToCartFormBuyNow").find(".js-qty-selector-input");
+        var custombuynowqty = $(self).parents(".addtocart-component").find("#custombuynowform").find(".js-qty-selector-input");
         input.val(value);
         addtocartQty.val(value);
-        addtocartQtybuyNow.val(value);
+        custombuynowqty.val(value);
     },
 
     initPageEvents: function () {
