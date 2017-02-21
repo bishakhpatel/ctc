@@ -12,11 +12,13 @@
 package com.ctc.storefront.controllers.misc;
 
 import de.hybris.platform.acceleratorfacades.product.data.ProductWrapperData;
+import de.hybris.platform.acceleratorservices.config.SiteConfigService;
 import de.hybris.platform.acceleratorstorefrontcommons.controllers.AbstractController;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.AddToCartForm;
 import de.hybris.platform.acceleratorstorefrontcommons.forms.AddToCartOrderForm;
 import de.hybris.platform.commercefacades.order.CartFacade;
 import de.hybris.platform.commercefacades.order.converters.populator.GroupCartModificationListPopulator;
+import de.hybris.platform.commercefacades.order.data.CartData;
 import de.hybris.platform.commercefacades.order.data.CartModificationData;
 import de.hybris.platform.commercefacades.order.data.OrderEntryData;
 import de.hybris.platform.commercefacades.product.ProductFacade;
@@ -32,6 +34,8 @@ import java.util.List;
 import java.util.Set;
 
 import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.apache.commons.collections.CollectionUtils;
@@ -62,6 +66,7 @@ public class AddToCartController extends AbstractController
 	private static final String QUANTITY_INVALID_BINDING_MESSAGE_KEY = "basket.error.quantity.invalid.binding";
 	private static final String SHOWN_PRODUCT_COUNT = "ctcstorefront.storefront.minicart.shownProductCount";
 	private static final String REDIRECT_CART_URL = REDIRECT_PREFIX + "/cart";
+	public static final String CART_COUNT_COOKIE_DOMAIN_NAME = "cart.count.cookie.domain.name";
 
 	private static final Logger LOG = Logger.getLogger(AddToCartController.class);
 
@@ -74,9 +79,12 @@ public class AddToCartController extends AbstractController
 	@Resource(name = "groupCartModificationListPopulator")
 	private GroupCartModificationListPopulator groupCartModificationListPopulator;
 
+	@Resource(name = "siteConfigService")
+	private SiteConfigService siteConfigService;
+
 	@RequestMapping(value = "/cart/add", method = RequestMethod.POST, produces = "application/json")
 	public String addToCart(@RequestParam("productCodePost") final String code, final Model model,
-			@Valid final AddToCartForm form, final BindingResult bindingErrors)
+			@Valid final AddToCartForm form, final BindingResult bindingErrors, final HttpServletResponse response)
 	{
 		if (bindingErrors.hasErrors())
 		{
@@ -108,6 +116,8 @@ public class AddToCartController extends AbstractController
 					model.addAttribute(ERROR_MSG_TYPE,
 							"basket.information.quantity.reducedNumberOfItemsAdded." + cartModification.getStatusCode());
 				}
+
+				setCookie(response, cartFacade.getSessionCart());
 			}
 			catch (final CommerceCartModificationException ex)
 			{
@@ -290,7 +300,7 @@ public class AddToCartController extends AbstractController
 	@RequestMapping(value = "/cart/add", method = RequestMethod.POST, params =
 	{ "buyNow" })
 	public String buyNow(@RequestParam("productCodePost") final String code, final Model model, @Valid final AddToCartForm form,
-			final BindingResult bindingErrors)
+			final BindingResult bindingErrors, final HttpServletResponse response)
 	{
 		if (bindingErrors.hasErrors())
 		{
@@ -319,6 +329,7 @@ public class AddToCartController extends AbstractController
 					model.addAttribute(ERROR_MSG_TYPE,
 							"basket.information.quantity.reducedNumberOfItemsAdded." + cartModification.getStatusCode());
 				}
+				setCookie(response, cartFacade.getSessionCart());
 			}
 			catch (final CommerceCartModificationException ex)
 			{
@@ -328,5 +339,14 @@ public class AddToCartController extends AbstractController
 			}
 		}
 		return REDIRECT_CART_URL;
+	}
+
+	private void setCookie(final HttpServletResponse response, final CartData cartData)
+	{
+		final Cookie cookie = new Cookie("cartQuantity", String.valueOf(cartData.getTotalUnitCount()));
+		cookie.setMaxAge(60 * 60);
+		cookie.setPath("/");
+		cookie.setDomain(siteConfigService.getString(CART_COUNT_COOKIE_DOMAIN_NAME, ".ctc.com"));
+		response.addCookie(cookie);
 	}
 }
