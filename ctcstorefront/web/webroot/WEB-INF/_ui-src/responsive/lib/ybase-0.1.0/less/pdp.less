@@ -35,7 +35,6 @@
   .name {
     .page-headline();
     padding: 0;
-    font: 40px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
     text-decoration: none;
 
     .sku{
@@ -87,6 +86,23 @@
 		.description{
 			border-bottom: 1px solid @border-color-3;
 		}
+	}
+}
+@media (max-width: @screen-xs-max){
+	.product-details .name{
+		font: 20px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
+		text-transform: uppercase;
+	}
+}
+
+ @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+	.product-details .name{
+		font: 35px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
+	}
+}
+@media (min-width: @screen-sm-max){
+	.product-details .name{
+		font: 40px HelveticaLTStd-BlkCond,Helvetica,Arial,sans-serif;
 	}
 }
 

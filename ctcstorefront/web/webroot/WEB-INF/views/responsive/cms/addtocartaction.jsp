@@ -93,7 +93,7 @@
 					</c:when>
 					<c:otherwise>
 						<ycommerce:testId code="addToCartButton">
-								<button id="buyNowButton" type="${buttonType}" class="btn btn-primary btn-block js-add-to-cart js-enable-btn" disabled="disabled" name="buyNow">
+								<button id="buyNowButton" type="${buttonType}" class="btn btn-default btn-block js-add-to-cart js-enable-btn" disabled="disabled" name="buyNow">
 									<spring:theme code="basket.add.to.basket"/>
 								</button>	
 						</ycommerce:testId>
