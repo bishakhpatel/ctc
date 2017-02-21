@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-<c:url value="http://10.232.199.16:4503/content/WoodsDemo/en.html" var="homeUrl" />
+<c:url value="http://ctsc00388000801.cts.com:4503/content/WoodsDemo/en.html" var="homeUrl" />
 
 <ol class="breadcrumb">
 	<li>

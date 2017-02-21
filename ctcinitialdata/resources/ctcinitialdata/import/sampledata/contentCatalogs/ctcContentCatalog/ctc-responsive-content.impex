@@ -666,10 +666,10 @@ INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url
 
 
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;target(code)[default='sameWindow'];&linkRef
-;;InspirationLink;Inspiration;"http://10.232.199.16:4503/content/WoodsDemo/en/Inspiration.html";;InspirationLink
-;;WoodLegacyLink;Woods™ Legacy;"http://10.232.199.16:4503/content/WoodsDemo/en/woods-legacy.html";;WoodLegacyLink
-;;WhereToBuyLink;Where to Buy;"http://10.232.199.16:4503/content/WoodsDemo/en/wheretobuy.html";;WhereToBuyLink
-;;ContactUsHeaderLink;Contact us;"http://10.232.199.16:4503/content/WoodsDemo/en/contactus.html";;ContactUsHeaderLink
+;;InspirationLink;Inspiration;"http://ctsc00388000801.cts.com:4503/content/WoodsDemo/en/Inspiration.html";;InspirationLink
+;;WoodLegacyLink;Woods™ Legacy;"http://ctsc00388000801.cts.com:4503/content/WoodsDemo/en/woods-legacy.html";;WoodLegacyLink
+;;WhereToBuyLink;Where to Buy;"http://ctsc00388000801.cts.com:4503/content/WoodsDemo/en/wheretobuy.html";;WhereToBuyLink
+;;ContactUsHeaderLink;Contact us;"http://ctsc00388000801.cts.com:4503/content/WoodsDemo/en/contactus.html";;ContactUsHeaderLink
 
 ## entries of the above navigation nodes ##
 INSERT_UPDATE CMSNavigationEntry;uid[unique=true];$contentCV[unique=true];name;navigationNode(&nodeRef);item(CMSLinkComponent.uid,CMSLinkComponent.$contentCV);
@@ -822,10 +822,10 @@ INSERT_UPDATE CMSNavigationNode;uid[unique=true];$contentCV[unique=true];name;pa
 
 INSERT_UPDATE CMSLinkComponent;$contentCV[unique=true];uid[unique=true];name;url;target(code)[default='sameWindow'];linkName[lang=en]
 ;;FAQPageLink;FAQ Link;"#";newWindow;"FAQ"
-;;ContactUsLink;Contact Us Link;"http://10.232.199.16:4503/content/WoodsDemo/en/contactus.html";newWindow;"Contact Us"
+;;ContactUsLink;Contact Us Link;"http://ctsc00388000801.cts.com:4503/content/WoodsDemo/en/contactus.html";newWindow;"Contact Us"
 ;;SiteMapLink;Site Map Link;"#";newWindow;"Site Map"
 ;;PrivacyLink;Privacy Policy Link;"#";newWindow;"Privacy Policy"
-;;TermsLink;Linked In Link;"http://10.232.199.16:4503/content/WoodsDemo/en/tc.html";newWindow;"Terms & Conditions"
+;;TermsLink;Linked In Link;"http://ctsc00388000801.cts.com:4503/content/WoodsDemo/en/tc.html";newWindow;"Terms & Conditions"
 ;;FacebookLink;Facebook Link;http://www.facebook.com;newWindow;"Facebook"
 ;;TwitterLink;Twitter Link;http://twitter.com/;newWindow;"Twitter"
 ;;InstagramLink;Instagram Link;http://www.instagram.com;newWindow;"Instagram"
