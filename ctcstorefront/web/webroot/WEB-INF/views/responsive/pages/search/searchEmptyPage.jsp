@@ -18,7 +18,7 @@
 		<div class="headline">
 			<spring:theme code="search.no.results.products"/> 
 		</div>
-		<a class="btn btn-default  js-shopping-button" href="${homePageUrl}">
+		<a class="btn btn-default  js-shopping-button" href="${ctcHomePageUrl}">
 			<spring:theme code="general.continue.shopping" text="Continue Shopping"/>
 		</a>
 	</div>
