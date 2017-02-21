@@ -61,7 +61,7 @@ public class SearchPageController extends AbstractSearchPageController
 {
 	private static final String SEARCH_META_DESCRIPTION_ON = "search.meta.description.on";
 	private static final String SEARCH_META_DESCRIPTION_RESULTS = "search.meta.description.results";
-
+	public static final String HOMEPAGE_URL = "cart.checkoutbutton.url";
 	@SuppressWarnings("unused")
 	private static final Logger LOG = Logger.getLogger(SearchPageController.class);
 
@@ -106,7 +106,7 @@ public class SearchPageController extends AbstractSearchPageController
 			{
 				// nothing to do - the exception is logged in SearchSolrQueryPopulator
 			}
-			
+
 			if (searchPageData == null)
 			{
 				storeCmsPageInModel(model, getContentPageForLabelOrId(NO_RESULTS_CMS_PAGE_ID));
@@ -133,10 +133,8 @@ public class SearchPageController extends AbstractSearchPageController
 			getRequestContextData(request).setSearch(searchPageData);
 			if (searchPageData != null)
 			{
-				model.addAttribute(
-						WebConstants.BREADCRUMBS_KEY,
-						searchBreadcrumbBuilder.getBreadcrumbs(null, encodedSearchText,
-								CollectionUtils.isEmpty(searchPageData.getBreadcrumbs())));
+				model.addAttribute(WebConstants.BREADCRUMBS_KEY, searchBreadcrumbBuilder.getBreadcrumbs(null, encodedSearchText,
+						CollectionUtils.isEmpty(searchPageData.getBreadcrumbs())));
 			}
 		}
 		else
@@ -145,12 +143,10 @@ public class SearchPageController extends AbstractSearchPageController
 		}
 		model.addAttribute("pageType", PageType.PRODUCTSEARCH.name());
 		model.addAttribute(ThirdPartyConstants.SeoRobots.META_ROBOTS, ThirdPartyConstants.SeoRobots.NOINDEX_FOLLOW);
-
-		final String metaDescription = MetaSanitizerUtil.sanitizeDescription(getMessageSource().getMessage(
-				SEARCH_META_DESCRIPTION_RESULTS, null, SEARCH_META_DESCRIPTION_RESULTS, getI18nService().getCurrentLocale())
-				+ " "
-				+ searchText
-				+ " "
+		model.addAttribute("ctcHomePageUrl", getSiteConfigService().getString(HOMEPAGE_URL, "/ctcstorefront/en"));
+		final String metaDescription = MetaSanitizerUtil
+				.sanitizeDescription(getMessageSource().getMessage(SEARCH_META_DESCRIPTION_RESULTS, null,
+						SEARCH_META_DESCRIPTION_RESULTS, getI18nService().getCurrentLocale()) + " " + searchText + " "
 				+ getMessageSource().getMessage(SEARCH_META_DESCRIPTION_ON, null, SEARCH_META_DESCRIPTION_ON,
 						getI18nService().getCurrentLocale()) + " " + getSiteName());
 		final String metaKeywords = MetaSanitizerUtil.sanitizeKeywords(searchText);
@@ -187,11 +183,9 @@ public class SearchPageController extends AbstractSearchPageController
 		model.addAttribute(WebConstants.BREADCRUMBS_KEY, searchBreadcrumbBuilder.getBreadcrumbs(null, searchPageData));
 		model.addAttribute("pageType", PageType.PRODUCTSEARCH.name());
 
-		final String metaDescription = MetaSanitizerUtil.sanitizeDescription(getMessageSource().getMessage(
-				SEARCH_META_DESCRIPTION_RESULTS, null, SEARCH_META_DESCRIPTION_RESULTS, getI18nService().getCurrentLocale())
-				+ " "
-				+ searchText
-				+ " "
+		final String metaDescription = MetaSanitizerUtil
+				.sanitizeDescription(getMessageSource().getMessage(SEARCH_META_DESCRIPTION_RESULTS, null,
+						SEARCH_META_DESCRIPTION_RESULTS, getI18nService().getCurrentLocale()) + " " + searchText + " "
 				+ getMessageSource().getMessage(SEARCH_META_DESCRIPTION_ON, null, SEARCH_META_DESCRIPTION_ON,
 						getI18nService().getCurrentLocale()) + " " + getSiteName());
 
@@ -291,12 +285,9 @@ public class SearchPageController extends AbstractSearchPageController
 
 	protected void updatePageTitle(final String searchText, final Model model)
 	{
-		storeContentPageTitleInModel(
-				model,
-				getPageTitleResolver().resolveContentPageTitle(
-						getMessageSource().getMessage("search.meta.title", null, "search.meta.title",
-								getI18nService().getCurrentLocale())
-								+ " " + searchText));
+		storeContentPageTitleInModel(model, getPageTitleResolver().resolveContentPageTitle(
+				getMessageSource().getMessage("search.meta.title", null, "search.meta.title", getI18nService().getCurrentLocale())
+						+ " " + searchText));
 	}
 
 

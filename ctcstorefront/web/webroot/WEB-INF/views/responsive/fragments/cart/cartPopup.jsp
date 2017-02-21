@@ -22,7 +22,7 @@
 			<c:when test="${numberItemsInCart eq 0 }">
 			<p><spring:theme code="cart.noitems"/></p>
 			<button class="btn btn-block" disabled="disabled">
-						<spring:theme code="checkout.checkout" />
+						<spring:theme code="cart.popup.checkout" />
 					</button>
 					<a href="" class="btn btn-default btn-block js-mini-cart-close-button">
 						<spring:theme text="Continue Shopping" code="cart.page.continue"/>
@@ -93,9 +93,9 @@
 					<c:if test="${not empty lightboxBannerComponent && lightboxBannerComponent.visible}">
 						<cms:component component="${lightboxBannerComponent}" evaluateRestriction="true"  />
 					</c:if>
-
+					<p><spring:theme code="cart.noitems"/></p>
 					<button class="btn btn-block" disabled="disabled">
-						<spring:theme code="checkout.checkout" />
+						<spring:theme code="cart.popup.checkout" />
 					</button>
 					<a href="" class="btn btn-default btn-block js-mini-cart-close-button">
 						<spring:theme text="Continue Shopping" code="cart.page.continue"/>
