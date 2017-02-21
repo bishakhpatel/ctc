@@ -72,29 +72,21 @@ public class EsSearchPageController extends AbstractAddOnPageController
 			{
 				// nothing to do - the exception is logged in SearchSolrQueryPopulator
 			}
-
-			if (searchPageData != null && searchPageData.getResults() == null)
-			{
-				storeCmsPageInModel(model, getContentPageForLabelOrId(NO_RESULTS_CMS_PAGE_ID));
-			}
-			else
+			model.addAttribute("pageType", PageType.PRODUCTSEARCH.name());
+			if (searchPageData != null && searchPageData.getResults() != null && !searchPageData.getResults().isEmpty())
 			{
 				populateModel(model, searchPageData, ShowMode.Page);
 				storeCmsPageInModel(model, getContentPageForLabelOrId(SEARCH_CMS_PAGE_ID));
-				if(null != searchPageData){
 				model.addAttribute(
 						WebConstants.BREADCRUMBS_KEY,
 						searchBreadcrumbBuilder.getBreadcrumbs(null, encodedSearchText,
 								CollectionUtils.isEmpty(searchPageData.getBreadcrumbs())));
-				}
+				return getViewForPage(model);
+
 			}
 		}
-		else
-		{
-			storeCmsPageInModel(model, getContentPageForLabelOrId(NO_RESULTS_CMS_PAGE_ID));
-		}
 
-
+		storeCmsPageInModel(model, getContentPageForLabelOrId(NO_RESULTS_CMS_PAGE_ID));
 		return getViewForPage(model);
 	}
 
